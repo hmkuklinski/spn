@@ -9,18 +9,57 @@
   --dark-second-color: whitesmoke;
   --nav-active: skyblue;
   --nav-hover: blue;
+  --button-color: purple;
+  --button-hover: pink;
+  --johns-journal: rgb(185, 115, 22);
 }
+/*---------------------------- Fonts ---------------------------- */
+.grape-nuts-regular {
+  font-family: "Grape Nuts", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.julius-sans-one-regular {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 
 body{
   margin: 0;
+}
+
+/*---------------------------- Button ---------------------------- */
+button{
+  text-align: center;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 4px;
+  font-size: 20px;
+  font-family: "Julius Sans One";
+  width: 200px;
+  cursor:pointer;
+  background-color: var(--button-color);
+}
+
+button a{
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+button:hover{
+  background-color: var(--button-hover);
 }
 
 /*----------------------------NavBar Formatting----------------------------*/
 .nav{
   background-color: var(--main-color);
   color:var(--second-color);
+  font-family: "Julius Sans One";
   display: flex;
-  justify-content:space-evenly;
+  justify-content:flex-start;
   align-items:stretch;
   gap: 1rem;
   padding: 0 2rem;
@@ -65,4 +104,139 @@ body{
   align-items: center;
   justify-content: center;
   margin: 10px;
+}
+
+/*---------------------------- Home Landing Formatting ----------------------------*/
+.home-banner, .information{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+/* entire home landing (impala + information) */
+.home-banner{
+  gap: 1.2rem;
+  padding: 8px;
+}
+/* for the impala box and image- left side of landing*/
+.impala{
+  width: 35%;
+}
+.impala img{
+  width: 100%;
+  height: 350px;
+}
+/*information- has logo, subtitle, text, and button (right side of landing) */
+.information{
+  flex-direction: column;
+  padding: 14px;
+  width: 65%;
+  margin:  5px 10px;
+  font-family: "Julius Sans One";
+  text-align: center;
+}
+/* for supernatural title on landing*/
+.page-logo img{
+  width: 100%;
+  height: 120px;
+}
+/* is the text that goes beneath logo/subtitle */
+.text{
+  font-size: 22px;
+  text-align: left;
+}
+
+/*---------------------------- Features Section Formatting ----------------------------*/
+
+/*---------------------------- John's Journal Formatting ----------------------------*/
+.journal-container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  gap: 2rem;
+  height: 130vh;
+  padding: 7px;
+}
+
+.pages{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
+  height: 100%;
+  width:100%;
+  border-radius: 13px;
+  background-color: var(--johns-journal);
+}
+.left-page, .right-page{
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fdf6e3,
+    #fdf6e3 23px,
+    #c8c8c8 24px
+  );
+  width: 50%;
+  height: 95%;
+  padding: 6px;
+  flex-wrap: wrap;
+  font-family: 'Grape Nuts', monospace;
+  line-height: 23px;
+  font-size: 22px;
+}
+.info-title{
+  text-decoration: underline 2px solid var(--second-color);
+  font-size: 24px;
+  word-spacing: 1.3;
+  font-size: 21px;
+}
+.info-section{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap:wrap;
+  gap: 0.5rem;
+  margin: 10px 2px;
+}
+.info{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 44%;
+  gap: 1rem;
+  padding: 4px;
+  height: 20px;
+}
+.info-multiple-text ul{
+  list-style: none;
+}
+
+
+.character-img img{
+  width: 100%;
+  height: 400px;
+}
+.character-title{
+  text-align: center;
+  text-decoration: underline 6px solid var(--second-color);
+}
+
+.pagebtn-container{
+  background-color: var(--main-color);
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 15px;
+  cursor:pointer;
+}
+ion-icon{
+  color: black;
+  font-size: 30px;
 }
