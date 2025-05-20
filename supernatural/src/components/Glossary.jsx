@@ -25,11 +25,11 @@ export default function Glossary(props){
                     </div>
                 </div>
                 <div className="right-page">
-                    <ul className="glossary-ul">
+                    <ol className="glossary-ul">
                         {typeData.map((item,index)=>(
                             <li key={index} className="glossary-li"><Link to={`/${baseLink}/${item.id}`}>{item.name}</Link></li>
                         ))}
-                    </ul>
+                    </ol>
                 </div>
             </JohnsJournal>
         </Layout>

@@ -12,7 +12,7 @@ import {Route, Routes} from "react-router-dom";
 import './App.css';
 
 function App() {
-  const charGlossary = {title:"Character Glossary", imgsrc:"", description:"Learn more about your favorite characters!", nextLink:"/characters/dean", glossaryType:"characters"};
+  const charGlossary = {title:"Character Glossary", imgsrc:"https://pbs.twimg.com/media/FUGzeJzWAAA_TMy.jpg:large", description:"Learn more about your favorite characters!", nextLink:"/characters/dean", glossaryType:"characters"};
   return (
     <div className="App">
       <div className="container">

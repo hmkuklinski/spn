@@ -2,7 +2,7 @@ import NavBar from "./NavBar";
 
 export default function Layout(props){
     return (
-        <div>
+        <div className="layout-container">
             {/* NavBar on top of every page*/}
             <NavBar />
 

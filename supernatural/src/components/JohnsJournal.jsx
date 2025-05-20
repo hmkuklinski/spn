@@ -3,8 +3,7 @@ import PageBtn from "./PageBtn";
 
 export default function JohnsJournal({prevPageLink, nextPageLink, children}){
     return (
-        <div className="journal-container">
-            
+        <div className="journal-container" id="jj">
             <div className="pages">
                 <PageBtn isBackwards={true} navLink={prevPageLink} />
                 {children} 
