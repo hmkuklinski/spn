@@ -28,7 +28,7 @@
 
 /*----------------------------GENERAL FLEX FORMATTING BLOCKS (to make code cleaner) ---------------------------- */
 /* flex center column format*/
-.layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content{
+.layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, .return-glossary, .return-link {
   display:flex;
   align-items: center;
   justify-content: center;
@@ -156,6 +156,7 @@ button:hover{
 
 /*---------------------------- John's Journal Formatting ----------------------------*/
 .journal-container{
+  position:relative;
   width: 100%;
   margin: 10px;
   gap: 2rem;
@@ -190,6 +191,8 @@ button:hover{
   line-height: 23px;
   font-size: 22px;
 }
+
+
 /* ---------------------------- Page Navigation Formatting ----------------------------*/
 .pagebtn-container{
   background-color: var(--main-color);
@@ -227,6 +230,7 @@ ion-icon{
 .info-multiple-text ul{
   list-style: none;
 }
+
 /*---------------------------- Search Box Formatting ---------------------------- */
 .search-container{
   padding: 9px;
@@ -275,6 +279,16 @@ ion-icon{
 .glossary-title h2{
   text-decoration: underline 3px solid var(--second-color);
 }
+.glossary-ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  width: 100%;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+
 /*---------------------------- Character Formatting---------------------------- */
 .character-img img{
   width: 100%;

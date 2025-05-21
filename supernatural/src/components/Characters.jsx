@@ -92,7 +92,7 @@ export default function Characters(){
     
     return (
         <Layout>
-            <Search searchType="character" placeholder="Enter Character Name Here..." searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrCharacter} />
+            <Search searchType="character" placeholder="Enter Character Name Here..." searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrCharacter} buttonLink="/characters" />
             {failed && <SearchFailed buttonText="Glossary" buttonLink ="/characters" />}
             <JohnsJournal prevPageLink={prevLink} nextPageLink={nextLink}>
                 <Character {...currCharacter} />
