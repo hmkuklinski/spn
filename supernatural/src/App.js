@@ -1,9 +1,8 @@
 import Home from './components/Home';
-import About from './components/About';
+import Sigils from './components/Sigils';
 import Episodes from './components/Episodes';
 import Characters from './components/Characters';
 import Glossary from './components/Glossary';
-import RoadMap from './components/RoadMap';
 import BeyondSpn from './components/BeyondSpn';
 import NotFound from './components/NotFound';
 import JournalRedirect from './components/JournalRedirect';
@@ -18,13 +17,12 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/sigils" element={<Sigils />} />
           <Route path="/episodes" element={<Episodes />} />
           <Route path="/characters" element={<Glossary {...charGlossary}/>} />
           <Route path="/characters/:id" element={<Characters />}/>
           <Route path="/characters/redirect" element={<JournalRedirect redirect="character" />} />
           <Route path="/thelore" element={<Glossary {...monsterGlossary} />}  />
-          <Route path="/roadmap" element={<RoadMap />} />
           <Route path="/beyondspn" element={<BeyondSpn />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -21,7 +21,7 @@ export default function Glossary(props){
     const monFirst = monsters[0].id;
 
     const nextPageLink = props.glossaryType === "characters"? `/characters/${chFirst}`: `/monsters/${monFirst}`;
-
+    const dataInfo = props.glossaryType === "characters"? characters: monsters;
    
 
     //function to check if user entered text is a valid entry (and to display entry if valid)
@@ -75,7 +75,7 @@ export default function Glossary(props){
                 </div>
                 <div className="right-page">
                     <ol className="glossary-ul">
-                        {characters.map(item => (
+                        {dataInfo.map(item => (
                         <li key={item.id} className="glossary-li">
                             <Link to={`${props.baseLink}/${item.id}`}>
                             {item.name}
