@@ -28,14 +28,15 @@
 
 /*----------------------------GENERAL FLEX FORMATTING BLOCKS (to make code cleaner) ---------------------------- */
 /* flex center column format*/
-.layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, .return-glossary, .return-link {
+.layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, 
+.return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long {
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 /* flex center row format*/
-.home-banner, .information, .journal-container, .pages, .info-section, .info, .search-container{
+.home-banner, .information, .journal-container, .pages, .info-section, .info, .search-container, .info-slogan{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -208,27 +209,58 @@ ion-icon{
 }
 
 /* ----------------------------Journal Page Content Formatting ----------------------------*/
-.info-title{
-  text-decoration: underline 2px solid var(--second-color);
-  font-size: 24px;
-  word-spacing: 1.3;
-  font-size: 21px;
-}
 .info-section{
   justify-content: flex-start;
   flex-wrap:wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
   margin: 10px 2px;
+  padding: 2px;
 }
+/*for each item in info section (header and info)*/
 .info{
   justify-content: flex-start;
-  width: 44%;
-  gap: 1rem;
+  width: 48%;
+  gap: 0.8rem;
   padding: 4px;
   height: 20px;
 }
-.info-multiple-text ul{
+/* for single line*/
+.info-slogan{
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 2px;
+  height: 40px;
+}
+/* info long has title on top and text underneath (as opposed to text and title side by side like in info-section) */
+.info-long{
+  align-items: flex-start;
+  height: auto;
+  padding: 5px;
+  margin: 15px 0px;
+}
+/* to help with spacing in the info long div*/
+.info-title2 h4 {
+  margin: 0;
+}
+.info-text p{
+  margin:8px;
+}
+/* formatting for the quotes section*/
+.info-quotes{
+  height: 230px;
+  margin: 20px 0px;
+  padding: 6px;
+}
+.info-quotes-text ul{
   list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.info-quotes-text li{
+  margin: 20px 0 0 0;
+  padding-left: 0;
 }
 
 /*---------------------------- Search Box Formatting ---------------------------- */
@@ -408,4 +440,21 @@ ion-icon{
   width: 100%;
   height: 320px;
   object-fit: cover;
+}
+
+/*---------------------------Filter Buttons ---------------------------*/
+.btn-filter, .btn-filter.active{
+  background: var(--main-color);
+  width: 200px;
+  font-size: 15px;
+}
+.btn-filter{
+  border: 1px solid var(--second-color);
+}
+.btn-filter.active{
+  border: 1px solid var(--nav-hover);
+}
+.btn-filter:hover{
+  color: var(--nav-hover);
+  background-color: var(--main-color);
 }

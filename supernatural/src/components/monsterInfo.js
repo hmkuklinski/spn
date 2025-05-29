@@ -2,6 +2,7 @@ export const monsters = [
     {
       id: "ghosts",
       name: "Ghosts",
+      species: "Ghost",
       type: "Spirit / Supernatural Entity",
       description: "Ghosts in Supernatural are the spirits of the dead who have not yet moved on to the afterlife. They often linger due to unfinished business, trauma, or strong emotional ties to the living world. Unlike some other supernatural beings, ghosts in the show are usually tied to a particular location or object.",
       abilities: [
@@ -29,8 +30,9 @@ export const monsters = [
     },
     //item 1: vampires
     {
-        id: "vampires",
-        name: "Vampires",
+        id: "vampire",
+        species: "Vampire",
+        name: "Vampire",
         type: "Undead / Supernatural",
         description: "Vampires in Supernatural are reanimated humans who feed on blood. They possess enhanced strength, speed, and healing abilities, and are typically vulnerable to decapitation and sunlight.",
         abilities: [
@@ -59,6 +61,7 @@ export const monsters = [
     {
         id: "werewolves",
         name: "Werewolves",
+        species: "Werewolf",
         type: "Shapeshifter / Lycanthrope",
         description: "Werewolves are humans who transform into wolf-like creatures during the full moon. They have heightened senses and strength, and are often depicted as pack-oriented.",
         abilities: [
@@ -86,6 +89,7 @@ export const monsters = [
     {
         id: "shapeshifters",
         name: "Shapeshifters",
+        species: "Shapeshifter",
         type: "Shapeshifter / Mimic",
         description: "Shapeshifters are creatures that can assume the appearance of any human they come into contact with. They often use this ability to commit crimes or manipulate others.",
         abilities: [
@@ -113,6 +117,7 @@ export const monsters = [
     {
         id: "djinn",
         name: "Djinn",
+        species: "Djinn",
         type: "Genie / Wish Granting Entity",
         description: "Djinn in Supernatural are malevolent beings that trap individuals in dream-like states, feeding on their life force while granting twisted versions of their desires.",
         abilities: [
@@ -140,6 +145,7 @@ export const monsters = [
     {
         id: "fairies",
         name: "Fairies",
+        species: "Fairy",
         type: "Fey / Magical Beings",
         description: "Fairies in Supernatural are magical beings that can manipulate nature and possess various powers. They are often mischievous and have their own agendas.",
         abilities: [
@@ -167,6 +173,7 @@ export const monsters = [
     {
         id: "hellhounds",
         name: "Hellhounds",
+        species: "Hellhound",
         type: "Demonic Beast",
         description: "Hellhounds are large, black, supernatural dogs that serve as enforcers for Hell. They are often sent to collect souls or punish those who have broken deals with demons.",
         abilities: [
@@ -194,6 +201,7 @@ export const monsters = [
     {
         id: "jefferson_starships",
         name: "Jefferson Starships",
+        species: "Jefferson Starships",
         type: "Alien / Extraterrestrial",
         description: "Jefferson Starships are alien creatures that resemble humans but possess advanced technology and abilities. They are often depicted as hostile invaders.",
         abilities: [
@@ -220,6 +228,7 @@ export const monsters = [
     {
         id: "rakshasa",
         name: "Rakshasa",
+        species: "Rakshasa",
         type: "Demonic Spirit / Shapeshifter",
         description: "Rakshasas are malevolent demonic spirits from Hindu mythology that possess the ability to shape-shift and consume human flesh. In Supernatural, they are depicted as bloodthirsty predators that can appear human but reveal their true monstrous form when attacking.",
         abilities: [

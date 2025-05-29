@@ -1,18 +1,67 @@
-import {characters} from './characterInfo';
-import React from 'react';
+import React, {useState} from 'react';
 import JohnsJournal from './JohnsJournal';
 import Layout from './Layout';
-import { Link} from 'react-router-dom';
+import Search from './Search';
+import SearchFailed from './SearchFailed';
+import { characters } from './characterInfo';
+import {monsters} from './monsterInfo';
+import { Link, useNavigate} from 'react-router-dom';
 
 export default function Glossary(props){
-    let typeData, baseLink;
-    if (props.glossaryType === "characters"){
-        typeData = characters;
-        baseLink ="characters";
+    
+    //input for search
+    const [searchEntry, setSearchEntry] = useState('');
+    //was search successful?
+    const [failed, setFailed] = useState(false); 
+
+    //to "change" the page if user types valid name in search bar and clicks button/enter
+    const navigate = useNavigate();
+
+    const chFirst = characters[0].id;
+    const monFirst = monsters[0].id;
+
+    const nextPageLink = props.glossaryType === "characters"? `/characters/${chFirst}`: `/monsters/${monFirst}`;
+
+   
+
+    //function to check if user entered text is a valid entry (and to display entry if valid)
+    const updateCurrEntry= ()=>{
+        //useState variable trimmed and lowercased to ensure proper comparison/find funciton
+        let finalSearch =searchEntry.trim().toLowerCase();
+
+        //ensures that if user types Sam, will still be able to see Sam Winchester
+        const matching = props.data.find(item => item.id.toLowerCase().includes(finalSearch));
+
+        //a character was found, we can navigate to the character's "page"
+        if (matching){
+            //change boolean:
+            setFailed(false);
+            //clear input box:
+            setSearchEntry("");
+            //change the current address to matching character
+            navigate(`/${props.baseLink}/${matching.id}`, {
+            });
+              
+
+        }
+        else{
+            const journal = document.getElementById("jj");
+            journal.style.opacity= "0.5";
+            //reset to false
+            setFailed(false);
+            //clear input box
+            setSearchEntry("");
+            setTimeout(() => {
+                setFailed(true);
+            }, 0);
+        }
     }
+
     return (
         <Layout>
-            <JohnsJournal prevPageLink={null} nextPageLink={props.nextLink}>
+            <Search searchType={props.glossaryType} placeholder={`Enter ${props.glossaryType} Name Here...`} searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrEntry} buttonLink={props.baseLink}/>    
+            {failed && <SearchFailed buttonText="Glossary" buttonLink ={`/${props.baseLink}`} />}
+            <JohnsJournal prevPageLink={null} nextPageLink={nextPageLink}>
                 <div className="left-page">
                     <div className="glossary-title">
                     <h2>{props.title}</h2>
@@ -26,8 +75,12 @@ export default function Glossary(props){
                 </div>
                 <div className="right-page">
                     <ol className="glossary-ul">
-                        {typeData.map((item,index)=>(
-                            <li key={index} className="glossary-li"><Link to={`/${baseLink}/${item.id}`}>{item.name}</Link></li>
+                        {characters.map(item => (
+                        <li key={item.id} className="glossary-li">
+                            <Link to={`${props.baseLink}/${item.id}`}>
+                            {item.name}
+                            </Link>
+                        </li>
                         ))}
                     </ol>
                 </div>

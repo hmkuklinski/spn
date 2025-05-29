@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-export default function Search({ searchType, placeholder, searchEntry, setSearchEntry, clickAction, buttonLink}) {
+export default function Search({ searchType, placeholder, searchEntry, setSearchEntry, clickAction, buttonLink, hasFilter=null, toggleFilters=null}) {
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
-            clickAction(); // This actually runs the function
+            clickAction();
         }
     };
     
@@ -17,6 +17,9 @@ export default function Search({ searchType, placeholder, searchEntry, setSearch
             <div className="search-home">
                 <Link to={buttonLink}><button className="search-btn"><ion-icon name="home-outline"></ion-icon></button></Link>
             </div>
+            {hasFilter && <div className="search-filter">
+                <button className="search-btn" onClick={toggleFilters}><ion-icon name="funnel-outline"></ion-icon></button>
+            </div>}
         </div>
     );
 }

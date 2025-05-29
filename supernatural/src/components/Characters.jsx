@@ -3,10 +3,9 @@ import Character from './Character';
 import Layout from './Layout';
 import Search from './Search.jsx';
 import SearchFailed from './SearchFailed.jsx';
-
 import {characters} from './characterInfo.js';
 import {useParams, useNavigate} from "react-router-dom";
-import { useState } from 'react';
+import { useState} from 'react';
 
 export default function Characters(){
     //get current /characters/:id (need to render correct page)
@@ -17,9 +16,7 @@ export default function Characters(){
     //for search bar function:
     const [searchEntry, setSearchEntry] = useState("");
     const [failed, setFailed]= useState(false);
-
-    //for "fading" journal on fail:
-    const journal = document.getElementById("jj");
+    
 
 
     //find current character in characters array
@@ -34,31 +31,13 @@ export default function Characters(){
     const currCharacter = characters[currCharacterIndex];
     
     //see if previous character: access if valid, set to null if invalid
-    const prevCh =  currCharacter.prev != null? characters[currCharacter.prev]: null;
-    
-    //variable to hold the previous link (for passing into component later to render proper page/navigatons)
-    let prevLink = null;
-    //dean redirects to glossary- else, has previous set to prev character's id
-    if (currCharacter.id === "dean") 
-        prevLink = "/characters";
-    else{
-        if (prevCh) 
-            prevLink=`/characters/${prevCh.id}`;
-    }
+    const prevCh =  currCharacterIndex >0? characters[currCharacterIndex-1]: null;
 
     //see if there are characters after current one (if last one--> redirect page)
-    const nextCh =  currCharacter.next != null? characters[currCharacter.next]: null;
+    const nextCh =  currCharacterIndex < characters.length-1? characters[currCharacterIndex+1]: null;
     
-    //variable to hold the next link (for passing into component later to render proper page/navigatons)
-    let nextLink = null;
-    
-    //more characters in list, can set valid next link
-    if(currCharacterIndex<characters.length-1){
-        nextLink = `/characters/${nextCh.id}`;
-    }
-    else{ //no valid --> last character in array, redirect to glossary
-        nextLink = "/characters/redirect";
-    }
+    let prevLink = prevCh ? `/characters/${prevCh.id}` : "/characters"; 
+    let nextLink = nextCh ? `/characters/${nextCh.id}` : "/characters/redirect";
 
     //function to check if user entered text is a valid spn character (and to display character entry if valid)
     const updateCurrCharacter= ()=>{
@@ -78,6 +57,7 @@ export default function Characters(){
             navigate(`/characters/${matching.id}`);
         }
         else{
+            const journal = document.getElementById("jj");
             journal.style.opacity= "0.5";
             //reset to false
             setFailed(false);
@@ -89,10 +69,9 @@ export default function Characters(){
         }
     }
 
-    
     return (
         <Layout>
-            <Search searchType="character" placeholder="Enter Character Name Here..." searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrCharacter} buttonLink="/characters" />
+            <Search searchType="character" placeholder="Enter Character Name Here..." searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrCharacter} buttonLink="/characters"/>
             {failed && <SearchFailed buttonText="Glossary" buttonLink ="/characters" />}
             <JohnsJournal prevPageLink={prevLink} nextPageLink={nextLink}>
                 <Character {...currCharacter} />
