@@ -29,7 +29,7 @@
 /*----------------------------GENERAL FLEX FORMATTING BLOCKS (to make code cleaner) ---------------------------- */
 /* flex center column format*/
 .layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, 
-.return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long {
+.return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer {
   display:flex;
   align-items: center;
   justify-content: center;
@@ -457,4 +457,16 @@ ion-icon{
 .btn-filter:hover{
   color: var(--nav-hover);
   background-color: var(--main-color);
+}
+
+#monster-pages{
+  font-size: 14px;
+}
+
+.info-longer .info-title2{
+  padding: 3px;
+}
+
+.info-longer .info-list{
+  width: 100%;
 }
