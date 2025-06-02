@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   const charGlossary = {title:"Character Glossary", imgsrc:"https://pbs.twimg.com/media/FUGzeJzWAAA_TMy.jpg:large", description:"Learn more about your favorite characters!", nextLink:"/characters/dean", glossaryType:"characters",baseLink: "characters"};
-  const monsterGlossary = {title:"Monster Glossary", imgsrc:"", description:"Explore the lore and learn how to defeat every monster that hunters have faced in the series!", nextLink:"/monsters/ghosts", glossaryType:"monsters",baseLink: "thelore"};
+  const monsterGlossary = {title:"Monster Glossary", imgsrc:"https://preview.redd.it/w8h6m48xzg971.jpg?width=428&format=pjpg&auto=webp&s=b251f4caebc51398b733ddfab2128d3dd1a67218", description:"Explore the lore and learn how to defeat every monster that hunters have faced in the series!", nextLink:"/monsters/ghosts", glossaryType:"monsters",baseLink: "monsters"};
   return (
     <div className="App">
       <div className="container">

@@ -39,7 +39,7 @@ export default function Glossary(props){
             //clear input box:
             setSearchEntry("");
             //change the current address to matching character
-            navigate(`/${props.baseLink}/${matching.id}`, {
+            navigate(`/${matching.id}`, {
             });
               
 
@@ -77,7 +77,7 @@ export default function Glossary(props){
                     <ol className="glossary-ul">
                         {dataInfo.map(item => (
                         <li key={item.id} className="glossary-li">
-                            <Link to={`${props.baseLink}/${item.id}`}>
+                            <Link to={`/${props.baseLink}/${item.id}`}>
                             {item.name}
                             </Link>
                         </li>

@@ -20,28 +20,40 @@ export default function Character(props){
                         <div className="info-answer">{props.status}</div>
                     </div>
                     <div className="info">
-                        <div className="info-title"><h4>Occupation: </h4></div>
-                        <div className="info-answer">{props.occupation}</div>
-                    </div>
-                    <div className="info">
                         <div className="info-title"><h4>Age: </h4></div>
                         <div className="info-answer">{props.age}</div>
                     </div>
+                    {props.occupation &&  props.occupation === "Hunter" && (
+                    <div className="info">
+                        <div className="info-title"><h4>Occupation: </h4></div>
+                        <div className="info-answer">{props.occupation}</div>
+                    </div>
+                    )}
                     
                     
                 </div>
-                <div className="info-long">
-                    <div className="info-title2"><h4>Nicknames: </h4></div>
-                    <div className="info-answer-long">{props.nicknames}</div>
-                </div>
+                {props.occupation && props.occupation !== "Hunter" && (
+                    <div className="info-long">
+                        <div className="info-title2"><h4>Occupation: </h4></div>
+                        <div className="info-answer-long">{props.occupation}</div>
+                    </div>
+                )}
+                {props.nicknames && (
+                    <div className="info-long">
+                        <div className="info-title2"><h4>Nicknames: </h4></div>
+                        <div className="info-answer-long">{props.nicknames}</div>
+                    </div>
+                )}
                 <div className="info-slogan">
                         <div className="info-title"><h4>Actor: </h4></div>
                         <div className="info-answer">{props.actor}</div>
                     </div>  
-                <div className="info-slogan">
-                    <div className="info-title"><h4>Slogan</h4></div>
-                    <div className="info-answer">{props.catchphrase}</div>
-                </div>
+                {props.catchphrase && (
+                    <div className="info-slogan">
+                        <div className="info-title"><h4>Slogan</h4></div>
+                        <div className="info-answer">{props.catchphrase}</div>
+                    </div>
+                )}
                 
             </div>
             <div className="right-page">
@@ -69,12 +81,27 @@ export default function Character(props){
                         </ul>
                     </div>
                 </div> 
-                <div className="info-long">
+                <div className="info-long" style={{ height: !props.deaths ? "150px" : "auto" }}>
                     <div className="info-title2"><h4>Total Deaths: {props.totalDeaths}</h4></div>
-                    <div className="info-text">
-                        <p>{props.deaths.map(death => death.text).join(', ')}</p>
-                    </div>
+                    {props.deaths && (
+                        <div className="info-text">
+                            <p>{props.deaths.map(death => death.text).join(', ')}</p>
+                        </div>
+                    )}
                 </div> 
+                {props.funfacts && (
+                    <div className="info-quotes">
+                        <div className="info-title2"><h4>Interesting Facts: </h4></div>
+                        <div className="info-quotes-text">
+                            <ul>
+                            {props.funfacts.map((fact)=>(
+                                <li key={fact.id}>{fact.id}. {fact.text}</li>
+            
+                            ))}
+                            </ul>
+                        </div>
+                    </div> 
+                )}
                
                 {/* <div className="info-long">
                     <div className="info-title"><h4>Fun Fact: </h4></div>

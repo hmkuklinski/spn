@@ -192,6 +192,10 @@ button:hover{
   line-height: 23px;
   font-size: 22px;
 }
+.left-page, .right-page{
+  box-shadow:4px 4px 0px #222222;
+  border-radius: 2px #222;
+}
 
 
 /* ---------------------------- Page Navigation Formatting ----------------------------*/
@@ -249,7 +253,8 @@ ion-icon{
 }
 /* formatting for the quotes section*/
 .info-quotes{
-  height: 230px;
+  height: auto;
+  max-height: 260px;
   margin: 20px 0px;
   padding: 6px;
 }
@@ -459,14 +464,13 @@ ion-icon{
   background-color: var(--main-color);
 }
 
+/*---------------------------Monster Page Formatting ---------------------------*/
 #monster-pages{
   font-size: 14px;
 }
-
 .info-longer .info-title2{
   padding: 3px;
 }
-
 .info-longer .info-list{
   width: 100%;
 }

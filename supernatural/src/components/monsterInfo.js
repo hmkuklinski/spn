@@ -1,3 +1,5 @@
+//ghost drawing: imgsrc: "https://johnnycompton.com/wp-content/uploads/2013/12/A-ghostly-19th-century-il-015.jpg",
+
 export const monsters = [
   {
     id: "ghosts",
