@@ -29,7 +29,7 @@
 /*----------------------------GENERAL FLEX FORMATTING BLOCKS (to make code cleaner) ---------------------------- */
 /* flex center column format*/
 .layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, 
-.return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer {
+.return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer, .season-container, .season-text {
   display:flex;
   align-items: center;
   justify-content: center;
@@ -316,7 +316,7 @@ ion-icon{
 .glossary-title h2{
   text-decoration: underline 3px solid var(--second-color);
 }
-.glossary-ul {
+.glossary-ul , .seasons1, .seasons2{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 20px;
@@ -474,3 +474,29 @@ ion-icon{
 .info-longer .info-list{
   width: 100%;
 }
+
+/*---------------------------- Seasons Formatting---------------------------- */
+.season-titlecard img{
+  width: 200px;
+  height: 110px;
+}
+.season-container{
+  height: 150px;
+  cursor:pointer;
+}
+.seasons-title{
+  text-align: center;
+  text-decoration: underline;
+  width:100%;
+}
+.seasons2{
+  margin-top: 80px;
+  padding-left: 10px;
+}
+.season-text{
+  font-size: 22px;
+  width: 100%;
+  text-align:center;
+  height: 30px;
+}
+/*---------------------------- Seasons Sumnmary Formatting---------------------------- */

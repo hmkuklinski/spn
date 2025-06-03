@@ -1,12 +1,14 @@
 import Home from './components/Home';
 import Sigils from './components/Sigils';
-import Episodes from './components/Episodes';
+import Seasons from './components/Seasons';
+import SeasonRouting from './components/SeasonRouting';
 import Characters from './components/Characters';
 import Glossary from './components/Glossary';
 import BeyondSpn from './components/BeyondSpn';
 import NotFound from './components/NotFound';
 import JournalRedirect from './components/JournalRedirect';
 import TheLore from './components/TheLore';
+import Episodes from './components/Episodes';
 import {Route, Routes} from "react-router-dom";
 import './App.css';
 
@@ -20,6 +22,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sigils" element={<Sigils />} />
           <Route path="/episodes" element={<Episodes />} />
+          <Route path="/seasons" element={<Seasons />} />
+          <Route path="/seasons/:num" element={<SeasonRouting />} />
+          <Route path="/seasons/redirect" element={<JournalRedirect redirect="season" />} />
           <Route path="/characters" element={<Glossary {...charGlossary}/>} />
           <Route path="/characters/:id" element={<Characters />}/>
           <Route path="/characters/redirect" element={<JournalRedirect redirect="character" />} />

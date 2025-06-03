@@ -4,12 +4,16 @@ import JohnsJournal from "./JohnsJournal";
 import GalleryImage from "./GalleryImage";
 import { monsters } from "./monsterInfo";
 import Layout from "./Layout";
+import { episodes } from './episodeInfo';
 
 export default function JournalRedirect(props){
-    let rightPageContents, prevLink;
+    let rightPageContents, prevLink, redirectLink, redirectImage, redirectText;
     if (props.redirect=== "character"){
         const prevChar = characters[characters.length-1];
         prevLink = `/characters/${prevChar.id}`;
+        redirectText = <p>Unfortunately that's all that John wrote here. If you still want to learn more, you can always review.</p>;
+        redirectLink = <Link to="/characters">Start Over</Link>;
+        redirectImage = <img src="/assets/redirects/characterredirect.gif" alt="redirect"/>;
         rightPageContents = (
             <div className="gallery-redirect">
                 <div className="redirect-block">
@@ -31,6 +35,9 @@ export default function JournalRedirect(props){
     else if(props.redirect === "thelore"){
         const prevMon = monsters[monsters.length-1];
         prevLink = `/monsters/${prevMon.id}`;
+        redirectLink = <Link to="/monsters">Start Over</Link>;
+        redirectText = <p>That's all the lore that John wrote in his journal. If you still want to learn more, you can always review what is written here or check the Men of Letters' Library.</p>;
+        redirectImage =  <img src="/assets/redirects/monsterredirect.gif" alt="redirect" width="100%" height="350px"/>;
         rightPageContents = (
             <div className="stats">
                 <div className="stats-monsters">
@@ -58,25 +65,28 @@ export default function JournalRedirect(props){
             </div>
         );
     }
+    else if(props.redirect === "season"){
+        const prevSeason = episodes[episodes.length-1];
+        prevLink = `/seasons/${prevSeason.id}`;
+        redirectLink = <Link to="/seasons">Start Over</Link>;
+        redirectImage= <img src="/assets/redirects/seasonredirect.gif" alt="redirect" />;
+        redirectText = <p></p>;
+    }
     let leftPageContents = (
             <div className="redirect">
                 <div className="redirect-title">
                     <h2>The End of the Road</h2>
                 </div>
                 <div className="redirect-image">
-                   {props.redirect==="character"?<img src="https://25.media.tumblr.com/1980c3f7e3ffa4d94bf272615452a1e5/tumblr_mvcglzQN3U1sypyz3o1_500.gif" alt="redirect"/>:<img src="https://media.tenor.com/L9WHyC2nMfsAAAAM/bye-supernatural.gif" alt="redirect" width="100%" height="350px"/>}
+                   {redirectImage}
                 </div>
                 <div className="redirect-content">
                     <div className="redirect-text">
-                        {props.redirect==="character"?<p>Unfortunately that's all that John wrote here. If you still want to learn more, you can always review.</p>:<p>That's all the lore that John wrote in his journal. If you still want to learn more, you can always review what is written here or check the Men of Letters' Library.</p>}
+                        {redirectText}
                     </div>
                     <div className="redirect-button">
                         <button className="basic-btn">
-                            {props.redirect === "character" ? (
-                                <Link to="/characters">Start Over</Link>
-                            ) : (
-                                <Link to="/monsters">Start Over</Link>
-                            )}
+                            {redirectLink}                                
                         </button>
                     </div>
 

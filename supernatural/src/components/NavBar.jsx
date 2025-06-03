@@ -8,7 +8,8 @@ export default function NavBar() {
       {navlogo}
       <ul>
         <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>
-        <li><NavLink to="/episodes" className={({ isActive }) => isActive ? "active" : ""}>Episodes</NavLink></li>
+        <li><NavLink to="/Episodes" className={({ isActive }) => isActive ? "active" : ""}>Episodes List</NavLink></li>
+        <li><NavLink to="/seasons" className={({ isActive }) => isActive ? "active" : ""}>Seasons</NavLink></li>
         <li><NavLink to="/characters" className={({ isActive }) => isActive ? "active" : ""}>Characters</NavLink></li>
         <li><NavLink to="/monsters" className={({ isActive }) => isActive ? "active" : ""}>The Lore</NavLink></li>
         <li><NavLink to="/sigils" className={({ isActive }) => isActive ? "active" : ""}>Sigils</NavLink></li>
