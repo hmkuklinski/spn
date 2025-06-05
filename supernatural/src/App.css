@@ -29,7 +29,8 @@
 /*----------------------------GENERAL FLEX FORMATTING BLOCKS (to make code cleaner) ---------------------------- */
 /* flex center column format*/
 .layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, 
-.return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer, .season-container, .season-text {
+.return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer, .season-container, .season-text,
+.season-title, .char-updates, .update-container, .char-intros, .intro-container, .char-deaths, .updates, .spoilers{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -500,3 +501,55 @@ ion-icon{
   height: 30px;
 }
 /*---------------------------- Seasons Sumnmary Formatting---------------------------- */
+.season-gif img{
+  width: 100%;
+  height: 400px;
+}
+.season-title{
+  text-align: center;
+  height: 40px;
+}
+.season-info{
+  padding: 5px;
+  font-size: 25px;
+  word-spacing: 1.2px;
+  margin: 0;
+  height:auto;
+}
+.char-title{
+  width:100%;
+  text-align:center;
+  text-decoration:underline;
+  margin: 3px 0px;
+}
+.char-title h3{
+  margin:0;
+}
+.char-name{
+  margin-top: 4px;
+}
+.char-name h3{
+  margin:0;
+  font-size: 24px;
+  text-decoration: none;
+  color:var(--nav-hover);
+}
+.char-name h3:hover{
+  color:var(--nav-active);
+  transition: 0.2s ease-in all;
+}
+
+#intros, #deaths{
+  margin-top: 30px;
+}
+
+.char-section{
+  padding: 5px;
+}
+.char-entry{
+  margin-top: 10px;
+}
+
+.char-text{
+  font-size: 18px;
+}
