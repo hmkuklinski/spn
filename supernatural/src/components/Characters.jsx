@@ -16,7 +16,7 @@ export default function Characters(){
     //for search bar function:
     const [searchEntry, setSearchEntry] = useState("");
     const [failed, setFailed]= useState(false);
-    
+    const [showHelp, setShowHelp] = useState(false);
 
 
     //find current character in characters array
@@ -69,10 +69,20 @@ export default function Characters(){
         }
     }
 
+    const displayHelp=()=>{
+        setShowHelp(prev =>!prev);
+    }
+
     return (
         <Layout>
-            <Search searchType="character" placeholder="Enter Character Name Here..." searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrCharacter} buttonLink="/characters"/>
+            <Search searchType="character" placeholder="Enter Character Name Here..." searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrCharacter} buttonLink="/characters" hasHelper={true} toggleHelp={displayHelp} hasHome={true}/>
             {failed && <SearchFailed buttonText="Glossary" buttonLink ="/characters" />}
+            {showHelp && <div className='helper'>
+                <p>1. <b>To Search:</b> Enter the name of the character and then click the search button or hit enter. 
+                <br />If there is a valid search, it will direct you to the page!</p>
+                <p>2. <b>To Turn the Page:</b> Click the edge of the page! (just like a real book!)</p>   
+                <p>3. <b>To Return to Glossary: </b>Click the home icon</p> 
+            </div>}
             <JohnsJournal prevPageLink={prevLink} nextPageLink={nextLink}>
                 <Character {...currCharacter} />
             </JohnsJournal>

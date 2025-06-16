@@ -35,7 +35,7 @@ export default function SeasonInfo({num}){
                     ))}
                 </div>
                 )}
-
+{/* 
                 {Array.isArray(myEp.majorUpdates) && (
                 <div className="char-section" id="intros">
                     <div className="char-title">
@@ -58,7 +58,7 @@ export default function SeasonInfo({num}){
                     </>
                     )}
                 </div>
-                )}
+                )} */}
 
                 
 

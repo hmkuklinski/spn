@@ -1,5 +1,3 @@
-import React from "react";
-import PageBtn from "./PageBtn";
 import { Link } from "react-router-dom";
 
 export default function JohnsJournal({prevPageLink, nextPageLink, children}){
@@ -8,9 +6,17 @@ export default function JohnsJournal({prevPageLink, nextPageLink, children}){
             <div className="pages">
                 <div className="return-glossary">
                 </div>
-                <PageBtn isBackwards={true} navLink={prevPageLink} />
+                {prevPageLink && (
+                    <Link to={prevPageLink} className="page-nav bottom-left" aria-label="Previous page">
+                    </Link>
+                )}
+                {/* <PageBtn isBackwards={true} navLink={prevPageLink} /> */}
                 {children} 
-                <PageBtn isBackwards={false} navLink={nextPageLink} />
+                {nextPageLink && (
+                    <Link to={nextPageLink} className="page-nav bottom-right" aria-label="Next page">
+                    </Link>
+                )}
+                {/* <PageBtn isBackwards={false} navLink={nextPageLink} /> */}
             </div>
            
         </div>

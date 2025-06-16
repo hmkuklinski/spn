@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import JohnsJournal from './JohnsJournal';
 import Layout from './Layout';
 import Search from './Search';
@@ -14,6 +14,12 @@ export default function Glossary(props){
     //was search successful?
     const [failed, setFailed] = useState(false); 
 
+    //for filtering:
+    const [filter, setFilter]= useState("all");
+    const [showFilters, setShowFilters] = useState(false);
+    
+    const [showHelp, setShowHelp] = useState(false);
+
     //to "change" the page if user types valid name in search bar and clicks button/enter
     const navigate = useNavigate();
 
@@ -22,7 +28,19 @@ export default function Glossary(props){
 
     const nextPageLink = props.glossaryType === "characters"? `/characters/${chFirst}`: `/monsters/${monFirst}`;
     const dataInfo = props.glossaryType === "characters"? characters: monsters;
-   
+    
+    const filteredData = filter === "all"? dataInfo: dataInfo.filter(item=> item.type === filter);
+    
+    const filterTextMap = {
+        all: "Character List",
+        human: "Character List: Humans",
+        angel: "Character List: Angels & Deities",
+        demon: "Character List: Demons",
+        monster: "Character List: Monsters",
+        reaper: "Character List: Reapers & Death"
+    };
+
+    const filterText = filterTextMap[filter] || "Character List";
 
     //function to check if user entered text is a valid entry (and to display entry if valid)
     const updateCurrEntry= ()=>{
@@ -30,7 +48,8 @@ export default function Glossary(props){
         let finalSearch =searchEntry.trim().toLowerCase();
 
         //ensures that if user types Sam, will still be able to see Sam Winchester
-        const matching = props.data.find(item => item.id.toLowerCase().includes(finalSearch));
+        const matching = dataInfo.find(item => item.id.toLowerCase().includes(finalSearch));
+
 
         //a character was found, we can navigate to the character's "page"
         if (matching){
@@ -39,8 +58,8 @@ export default function Glossary(props){
             //clear input box:
             setSearchEntry("");
             //change the current address to matching character
-            navigate(`/${matching.id}`, {
-            });
+            navigate(`/${props.baseLink}/${matching.id}`);
+
               
 
         }
@@ -57,10 +76,42 @@ export default function Glossary(props){
         }
     }
 
+    const toggleFilter = () => {
+        setShowFilters(prev => !prev);
+        if (showHelp) {
+            setShowHelp(false);
+        }
+    };
+
+    const displayHelp = () => {
+        setShowHelp(prev => !prev);
+        if (showFilters) {
+            setShowFilters(false);
+        }
+    };
+
+
     return (
         <Layout>
-            <Search searchType={props.glossaryType} placeholder={`Enter ${props.glossaryType} Name Here...`} searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrEntry} buttonLink={props.baseLink}/>    
+            <Search searchType={props.glossaryType} placeholder={`Enter ${props.glossaryType} Name Here...`} searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrEntry} buttonLink={props.baseLink} hasFilter={true} toggleFilters={toggleFilter} hasHelper={true} toggleHelp={displayHelp} hasHome={false}/>    
+            {showFilters && (
+                <div className="glossary-filters">
+                        <button onClick={() => setFilter("human")}>Humans</button>
+                        <button onClick={() => setFilter("angel")}>Heavenly</button>
+                        <button onClick={() => setFilter("demon")}>Demonic</button>
+                        <button onClick={() => setFilter("monster")}>Monsters</button>
+                        <button onClick={() => setFilter("reaper")}>Reapers</button>
+                        <button onClick={() => setFilter("all")} id="reset">Reset</button>
+                    </div>
+            )}
             {failed && <SearchFailed buttonText="Glossary" buttonLink ={`/${props.baseLink}`} />}
+             {showHelp && <div className='helper'>
+                <p>1. <b>To Filter:</b> click the funnel icon and select your category. <br/>
+                (Note: This will not filter the character display when you hit the next button!)</p>
+                <p>2. <b>To Search:</b> Enter the name of the character and then click the search button or hit enter. 
+                <br />If there is a valid search, it will direct you to the page!</p>
+                <p>3. <b>To Turn the Page:</b> Click the edge of the page! (just like a real book!)</p>    
+            </div>}
             <JohnsJournal prevPageLink={null} nextPageLink={nextPageLink}>
                 <div className="left-page">
                     <div className="glossary-title">
@@ -72,10 +123,12 @@ export default function Glossary(props){
                     <div className="glossary-description">
                         {props.description}
                     </div>
+                    
                 </div>
-                <div className="right-page">
+                <div className="right-page" id="glossary-right">
+                    <h2>{filterText}</h2>
                     <ol className="glossary-ul">
-                        {dataInfo.map(item => (
+                        {filteredData.map(item => (
                         <li key={item.id} className="glossary-li">
                             <Link to={`/${props.baseLink}/${item.id}`}>
                             {item.name}

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-export default function Search({ searchType, placeholder, searchEntry, setSearchEntry, clickAction, buttonLink, hasFilter=null, toggleFilters=null}) {
+export default function Search({ searchType, placeholder, searchEntry, setSearchEntry, clickAction, buttonLink, hasFilter=null, toggleFilters=null, hasHelper=null, toggleHelp=null, hasHome=null}) {
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             clickAction();
@@ -14,12 +14,19 @@ export default function Search({ searchType, placeholder, searchEntry, setSearch
             <div className="search-button">
                 <button className="search-btn" onClick={clickAction}><ion-icon name="search-outline"></ion-icon></button>
             </div>
-            <div className="search-home">
+            {hasHome && <div className="search-home">
                 <Link to={buttonLink}><button className="search-btn"><ion-icon name="home-outline"></ion-icon></button></Link>
             </div>
+            }
+            
             {hasFilter && <div className="search-filter">
                 <button className="search-btn" onClick={toggleFilters}><ion-icon name="funnel-outline"></ion-icon></button>
             </div>}
+            {hasHelper && 
+                <div className="helper">
+                    <button className="search-btn" onClick={toggleHelp}><ion-icon name="help-outline"></ion-icon></button>
+                </div>
+            }
         </div>
     );
 }

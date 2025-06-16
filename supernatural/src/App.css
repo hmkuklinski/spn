@@ -70,6 +70,13 @@ button:hover{
   background-color: var(--button-hover);
 }
 
+.glossary-filters button{
+  width: 140px;
+}
+#reset {
+  background-color: var(--exit-color);
+}
+
 /*----------------------------NavBar Formatting----------------------------*/
 .nav{
   background-color: var(--main-color);
@@ -171,9 +178,11 @@ button:hover{
   background-image: url("https://www.texturex.com/wp-content/uploads/2018/03/leather-texture-stripe-pattern-hand-made-journal-material-stock-photo-5.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
+  display: flex;
   gap: 3rem;
   height: 100%;
-  width:100%;
+  width:95%;
   border-radius: 13px;
   background-color: var(--johns-journal);
 }
@@ -187,7 +196,8 @@ button:hover{
   );
   width: 50%;
   height: 95%;
-  padding: 6px;
+  position: relative;
+  padding: 0px 32px 15px 32px;
   flex-wrap: wrap;
   font-family: 'Grape Nuts', monospace;
   line-height: 23px;
@@ -196,7 +206,32 @@ button:hover{
 .left-page, .right-page{
   box-shadow:4px 4px 0px #222222;
   border-radius: 2px #222;
+  
 }
+
+.page-nav {
+  position: absolute;
+  bottom: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  user-select: none;
+  text-decoration: none;
+  color: #000;
+  height: 95%;
+  width: 40px;
+}
+
+.bottom-left {
+  left: 60px;
+  z-index: 100;
+}
+
+.bottom-right {
+  right: 10px;
+}
+
 
 
 /* ---------------------------- Page Navigation Formatting ----------------------------*/
