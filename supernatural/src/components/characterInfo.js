@@ -1,5 +1,4 @@
-//{name: "", id: "", prev:"", next:"", imgsrc: "", species: "", status: "", occupation: "", age: 0, nicknames: "", relationships: "", catchphrase: "", strengths: "", weaknesses: "", quotes: [{id: 0, text: ""}], totalDeaths: , deaths: [{id: 0, text: ""}], fact: "" , actor:""}
-//funfacts- for people with zero deaths: funfacts: [{id: 1, text: ""}]
+//{name: "", id: "",  type:"", imgsrc: "", species: "", status: "", occupation: "", age: 0, nicknames: "", relationships: "", catchphrase: "", strengths: "", weaknesses: "", quotes: [{id: 0, text: ""}], totalDeaths: , deaths: [{id: 0, text: ""}], fact: "" , actor:"", funfacts: [{id: 1, text: ""}]}
 export let characters= [
     //DEAN WINCHESTER
     {name: "Dean Winchester", id: "dean", type:"human", 
