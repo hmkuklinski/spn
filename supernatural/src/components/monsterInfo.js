@@ -145,7 +145,7 @@ export const monsters = [
     species: "Hellhound",
     type: "Demonic Beast",
     imgsrc: "/assets/monsters/hellhounds.gif",
-    description: "Hellhounds are large, black supernatural dogs that serve as enforcers for Hell. They are often sent to collect souls or punish those who have broken deals with demons. They are only visible to those who are hunted by the hellhounds or those who have glasses scorched in Holy Fire. They are only loyal to the demon they serve and cannnot be bargained with.",
+    description: "Hellhounds are large, black supernatural dogs that serve as enforcers for Hell. They are often sent to collect souls or punish those who have broken deals with demons.",
     abilities: [
       "Invisibility to the human eye",
       "Enhanced strength and speed",

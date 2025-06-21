@@ -10,12 +10,13 @@ export default function Features(){
     const [myMon, setMyMon] = useState(null);
     const [myEp, setMyEp] = useState(null);
 
-    //length variables
-    const charLength = characters.length;
-    const monLength = monsters.length;
-    const seasonLength = episodes.length;
 
     useEffect(()=>{
+        //length variables
+        const charLength = characters.length;
+        const monLength = monsters.length;
+        const seasonLength = episodes.length;
+
         //to generate and store info for random character:
         const randomChar = () =>{
             const randomSelect = Math.floor(Math.random() * charLength);
