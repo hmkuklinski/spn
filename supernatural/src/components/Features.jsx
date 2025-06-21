@@ -1,35 +1,60 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Feature from "./Feature";
+import {characters} from './characterInfo.js';
+import {monsters} from './monsterInfo.js';
+import {episodes} from './episodeInfo.js';
 
 export default function Features(){
-    const myFeatures = [
-        {
-            feature: "Featured Monster",
-            imgsrc: "",
-            subtitle: "Rakshasa",
-            description: "Rakshasas are evil spirits that are known for their malevolent behavior and desire for chaos. They are known for their ability to change shape at will, appearing as animals, monsters, or beautiful women.",
-            link: "/thelore/rakshasa",
-            linkText: "Check the Lore"
-        },
-        {
-            feature: "Featured",
-            imgsrc: "",
-            subtitle: "",
-            description: "",
-            link: "",
-            linkText: ""
-        },
-        {
-            feature: "Featured",
-            imgsrc: "",
-            subtitle: "",
-            description: "",
-            link: "",
-            linkText: ""
-        },
-    ];
+    //states
+    const [myChar, setMyChar] = useState(null);
+    const [myMon, setMyMon] = useState(null);
+    const [myEp, setMyEp] = useState(null);
+
+    //length variables
+    const charLength = characters.length;
+    const monLength = monsters.length;
+    const seasonLength = episodes.length;
+
+    useEffect(()=>{
+        //to generate and store info for random character:
+        const randomChar = () =>{
+            const randomSelect = Math.floor(Math.random() * charLength);
+            const selected = characters[randomSelect];
+            setMyChar({...selected, feature: "Featured Character", link:`/characters/${selected.id}`, linkText:"Character Profile"});
+
+        }
+        //to generate and store info for random monster:
+        const randomMon = () =>{
+            const randomSelectMon = Math.floor(Math.random() * monLength);
+            const selectedMon = monsters[randomSelectMon];
+            setMyMon({...selectedMon, feature: `Featured Monster`, link:`/monsters/${selectedMon.id}`, linkText:"Check out the Lore"});
+        }
+
+        //to generate and store info for random episode:
+        const randomEp = () =>{
+            const seasonSelected = Math.floor(Math.random()* seasonLength);
+            const season = episodes[seasonSelected];
+            if (!season || !Array.isArray(season.epInfo)) return;
+
+            const numEpisodes = season.epInfo.length;
+            const episodeSelected = Math.floor(Math.random()*numEpisodes);
+            const episode = season.epInfo[episodeSelected];
+
+            setMyEp({...episode, feature:"Featured Episode", linkText:"Visit the Archives"});
+        }
+
+        randomChar();
+        randomMon();
+        randomEp();
+    }, []);
+
+
+    //feature, imgsrc, subtitle, description, link, linkText
     return (
         <div className="features-container">
-
+            <Feature {...myMon} contentType="monster" />
+            <Feature {...myEp} contentType="episode"/>
+            <Feature {...myChar} contentType="character" />
         </div>
     );
 }
