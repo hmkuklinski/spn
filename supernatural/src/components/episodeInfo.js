@@ -9,8 +9,8 @@ export const episodes = [
         epInfo: [
             {id: "s1e1", title:"Pilot", num: "1", photo: "/assets/episodes/season1/s1e1.jpg", description: "Two brothers witness their mother's paranomal death and are trained to fight by their father, who aim to hunt down the thing that killed his wife."},
             {id: "s1e2", title:"Wendigo",num: "2", photo: "/assets/episodes/season1/s1e2.jpg", description: "Sam and Dean follow the coordinates in their father's journal and land in Colorado, where they investigate the disappearance of several campers."},
-            {id: "s1e3", title:"Dead in the Water",num: "3", photo: "/assets/episodes/season1/s1e3jpg", description: "In a small town in Wisconsin, Sam and Dean investigate a series of mysterious drownings officially explained as suicides."},
-            {id: "s1e4", title:"Phantom Traveler",num: "4", photo: "/assets/episodes/season1/s1e4jpg", description: "On United Britannia flight 2485, a man possessed by the spirit of the Phantom Traveler causes the plane to crash, leaving only seven survivors."},
+            {id: "s1e3", title:"Dead in the Water",num: "3", photo: "/assets/episodes/season1/s1e3.jpg", description: "In a small town in Wisconsin, Sam and Dean investigate a series of mysterious drownings officially explained as suicides."},
+            {id: "s1e4", title:"Phantom Traveler",num: "4", photo: "/assets/episodes/season1/s1e4.jpg", description: "On United Britannia flight 2485, a man possessed by the spirit of the Phantom Traveler causes the plane to crash, leaving only seven survivors."},
             {id: "s1e5", title:"Bloody Mary",num: "5", photo: "/assets/episodes/season1/s1e5.png", description: "Several high schoolers dare their friend to look into a mirror and repeat a chant, not knowing that this will unleash a series of mysterious murders."},
             {id: "s1e6", title:"Skin",num: "6", photo: "/assets/episodes/season1/s1e6.png", description: "Sam and Dean help Sam's old college buddy after he is accused of a murder he swears he didn't commit."},
             {id: "s1e7", title:"Hookman",num: "7", photo: "/assets/episodes/season1/s1e7.jpg", description: "In a small town in Iowa, Sam and Dean encounter the infamous \"Hook Man,\" a spirit who kills his victims with a shiny hook that serves as his hand."},
@@ -35,7 +35,8 @@ export const episodes = [
     {
         num:2,title: "Season Two", imgsrc:"/assets/seasons/season2.jpg", photo:"/assets/titlecards/s2.gif",
         description:"Following their father’s death and the revelation of Azazel’s plans, Sam and Dean continue hunting while struggling with the emotional fallout. Sam begins to exhibit strange powers, and they encounter others like him—children with psychic abilities also targeted by Azazel. As the brothers try to stop a demonic war from unfolding, they face the loss of friends and family. Azazel remains the key antagonist, orchestrating a deadly contest that pits the special children against each other.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "22", yearAired: "2006", ratings:"8.6", bodyCount: "" , 
+        // characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "22", yearAired: "2006", ratings:"8.6", bodyCount: "" , 
         epInfo: [
             {id: "s2e1", title:"In My Time of Dying",num: "1", photo: "/assets/episodes/season2/s2e1.jpg", description: "Sam, Dean and John were left for dead after the Demon plowed a truck into the Impala. Now the surviving family members must face a powerful adversary."},
             {id: "s2e2", title:"Everybody Loves a Clown",num: "2", photo: "/assets/episodes/season2/s2e2.jpg", description: "After listening to a message on John's cell phone from a woman named Ellen, Sam and Dean decide to track her down."},
@@ -65,8 +66,8 @@ export const episodes = [
     {
         num:3,title: "Season Three", imgsrc:"/assets/seasons/season3.jpg", photo:"/assets/titlecards/s3.gif",
         description:"After making a deal with a crossroads demon to save Sam’s life, Dean has one year left to live before going to Hell. The brothers desperately search for a way to break the contract. Their quest is made harder by the rise of new threats, including demons freed from Hell by Azazel’s death. Among these is Lilith, a powerful demon who holds Dean’s contract and is systematically eliminating psychic children like Sam.",
-        //Lisa/Ben, Gabriel
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "16", yearAired: "2007", ratings:"8.4", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "16", yearAired: "2007", ratings:"8.4", bodyCount: "" , 
         epInfo: [
             {id: "s3e1", title:"The Magnificent Seven",num: "1", photo: "/assets/episodes/season3/s3e1.jpg", description: "Sam and Dean realize they have an enormous task: hunting down the hundreds of demons that escaped from the Devil's Gate."},
             {id: "s3e2", title:"The Kids are Alright",num: "2", photo: "/assets/episodes/season3/s3e2.jpg", description: "Dean pressures Sam into traveling to Cicero, Ind., so Dean can visit an old flame named Lisa, with whom he had a tryst nine years ago."},
@@ -90,7 +91,8 @@ export const episodes = [
     {
         num:4,title: "Season Four", imgsrc:"/assets/seasons/season4.jpg", photo:"/assets/titlecards/s4.gif",
         description:"Dean is miraculously saved from Hell by Castiel, an angel who brings word of an impending apocalypse. Heaven and Hell wage war on Earth, using humanity as pawns. As Sam becomes addicted to demon blood and aligns with a demon named Ruby, the brothers’ trust fractures. The season builds to a devastating finale in which Lilith’s death—at Sam’s hands—releases Lucifer from his prison, setting the stage for the apocalypse.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "22", yearAired: "2008", ratings:"8.5", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "22", yearAired: "2008", ratings:"8.5", bodyCount: "" , 
         epInfo: [
             {id: "s4e1", title:"Lazarus Rising",num: "1", photo: "/assets/episodes/season4/s4e1.jpg", description: "Dean wakes up in a pine box, freed from Hell. He has a joyful reunion with Sam, but they wonder what pulled Dean from Hell- and why."},
             {id: "s4e2", title:"Are You There, God? It's Me, Dean Winchester",num: "2", photo: "/assets/episodes/season4/s4e2.jpg", description: "Sam and Dean are stunned when the spirits of Meg and Agent Henricksen appear."},
@@ -120,7 +122,8 @@ export const episodes = [
     {
         num:5,title: "Season Five", imgsrc:"/assets/seasons/season5.jpg", photo:"/assets/titlecards/s5.gif",
         description:"Lucifer is free, and the apocalypse is in full swing. Sam and Dean learn they are destined to become vessels for Lucifer and Michael in a final, world-ending showdown. While resisting fate, they search for a way to trap Lucifer again, eventually using the Four Horsemen’s rings to open the cage. With sacrificial courage, Sam takes Lucifer back into the cage, ending the apocalypse. Lucifer is the main antagonist, driving the conflict between destiny and free will.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "22", yearAired: "2009", ratings:"8.8", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "22", yearAired: "2009", ratings:"8.8", bodyCount: "" , 
         epInfo: [
             {id: "s5e1", title:"Sympathy for the Devil",num: "1", photo: "/assets/episodes/season5/s5e1.jpg", description: "Dean and Sam watch as the devil emerges from hell and must deal with the aftermath."},
             {id: "s5e2", title:"Good God, Y'all!",num: "2", photo: "/assets/episodes/season5/s5e2.jpg", description: "While Castiel goes in search of God in the fight against Lucifer, Sam and Dean help an older hunter friend of Bobby's."},
@@ -150,7 +153,8 @@ export const episodes = [
     {
         num:6,title: "Season Six", imgsrc:"/assets/seasons/season6.jpg", photo:"/assets/titlecards/s6.gif",
         description:"The aftermath of the apocalypse leaves the supernatural world in chaos. Sam returns mysteriously from Hell—soulless and emotionally void. Dean, trying to settle into normal life, is pulled back into hunting as new threats emerge, including creatures created by Eve, the Mother of All Monsters. As they face increasingly strange beings, the brothers uncover a plot involving the souls of Purgatory, manipulated by Castiel in his quest to stop Raphael’s plans for another apocalypse.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "22", yearAired: "2010", ratings:"8.3", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "22", yearAired: "2010", ratings:"8.3", bodyCount: "" , 
         epInfo: [
             {id: "s6e1", title:"Exile on Main St.",num: "1", photo: "/assets/episodes/season6/s6e1.jpg", description: "Mysteriously freed from hell, Sam finds Dean and tells him he needs to rejoin the fight."},
             {id: "s6e2", title:"Two and a Half Men",num: "2", photo: "/assets/episodes/season6/s6e2.jpg", description: "Sam investigates a case involving missing babies whose parents are being murdered."},
@@ -180,7 +184,8 @@ export const episodes = [
     {
         num:7,title: "Season Seven", imgsrc:"/assets/seasons/season7.jpg", photo:"/assets/titlecards/s7.gif",
         description:"The Leviathans, ancient creatures predating angels and demons, escape from Purgatory and begin taking over human society. Led by the cunning Dick Roman, they aim to turn humanity into complacent, edible cattle. As Sam suffers hallucinations and Dean spirals into despair, the brothers struggle to find a way to stop beings that can’t be killed by conventional means. The Leviathans become the most difficult and alien threat they’ve faced yet.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "23", yearAired: "2011", ratings:"8.0", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "23", yearAired: "2011", ratings:"8.0", bodyCount: "" , 
         epInfo: [
             {id: "s7e1", title:"Meet the New Boss",num: "1", photo: "/assets/episodes/season7/s7e1.jpg", description: "Assuming his new role as God, Castiel sets out to right some of the wrongs in the world. And Dean decides to bind Death in order to stop him."},
             {id: "s7e2", title:"Hello, Cruel World",num: "2", photo: "/assets/episodes/season7/s7e2.jpg", description: "While Castiel struggles with the burdens of his absolute power, the broken psychological wall in Sam's mind leaves him unable to discern what is real."},
@@ -211,7 +216,8 @@ export const episodes = [
     {
         num:8,title: "Season Eight", imgsrc:"/assets/seasons/season8.jpg", photo:"/assets/titlecards/s8.gif",
         description:"After being trapped in Purgatory, Dean returns with a vampire ally, while Sam has tried to live a normal life. The brothers reunite to search for the Men of Letters' legacy, which leads them to the trials needed to close the gates of Hell permanently. As Sam completes each trial, it takes a physical toll on him. The season focuses on trust, sacrifice, and the brothers’ evolving roles. Abaddon, a resurrected Knight of Hell, emerges as a significant threat.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "23", yearAired: "2012", ratings:"8.3", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "23", yearAired: "2012", ratings:"8.3", bodyCount: "" , 
         epInfo: [
             {id: "s8e1", title:"We Need to Talk About Kevin",num: "1", photo: "/assets/episodes/season8/s8e1.jpg", description: "After escaping from Purgatory (but not alone), Dean heads straight for Sam, but the reunion isn't exactly everything he imagined it would be."},
             {id: "s8e2", title:"What's Up, Tiger Mommy?",num: "2", photo: "/assets/episodes/season8/s8e2.jpg", description: "Checking in on Kevin's mom, the Winchesters discover that Crowley has surrounded her with demons, so they save her and take her along on their quest."},
@@ -242,7 +248,8 @@ export const episodes = [
     {
         num:9,title: "Season Nine", imgsrc:"/assets/seasons/season9.jpg", photo:"/assets/titlecards/s9.gif",
         description:"With the gates of Heaven closed and angels cast out, chaos reigns. Dean, desperate to save a dying Sam, allows an angel named Gadreel to possess him, straining their relationship. Meanwhile, the Mark of Cain gives Dean incredible power at a cost. Metatron, Heaven’s former scribe, manipulates events to gain power and declare himself the new God. The season ends with Dean dying and resurrecting as a demon, thanks to the Mark.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "23", yearAired: "2013", ratings:"8.0", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "23", yearAired: "2013", ratings:"8.0", bodyCount: "" , 
         epInfo: [
             {id: "s9e1", title:"I Think I'm Gonna Like It Here",num: "1", photo: "/assets/episodes/season9/s9e1.jpg", description: "Devastated by Sam's collapse, Dean makes a pact with Ezekiel while his brother fights to live. Meanwhile, Castiel struggles to survive without powers."},
             {id: "s9e2", title:"Devil May Care",num: "2", photo: "/assets/episodes/season9/s9e2.jpg", description: "Dean shocks Sam when he opens the Impala's trunk to reveal he's kidnapped the King of Hell. Meanwhile, Abaddon rises with plans to take over his role."},
@@ -273,7 +280,8 @@ export const episodes = [
     {
         num:10,title: "Season Ten", imgsrc:"/assets/seasons/season10.jpg", photo:"/assets/titlecards/s10.gif",
         description:"Dean battles the effects of the Mark of Cain, which turns him increasingly violent. Sam searches for a cure while Castiel deals with dwindling grace. Crowley’s alliances shift as the brothers clash with Rowena, a powerful witch and Crowley’s mother. The Mark’s true origin is revealed to be tied to an ancient entity called the Darkness. Removing the Mark unleashes this being, setting up an even more powerful adversary.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "23", yearAired: "2014", ratings:"8.2", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "23", yearAired: "2014", ratings:"8.2", bodyCount: "" , 
         epInfo: [
             {id: "s10e1", title:"Black",num: "1", photo: "/assets/episodes/season10/s10e1.jpg", description: "Sam's frantic search for his brother takes him down dangerous paths, while Dean lives it up with Crowley and Castiel faces his own mortality."},
             {id: "s10e2", title:"Reichenbach",num: "2", photo: "/assets/episodes/season10/s10e2.jpg", description: "As Dean spins out of control, Crowley reaches out to Sam for help. Meanwhile, a man with a grudge plots revenge on Dean."},
@@ -303,7 +311,8 @@ export const episodes = [
     {
         num:11,title: "Season Eleven", imgsrc:"/assets/seasons/season11.jpg", photo:"/assets/titlecards/s11.gif",
         description:"The Darkness, now known as Amara, emerges and threatens to destroy the universe. She is God’s sister and seeks revenge for her imprisonment. As Amara grows in power, even angels and demons prove powerless. The Winchesters attempt to find God—revealed to be Chuck Shurley—and convince him to help. The season becomes a cosmic family drama between Chuck and Amara, leading to a fragile truce that restores balance to the universe.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "23", yearAired: "2015", ratings:"8.3", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "23", yearAired: "2015", ratings:"8.3", bodyCount: "" , 
         epInfo: [
             {id: "s11e1", title:"Out of the Darkness, Into the Fire",num: "1", photo: "/assets/episodes/season11/s11e1.jpg", description: "After releasing the Darkness, Sam and Dean encounter a mysterious new entity who's more powerful than any angel."},
             {id: "s11e2", title:"Form and Void",num: "2", photo: "/assets/episodes/season11/s11e2.jpg", description: "Crowley seems to have plans for baby Amara, who displays startling powers. An infected Sam races to find a cure for the toxic fallout of the Darkness."},
@@ -333,7 +342,8 @@ export const episodes = [
     {
         num:12,title: "Season Twelve", imgsrc:"/assets/seasons/season12.jpg", photo:"/assets/titlecards/s12.gif",
         description:"The British Men of Letters arrive in America, enforcing a ruthless approach to hunting. Meanwhile, Mary Winchester is resurrected and struggles to reconnect with her sons. The season focuses on family, legacy, and the cost of war. Lucifer returns and becomes a father, with his Nephilim child Jack becoming a key point of contention. The Winchesters face new enemies and painful sacrifices as alliances fracture.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "23", yearAired: "2016", ratings:"7.9", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "23", yearAired: "2016", ratings:"7.9", bodyCount: "" , 
         epInfo: [
             {id: "s12e1", title:"Keep Calm and Carry On",num: "1", photo: "/assets/episodes/season12/s12e1.jpg", description: "As Crowley conducts a desperate search for Lucifer's vessel, Dean must come to grips with an unbelievable sight: the return of his mother."},
             {id: "s12e2", title:"Mamma Mia",num: "2", photo: "/assets/episodes/season12/s12e2.jpg", description: "A reluctant Dean brings Mary along on a mission to rescue Sam. Crowley receives word that Lucifer has possessed the body of an aging rock star."},
@@ -363,7 +373,8 @@ export const episodes = [
     {
         num:13,title: "Season Thirteen", imgsrc:"/assets/seasons/season13.jpg", photo:"/assets/titlecards/s13.gif",
         description:"In the aftermath of Lucifer’s death and the birth of his son Jack, the brothers must guide the powerful Nephilim while navigating their grief over Castiel’s death. They discover an alternate universe where archangel Michael has conquered and seeks to invade their world. As Jack grows and grapples with his powers, the team faces tough choices to prevent another apocalypse. Alternate Michael becomes the season’s central antagonist.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "23", yearAired: "2017", ratings:"7.8", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "23", yearAired: "2017", ratings:"7.8", bodyCount: "" , 
         epInfo: [
             {id: "s13e1", title:"Lost and Found",num: "1", photo: "/assets/episodes/season13/s13e1.jpg", description: "Sam and Dean pursue Lucifer's son as he adjusts to his new earthly existence. But they aren't the only ones searching for him."},
             {id: "s13e2", title:"The Rising Son",num: "2", photo: "/assets/episodes/season13/s13e2.jpg", description: "Sam and Dean test Jack's powers further. The fourth prince of Hell fills in for Lucifer while he and Mary are stuck in Apocalypse World."},
@@ -393,7 +404,8 @@ export const episodes = [
     {
         num:14,title: "Season Fourteen", imgsrc:"/assets/seasons/season14.jpg", photo:"/assets/titlecards/s14.gif",
         description:"Michael from the alternate universe possesses Dean and launches a campaign to create a monstrous army. Jack loses his powers and later sacrifices his soul to regain them. As tensions rise and Jack’s morality falters, the lines between good and evil blur. Chuck (God) reemerges, revealing himself as a manipulative creator who sees the Winchesters’ lives as entertainment. The season ends with Chuck turning against the brothers, unleashing Hell on Earth.", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "20", yearAired: "2018", ratings:"7.5", bodyCount: "" , 
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "20", yearAired: "2018", ratings:"7.5", bodyCount: "" , 
         epInfo: [
             {id: "s14e1", title:"Stranger in a Strange Land",num: "1", photo: "/assets/episodes/season14/s14e1.jpg", description: "Sam coordinates efforts in the search for his brother. Jack struggles to adapt to life as a human. Castiel tries to get more intel on Dean from a demon."},
             {id: "s14e2", title:"Gods and Monsters",num: "2", photo: "/assets/episodes/season14/s14e2.jpg", description: "As Sam, Mary and Bobby look into a new clue, Nick seeks a killer from his past while Jack searches for a sense of family."},
@@ -421,8 +433,9 @@ export const episodes = [
     {
         num:15,title: "Season Fifteen", imgsrc:"/assets/seasons/season15.jpg", photo:"/assets/titlecards/s15.gif",
         description:"The final season pits Sam and Dean against God himself, who aims to destroy all alternate realities and start fresh. The brothers face an army of the dead, old enemies, and cosmic uncertainty. As they search for a way to defeat Chuck, they’re forced to question fate and free will. Jack ultimately becomes the new God, restoring balance. Dean sacrifices his life in a final hunt, and Sam lives out a long life before reuniting with Dean in the afterlif", 
-        characterIntros: [{id:"", name:"",text:""}], epNumbers: "20", yearAired: "2019", ratings:"7.4", bodyCount: "" , 
-        eepInfo: [
+        //characterIntros: [{id:"", name:"",text:""}], 
+        epNumbers: "20", yearAired: "2019", ratings:"7.4", bodyCount: "" , 
+        epInfo: [
             {id: "s15e1", title:"Back to the Future",num: "1", photo: "/assets/episodes/season15/s15e1.jpg", description: "Sam, Dean and Castiel reluctantly team up with a demon inhabiting Jack's body to battle an army of undead souls that includes some infamous killers."},
             {id: "s15e2", title:"Raising Hell",num: "2", photo: "/assets/episodes/season15/s15e2.jpg", description: "The Winchesters get some much-needed reinforcements as they try to ward off evil spirits from a small Kansas town. Chuck seeks out Amara in Reno."},
             {id: "s15e3", title:"The Rupture",num: "3", photo: "/assets/episodes/season15/s15e3.jpg", description: "With their defenses crumbling, Sam, Dean, Castiel and Rowena take bold steps to send the spirits back to hell- but their efforts come at a high price."},

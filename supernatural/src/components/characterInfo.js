@@ -110,7 +110,7 @@ export let characters= [
 
     //ANGELS AND CELESTIALS --------------------------------------------------------
     //CASTIEL
-    {name: "Castiel", id: "castiel",type:"angel", description:"An angel who first appears when he pulls Dean out of Hell. At first emotionless and obedient, Cas becomes one of the brothers' closest friends, questioning Heaven's orders and often rebelling for the sake of humanity—especially for the Winchesters.",
+    {name: "Castiel", id: "castiel",type:"angel", description:"An angel who first appears when he pulls Dean out of Hell. At first emotionless and obedient, Cas becomes one of the brothers' closest friends, questioning Heaven's orders and often rebelling for the sake of humanity.",
         imgsrc: "/assets/characters/castiel.gif",
         species: "Angel", status: "Dead", occupation: "", age: "Ancient", nicknames: "Cas (Dean), Clarence (Meg), Feathers (Crowley)", relationships: "God (Father), Angels (Siblings), Jack Kline (nephew)", catchphrase: "Hey, Assbutt.", strengths: "Strength, Healing, Loyalty", weaknesses: "The Winchester Brothers", 
         quotes: [{id: 1, text: "I'm the one who gripped you tight and raised you from perdition."}, {id: 2, text: "I'm hunted. I rebelled. I did all of it, for you."}, {id:3, text:"This isn't funny, Dean. The voice says I'm almost out of minutes."}], 

@@ -113,9 +113,9 @@ export default function Glossary(props){
                 <p>3. <b>To Turn the Page:</b> Click the edge of the page! (just like a real book!)</p>    
             </div>}
             <JohnsJournal prevPageLink={null} nextPageLink={nextPageLink}>
-                <div className="left-page">
+                <div className="left-page" id="glossary-left">
                     <div className="glossary-title">
-                    <h2>{props.title}</h2>
+                        <h2>{props.title}</h2>
                     </div>
                     <div className="glossary-image">
                         <img src={props.imgsrc} alt={props.title} />

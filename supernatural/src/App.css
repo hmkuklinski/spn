@@ -30,20 +30,27 @@
 /* flex center column format*/
 .layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, 
 .return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer, .season-container, .season-text,
-.season-title, .char-updates, .update-container, .char-intros, .intro-container, .char-deaths, .updates, .spoilers{
+.season-title, .char-updates, .update-container, .char-intros, .intro-container, .char-deaths, .updates, .spoilers, #glossary-left, #glossary-right,
+.feature-container, .feature-subtitle, .feature-button, #warning{
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+#glossary-left, #glossary-right{
+  justify-content:flex-start;
+}
 /* flex center row format*/
-.home-banner, .information, .journal-container, .pages, .info-section, .info, .search-container, .info-slogan{
+.home-banner, .information, .journal-container, .pages, .info-section, .info, .search-container, .info-slogan,
+.features-container,.episode-container{
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
-
+.layout-container{
+  height: 100%;
+}
 body{
   margin: 0;
 }
@@ -84,18 +91,18 @@ button:hover{
   font-family: "Julius Sans One";
   display: flex;
   justify-content:flex-start;
-  align-items:stretch;
+  align-items:center;
   gap: 1rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   width: 100%;
 }
 /* styling for unordered list element */
 .nav ul{
-  padding: 10px;
+  padding: 5px;
   margin:0;
   list-style:none;
   display:flex;
-  gap: 4rem;
+  gap: 2rem;
 }
 /* styling for the active page on navbar*/
 .nav .active{
@@ -118,8 +125,8 @@ button:hover{
 
 /* styling for navbar logo*/
 .nav img{
-  width: 160px;
-  height: 100px;
+  width: 100px;
+  height: 70px;
 }
 
 /*---------------------------- Main Container Formatting ----------------------------*/
@@ -130,8 +137,9 @@ button:hover{
 /*---------------------------- Home Landing Formatting ----------------------------*/
 /* entire home landing (impala + information) */
 .home-banner{
-  gap: 1.2rem;
+  /* gap: 1.2rem; */
   padding: 8px;
+  width: 100%;
 }
 /* for the impala box and image- left side of landing*/
 .impala{
@@ -150,6 +158,9 @@ button:hover{
   font-family: "Julius Sans One";
   text-align: center;
 }
+.page-logo{
+  width: 100%;
+}
 /* for supernatural title on landing*/
 .page-logo img{
   width: 100%;
@@ -163,40 +174,30 @@ button:hover{
 
 /*---------------------------- Features Section Formatting ----------------------------*/
 .features-container{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:row;
   margin: 20px 0px;
-  height: 600px;
+  height: 650px;
   padding: 10px;
   border-radius: 12px;
 }
 .feature-container{
-  width: 30%;
+  width: 32%;
   margin: 0px 20px;
-  display:flex;
-  align-items:center;
   justify-content:flex-start;
-  flex-direction:column;
   font-family: "Julius Sans One";
   height: 100%;
   border-radius: 13px;
-  padding: 10px;
+  padding: 6px;
 }
 .feature-content{
-  height: 45%;
+  height: 40%;
   padding: 15px;
 }
 .feature-subtitle h2{
   text-decoration: underline;
+  font-size: 18px;
 }
 .feature-subtitle{
   width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
   text-align:center;
 }
 
@@ -210,12 +211,12 @@ button:hover{
 }
 .feature-description{
   text-align:center;
+  padding: 0px 8px;
+}
+.feature-description p{
+  font-size: 13px;
 }
 .feature-button{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
   width: 100%;
   margin-top: 13px;
 }
@@ -224,13 +225,13 @@ button:hover{
 }
 
 /*---------------------------- John's Journal Formatting ----------------------------*/
+
 .journal-container{
   position:relative;
   width: 100%;
-  margin: 10px;
-  gap: 2rem;
-  height: 138vh;
-  padding: 7px;
+  margin: 10px 0px;
+  /* min-height: 138vh; */
+  /* padding: 7px; */
 }
 
 /* container that holds left and right pages*/
@@ -240,11 +241,14 @@ button:hover{
   background-position: center;
   position: relative;
   display: flex;
-  gap: 3rem;
-  height: 100%;
-  width:90%;
+  align-items:stretch;
+  gap: 1.4rem;
+  height: auto;
+  margin: 10px 10px 80px 10px;
+  width:93%;
   border-radius: 13px;
   background-color: var(--johns-journal);
+  
 }
 /* formatting to make pages look like lined paper*/
 .left-page, .right-page{
@@ -255,9 +259,10 @@ button:hover{
     #c8c8c8 24px
   );
   width: 50%;
-  height: 95%;
+  height: auto;
+  flex: 1;
   position: relative;
-  padding: 0px 32px 15px 32px;
+  padding: 20px;
   flex-wrap: wrap;
   font-family: 'Grape Nuts', monospace;
   line-height: 23px;
@@ -266,9 +271,11 @@ button:hover{
 .left-page, .right-page{
   box-shadow:4px 4px 0px #222222;
   border-radius: 2px #222;
-  
+  display:flex;
+  align-items:center;
 }
 
+/* formatting for navigation arrows*/
 .page-nav {
   position: absolute;
   bottom: 20px;
@@ -291,21 +298,6 @@ button:hover{
   right: 60px;
 }
 
-
-
-/* ---------------------------- Page Navigation Formatting ----------------------------*/
-.pagebtn-container{
-  background-color: var(--main-color);
-  border-radius: 100%;
-  height: 80px;
-  width: 80px;
-  margin: 2px 15px;
-  cursor:pointer;
-}
-ion-icon{
-  color: black;
-  font-size: 30px;
-}
 
 /* ----------------------------Journal Page Content Formatting ----------------------------*/
 .info-section{
@@ -402,8 +394,8 @@ ion-icon{
   margin: 10px 3px;
 }
 .glossary-image img{
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 .glossary-title, .glossary-description{
   text-align: center;
@@ -415,12 +407,9 @@ ion-icon{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 20px;
-  width: 100%;
-  padding-left: 30px;
+  width: 90%;
   box-sizing: border-box;
 }
-
-
 /*---------------------------- Character Formatting---------------------------- */
 .character-img img{
   width: 100%;
@@ -433,10 +422,6 @@ ion-icon{
 
 /*---------------------------Search Failed Formatting ---------------------------*/
 #warning{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   position: absolute;
   top: 30%;
   left: 25%;
@@ -571,9 +556,12 @@ ion-icon{
 }
 
 /*---------------------------- Seasons Formatting---------------------------- */
+.season-titlecard{
+  width: 85%;
+}
 .season-titlecard img{
-  width: 200px;
-  height: 110px;
+  width: 100%;
+  height: 100%;
 }
 .season-container{
   height: 150px;
@@ -585,7 +573,6 @@ ion-icon{
   width:100%;
 }
 .seasons2{
-  margin-top: 80px;
   padding-left: 10px;
 }
 .season-text{
@@ -593,6 +580,14 @@ ion-icon{
   width: 100%;
   text-align:center;
   height: 30px;
+}
+.seasons-description p{
+  margin:0;
+}
+.seasons-description{
+  width: 100%;
+  margin: 25px 0px 0px 0px;
+  text-align:center;
 }
 /*---------------------------- Seasons Sumnmary Formatting---------------------------- */
 .season-gif img{
@@ -646,4 +641,348 @@ ion-icon{
 
 .char-text{
   font-size: 18px;
+}
+
+/*---------------------------- For Episode Preview Page---------------------------- */
+.episode-container{
+  height: auto;
+  margin: 12px 0px;
+}
+
+.episode-content{
+  font-size: 15px;
+  padding: 0px 15px;
+  width: 63%;
+}
+.episode-length p{
+  margin:0;
+  padding: 5px;
+}
+.episode-preview{
+  width: 35%;
+  height: 100%;
+}
+.episode-preview img{
+  width: 100%;
+  height: 100%;
+}
+.episode-title{
+  text-decoration:underline;
+}
+.episode-title h2{
+  margin:0;
+}
+
+/* season selection formatting!*/
+.season-selection {       
+  position:relative;    
+  margin: 0 auto;
+}
+
+
+.dropdown-button {
+  font-family: "Grape Nuts";
+  display: flex;              
+  align-items: center;        
+  justify-content: center; 
+  gap: 14px;                   
+  border: none;
+  padding: 8px 16px;
+  font-size: 27px;
+  cursor: pointer;
+  height: 50px;
+  background-color:transparent;
+  color:black;
+}
+.dropdown-button:hover{
+  background-color:transparent;
+}
+
+
+.dropdown-options {
+  font-family: "Grape Nuts";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  font-size: 18px;
+}
+
+.dropdown-option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+.dropdown-arrow{
+  margin-top: 15px;
+}
+
+/*--------------- MOBILE FORMATTING ------------------------------*/
+/* FOR THE NAVBAR!! */
+.nav-mobile{
+  margin-top: 10px;
+  display:none;
+  align-items:center;
+  justify-content:stretch;
+  flex-direction:row;
+  background-image:url('https://oyster.ignimgs.com/wordpress/stg.ign.com/2013/05/SPNbrosB_050213_1600.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  min-height: 160px;
+}
+
+.nav-button{
+  width: 30%;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  z-index: 100;
+}
+.nav-options{
+  display:flex;
+  align-items:center;
+  justify-content:center; 
+  font-family: "Julius Sans One";
+  width: 100%;
+  position: absolute;
+  top: 160px;
+  left: 0px;
+  z-index: 100;
+  background-color:whitesmoke;
+}
+.nav-options ul{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  list-style:none;
+}
+.nav-options li{
+  cursor:pointer;
+  padding: 10px;
+  gap: 4rem;
+  text-align:center;
+  width: 50%;
+}
+.nav-options li a{
+  color: #333;
+  text-decoration:none;
+}
+.nav-options li:hover{
+  transition: 0.4s ease-in;
+}
+.nav-options li a:hover{
+  color: var(--nav-active);
+}
+.nav-options li .active{
+  color: var(--nav-hover);
+}
+.hamburger{
+  width: 100%;
+  background:none;
+  border:none;
+  color: whitesmoke;
+}
+.hamburger:hover{
+  transition: 0.6s ease-in;
+  background-color: transparent;
+  color: var(--nav-hover);
+}
+
+
+
+@media (max-width: 768px){
+  .nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  .main-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    width: 100%;
+  }
+  /* formatting for the home landing!*/
+  .impala{
+    display:none;
+  }
+  .information, .info-banner, .subtitle, .text{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+  }
+  .page-logo img{
+    width: 85%;
+  }
+  .text{
+    text-align:center;
+    font-size: 20px;
+    padding: 0px 10px;
+  }
+  /* featured section formatting*/
+  .features-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    height: auto;
+    background-color: var(--main-color);
+  }
+  .feature-container{
+    margin: 20px 0px;
+    width:95%;
+  }
+  .feature-button button{
+    font-size: 17px;
+    width: 100%;
+  }
+  .feature-description p{
+    font-size: 17px;
+  }
+  .feature-subtitle h2{
+    font-size: 20px;
+  }
+  .feature-title h2{
+    font-size: 22px;
+  }
+  .feature-image{
+    height: 20%;
+  }
+  .feature-image img{
+    height:100%;
+  }
+  /* for the episode formatting*/
+  .seasons{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    width: 90%;
+    padding: 0px;
+    box-sizing:border-box;
+    
+  }
+  .seasons-mobile{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    font-family: 'Grape Nuts', monospace;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #fdf6e3,
+      #fdf6e3 23px,
+      #c8c8c8 24px
+    );
+  }
+  #jj{
+    height:auto;
+    margin-bottom: 100px;
+  }
+  .pages{
+    flex-direction:column;
+  }
+  .left-page, .right-page{
+    width: 96%;
+    margin-bottom: 0px;
+  }
+  .right-page{
+    margin-bottom: 50px;
+  }
+  /* formatting for navigation arrows*/
+  .page-nav {
+    position: absolute;
+    bottom: 0px;
+    width: 50px;
+  }
+  .bottom-left {
+    left: 60px;
+    z-index: 100;
+  }
+  .bottom-right {
+    right: 60px;
+  }
+  .bottom-middle {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  .episode-container{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:row;
+    height: auto;
+    margin: 12px 0px;
+  }
+  .episode-title h2{
+    font-size: 18px;
+  }
+  .episode-length p{
+    font-size: 12px;
+  }
+  /*formatting for seasons section*/
+  .info-section{
+    flex-direction:column;
+  }
+  .info{
+    width: 100%;
+    margin: 5px 0px;
+  }
+  .glossary-ul{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+  }
+  .glossary-li{
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 450px){
+  .seasons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    width: 100%;
+  }
+  .season-container{
+    width: 75%;
+    margin: 5px 0px;
+    height: 200px;
+
+  }
+  .season-titlecard{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    width: 100%;
+  }
+  .season-titlecard img{
+    height: 150px;
+    width: 100%;
+  }
+  
 }

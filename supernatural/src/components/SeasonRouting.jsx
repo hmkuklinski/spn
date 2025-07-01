@@ -1,5 +1,5 @@
 //this component allows for the navigation between pages once user reaches seasons/1 through seasons/15
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import SeasonInfo from './SeasonInfo';
 import JohnsJournal from './JohnsJournal';
 import Layout from './Layout';
@@ -26,10 +26,16 @@ export default function SeasonRouting() {
         ? `/seasons/${seasonNum + 2}` 
         : "/seasons/redirect";
 
+      const homeBtn = (
+        <Link to="/seasons" className="page-nav bottom-middle" aria-label="Next page">
+            <ion-icon name="home-outline"></ion-icon>
+        </Link>
+    );
     return (
         <Layout>
             <JohnsJournal prevPageLink={prevLink} nextPageLink={nextLink}>
                 <SeasonInfo num={seasonNum} />
+                {homeBtn}
             </JohnsJournal>
         </Layout>
     );

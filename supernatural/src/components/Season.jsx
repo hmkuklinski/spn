@@ -2,11 +2,18 @@
 
 import { useNavigate } from "react-router-dom";
 
-export default function Season({ seasonNumber, imgsrc, num }) {
+export default function Season({ seasonNumber, imgsrc, num, isEpisodes}) {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/seasons/${num}`);
+        
+        if(isEpisodes){
+            navigate(`/episodes/season${num}`);
+
+        }
+        else{
+            navigate(`/seasons/${num}`);
+        }
     };
     return (
         <div className="season-container" onClick={handleClick}>

@@ -1,21 +1,58 @@
 //takes title, imgsrc, description, majorUpdates, characterIntros, epNumbers, yearAired, totalMonsters, bodyCount
 import { episodes } from "./episodeInfo";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function SeasonInfo({num}){
     const myEp = episodes[num];
     const [showDeaths, setShowDeaths] = useState(false);
     const [showUpdates, setShowUpdates] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); 
+    const navigate = useNavigate();
 
     useEffect(()=>{
         setShowDeaths(false);
         setShowUpdates(false);
     }, [num]);
+
+        //function to know state of whether the selection menu is open:
+    const handleToggle = () => setIsOpen((prev) => !prev);
+
+    //navigate to correct episodes page of desired selection:
+    const handleSeasonSelect = (num) => {
+        navigate(`/seasons/${num}`);
+        setIsOpen(false); //close it
+    };
+
+    
+    const seasonDropdown = (
+        <div className="season-selection2">
+            <button className="dropdown-button" onClick={handleToggle}>
+                <span className="dropdown-text">Season {num+1}</span>
+                <span className="dropdown-arrow"><ion-icon name="chevron-down-outline"></ion-icon></span>
+            </button>
+
+            {isOpen && (
+                <ul className="dropdown-options">
+                {episodes.map((ep) => (
+                    <li
+                    key={ep.num}
+                    className="dropdown-option"
+                    onClick={() => handleSeasonSelect(ep.num)}
+                    >
+                    Season {ep.num}
+                    </li>
+                ))}
+                </ul>
+            )}
+        </div>
+    );
+
+
     return (
         <div className="pages">
             <div className="left-page">
                 <div className="season-title">
-                    <h2>{myEp.title}</h2>
+                    {seasonDropdown}
                 </div>
                 <div className="season-info">
                     <p>{myEp.description}</p>
@@ -35,7 +72,6 @@ export default function SeasonInfo({num}){
                     ))}
                 </div>
                 )}
-{/* 
                 {Array.isArray(myEp.majorUpdates) && (
                 <div className="char-section" id="intros">
                     <div className="char-title">
@@ -58,10 +94,7 @@ export default function SeasonInfo({num}){
                     </>
                     )}
                 </div>
-                )} */}
-
-                
-
+                )}
             </div>
             <div className="right-page">
                 <div className="season-gif">
@@ -108,6 +141,7 @@ export default function SeasonInfo({num}){
                 </div>
                 )}
             </div>
+            
         </div>
     );
 }
