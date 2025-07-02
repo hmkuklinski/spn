@@ -25,7 +25,7 @@ export default function SeasonInfo({num}){
 
     
     const seasonDropdown = (
-        <div className="season-selection2">
+        <div className="season-selection" id="seasoninfo-selection">
             <button className="dropdown-button" onClick={handleToggle}>
                 <span className="dropdown-text">Season {num+1}</span>
                 <span className="dropdown-arrow"><ion-icon name="chevron-down-outline"></ion-icon></span>
