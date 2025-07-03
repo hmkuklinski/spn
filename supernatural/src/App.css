@@ -259,7 +259,6 @@ button:hover{
     #c8c8c8 24px
   );
   width: 50%;
-  height: auto;
   flex: 1;
   position: relative;
   padding: 20px;
@@ -506,8 +505,8 @@ button:hover{
   height: auto;
 }
 .gallery-img img{
-  width: 200px;
-  height: 130px;
+  width: 100%;
+  height: 120px;
 }
 /* caption formatting for both photos*/
 .gallery-caption, .gallery-image.portrait .gallery-caption{
@@ -521,7 +520,7 @@ button:hover{
 }
 /* caption formatting for portrait photo*/ 
 .gallery-image.portrait .gallery-caption{
-  height: 15%;
+  height: 10%;
 }
 /* formatting for portrait photo's photo*/
 .gallery-image.portrait .gallery-img img {
@@ -915,6 +914,7 @@ button:hover{
   }
   .right-page{
     margin-bottom: 50px;
+    padding: 20px 5px;
   }
   /* formatting for navigation arrows*/
   .page-nav {
@@ -968,6 +968,13 @@ button:hover{
   .info-quotes h4{
     width: 100%;
   }
+  .gallery-redirect{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
 }
 
 
