@@ -1,112 +1,58 @@
-import React from "react";
+import InfoDiv from "./InfoDiv";
 
 export default function Character(props){
+    //for the title of the page:
+    const charTitle = (
+        <div className="character-title">
+            <h1>{props.name}</h1>
+        </div>
+    );
+    //an image of the character:
+    const charImg = (
+        <div className="character-img">
+            <img src={props.imgsrc} alt={props.name}/>
+        </div>
+    );
+
+    //variables that hold my infodiv components for each stat/information/quote:
+    const speciesDiv = <InfoDiv title="Species" text={props.species} infoType="short"/>;
+    const statusDiv = <InfoDiv title="Status" text={props.status} infoType="short" />;
+    const ageDiv = <InfoDiv title="Age" text={props.age} infoType="short" />;
+    const nicknameDiv = <InfoDiv title="Nicknames" text={props.nicknames} infoType="long" />;
+    const occupationHunterDiv = <InfoDiv title="Occupation" text={props.occupation} infoType="short" />;
+    const occupationDiv = <InfoDiv title="Occupation" text={props.occupation} infoType="long" />;
+    const relationshipDiv = <InfoDiv title="Relationships" text={props.relationships} infoType="long" />;
+    const actorDiv = <InfoDiv title="Actor" text={props.actor} infoType="shortSpaced" />;
+    const catchphraseDiv = <InfoDiv title="Slogan" text={props.catchphrase} infoType="shortSpaced" />;
+    const strengthsDiv = <InfoDiv title="Strengths" text={props.strengths} infoType="long" />;
+    const weaknessesDiv = <InfoDiv title="Weaknesses" text={props.weaknesses} infoType="long" />;
+    const quotesDiv = <InfoDiv title="Memorable Quotes" quoteFacts={props.quotes} infoType="quotes" />;
+    const deathsDiv = <InfoDiv title="Total Deaths" stat={props.totalDeaths} hasDeaths={props.deaths} deaths={props.deaths} infoType="deaths"/>;
+    const factsDiv = <InfoDiv title="Interesting Facts" quoteFacts={props.funfacts} infoType="facts" />;
+
     return (
         <div className="pages">
             <div className="left-page">
-                <div className="character-title">
-                    <h1>{props.name}</h1>
-                </div>
-                <div className="character-img">
-                    <img src={props.imgsrc} alt={props.name}/>
-                </div>
+                {charTitle}
+                {charImg}
                 <div className="info-section">
-                    <div className="info">
-                        <div className="info-title"><h4>Species: </h4></div>
-                        <div className="info-answer">{props.species}</div>
-                    </div>
-                    <div className="info">
-                        <div className="info-title"><h4>Status: </h4></div>
-                        <div className="info-answer">{props.status}</div>
-                    </div>
-                    <div className="info">
-                        <div className="info-title"><h4>Age: </h4></div>
-                        <div className="info-answer">{props.age}</div>
-                    </div>
-                    {props.occupation &&  props.occupation === "Hunter" && (
-                    <div className="info">
-                        <div className="info-title"><h4>Occupation: </h4></div>
-                        <div className="info-answer">{props.occupation}</div>
-                    </div>
-                    )}
-                    
-                    
+                    {speciesDiv}
+                    {statusDiv}
+                    {ageDiv}
+                    {props.occupation &&  props.occupation === "Hunter" && occupationHunterDiv}
                 </div>
-                {props.occupation && props.occupation !== "Hunter" && (
-                    <div className="info-long">
-                        <div className="info-title2"><h4>Occupation: </h4></div>
-                        <div className="info-answer-long">{props.occupation}</div>
-                    </div>
-                )}
-                {props.nicknames && (
-                    <div className="info-long">
-                        <div className="info-title2"><h4>Nicknames: </h4></div>
-                        <div className="info-answer-long">{props.nicknames}</div>
-                    </div>
-                )}
-                <div className="info-slogan">
-                        <div className="info-title"><h4>Actor: </h4></div>
-                        <div className="info-answer">{props.actor}</div>
-                    </div>  
-                {props.catchphrase && (
-                    <div className="info-slogan">
-                        <div className="info-title"><h4>Slogan</h4></div>
-                        <div className="info-answer">{props.catchphrase}</div>
-                    </div>
-                )}
-                
+                {props.occupation && props.occupation !== "Hunter" && occupationDiv}
+                {props.nicknames && nicknameDiv}
+                {actorDiv}
+                {props.catchphrase &&  catchphraseDiv}
             </div>
             <div className="right-page">
-                <div className="info-long">
-                    <div className="info-title2"><h4>Relationships: </h4></div>
-                    <div className="info-text">{props.relationships}</div>
-                </div> 
-                
-                <div className="info-long">
-                    <div className="info-title2"><h4>Strengths: </h4></div>
-                    <div className="info-answer-long">{props.strengths}</div>
-                </div> 
-                <div className="info-long">
-                    <div className="info-title2"><h4>Weaknesses: </h4></div>
-                    <div className="info-answer-long">{props.weaknesses}</div>
-                </div> 
-                <div className="info-quotes">
-                    <div className="info-title2"><h4>Memorable Quotes: </h4></div>
-                    <div className="info-quotes-text">
-                        <ul>
-                        {props.quotes.map((quote)=>(
-                            <li key={quote.id}>"{quote.text}"</li>
-        
-                        ))}
-                        </ul>
-                    </div>
-                </div> 
-                <div className="info-long" style={{ height: !props.deaths ? "150px" : "auto" }}>
-                    <div className="info-title2"><h4>Total Deaths: {props.totalDeaths}</h4></div>
-                    {props.deaths && (
-                        <div className="info-text">
-                            <p>{props.deaths.map(death => death.text).join(', ')}</p>
-                        </div>
-                    )}
-                </div> 
-                {props.funfacts && (
-                    <div className="info-quotes">
-                        <div className="info-title2"><h4>Interesting Facts: </h4></div>
-                        <div className="info-quotes-text">
-                            <ul>
-                            {props.funfacts.map((fact)=>(
-                                <li key={fact.id}>{fact.id}. {fact.text}</li>
-            
-                            ))}
-                            </ul>
-                        </div>
-                    </div> 
-                )}
-               
-                {/* <div className="info-long">
-                    <div className="info-title"><h4>Fun Fact: </h4></div>
-                    <div className="info-answer-long">{props.fact}</div>
-                </div> */}
+                {relationshipDiv}
+                {strengthsDiv}
+                {weaknessesDiv}
+                {quotesDiv}
+                {deathsDiv}
+                {factsDiv}
             </div>
         </div>
     );

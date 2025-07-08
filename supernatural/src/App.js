@@ -23,7 +23,6 @@ function App() {
           <Route path="/sigils" element={<Sigils />} />
           <Route path="/episodes" element={<Seasons isEpisodes={true} />} />
           <Route path="/episodes/:id" element={<Episodes />} />
-
           <Route path="/episodes/redirect" element={<JournalRedirect redirect="episodes" />} /> 
           <Route path="/seasons" element={<Seasons />} />
           <Route path="/seasons/:num" element={<SeasonRouting />} />
