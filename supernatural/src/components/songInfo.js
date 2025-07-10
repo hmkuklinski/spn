@@ -88,3 +88,30 @@ export const songsSeason1 = [
     {title:"Fight the Good Fight", artist:"Triumph"},
     {title:"Turn To Stone", artist:"Joe Walsh"},
 ];
+
+//stopped at 2.8
+export const songsSeason2 = [
+    {title:"Strangelehold", artist:"Ted Nugent"},
+    {title:"Time Has Come Today", artist:"The Chamber Brothers"},
+    {title:"Shambala", artist:"Three Dog Night"},
+    {title:"Do That To Me One More Time", artist:"The Captain and Tennille"},
+    {title:"Mudd Walk", artist:"Bad Poodle"},
+    {title:"Wheel in the Sky", artist:"Journey"},
+    {title:"Time and Time Again", artist:"Long John Hunter"},
+    {title:"Golden Rule", artist:"Lil Ed and the Blues Imperials"},
+    {title:"Funny Car Graveyard", artist:"Lee Rocker"},
+    {title:"Sad Girl", artist:"Supergrass"},
+    {title:"Can't Fight This Feeling", artist:"REO Speedwagon"},
+    {title:"Stonehenge", artist:"Spinal Tap"},
+    {title:"Fell On Black Days", artist:"Soundgarden"},
+    {title:"Tired of Crying", artist:"Lil Ed and The Blues Imperials"},
+    {title:"Uncle John", artist:"Eric Lindell"},
+    {title:"Women's Wear", artist:"Mastersource"},
+    {title:"Surrender", artist:"Cheap Trick"},
+    {title:"Cold As Ice", artist:"Foreigner"},
+    {title:"Mama", artist:"Godsmack"},
+    {title:"Cross Road Blues", artist:"Robert Johnson"},
+    {title:"Downhearted Blues", artist:"Son House"},
+    {title:"Key To the Highway", artist:"Little Walter"},
+    {title:"Hair of the Dog", artist:"Nazareth"},
+];

@@ -61,8 +61,6 @@ export default function SeasonInfo({num}){
     const yearDiv = <InfoDiv title="Year Aired" text={myEp.yearAired} infoType="short" />;
     const ratingDiv = <InfoDiv title="IMDb Rating" text={myEp.ratings} infoType="short" />;
     const deathCount = <InfoDiv title="Major Deaths" text={myEp.bodyCount} infoType="short" />;
-    const directorsDiv = <InfoDiv title="Directors" deaths={myEp.directors} infoType="deaths" hasDeaths={true} />;
-    const writersDiv = <InfoDiv title="Writers" deaths={myEp.writers} infoType="deaths" hasDeaths={true} />;
 
     //to store seasonStats: number of episodes, year aired, rating, death count:
     const seasonStats = (
@@ -88,8 +86,6 @@ export default function SeasonInfo({num}){
                 <div className="season-info">
                     <p>{myEp.description}</p>
                 </div>
-                {directorsDiv}
-                {writersDiv}
             </div>
             <div className="right-page" id="season-spoilers">
                 <SeasonMap mapType="intro" data={introductions} />
