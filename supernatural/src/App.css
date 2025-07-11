@@ -789,6 +789,24 @@ button:hover{
   font-size: 26px;
 }
 
+.sigil-img{
+  width: 100%;
+  
+}
+.sigil-img img{
+  width:100%;
+  height: 350px;
+}
+.sigil-preview{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+.sigil-title{
+  text-align:center;
+}
+
 /* ---------------------------- season selection formatting! ----------------------------*/
 .season-selection {       
   position:relative;    

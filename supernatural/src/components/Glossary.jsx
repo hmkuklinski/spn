@@ -4,6 +4,7 @@ import Layout from './Layout';
 import Search from './Search';
 import SearchFailed from './SearchFailed';
 import { characters } from './characterInfo';
+import { sigils } from './sigilInfo';
 import {monsters} from './monsterInfo';
 import { Link, useNavigate} from 'react-router-dom';
 
@@ -21,13 +22,29 @@ export default function Glossary(props){
 
     const chFirst = characters[0].id;
     const monFirst = monsters[0].id;
+    const sigilFirst = sigils[0].id;
 
-    const nextPageLink = props.glossaryType === "characters"? `/characters/${chFirst}`: `/monsters/${monFirst}`;
-    const dataInfo = props.glossaryType === "characters"? characters: monsters;
-
-    const leftStop = 24;
-
-    const filterText =  "Character List";
+    let nextPageLink= null;
+    let dataInfo = null;
+    let filterText ="Character List";
+    let leftStop= 0;
+    if (props.glossaryType === "characters"){
+        nextPageLink = `/characters/${chFirst}`;
+        dataInfo= characters;
+        leftStop= 24;
+    }
+    else if (props.glossaryType === "monsters"){
+        nextPageLink = `/monsters/${monFirst}`;
+        dataInfo= monsters;
+        leftStop =0;
+        filterText= "Monster List";
+    }
+    else if (props.glossaryType=== "sigils"){
+        nextPageLink = `/sigils/${sigilFirst}`;
+        dataInfo = sigils;
+        leftStop=0;
+        filterText="Sigils List";
+    }
 
     //function to check if user entered text is a valid entry (and to display entry if valid)
     const updateCurrEntry= ()=>{
