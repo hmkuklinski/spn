@@ -51,7 +51,7 @@ export default function Seasons({isEpisodes=null}){
                          {seasonDescription}
                         <div className="seasons2">
                             {episodes.slice(8,15).map((ep)=>(
-                                <Season seasonNumber={ep.title} imgsrc={ep.imgsrc} num={ep.num}/>
+                                <Season seasonNumber={ep.title} imgsrc={ep.imgsrc} num={ep.num} isEpisodes={isEpisodes}/>
                             ))}
                         </div>
 

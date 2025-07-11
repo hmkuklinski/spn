@@ -1,15 +1,15 @@
-export default function Episode({photo, title, description, episodeNumber}){
+export default function Episode({episode, onClick}){
     return (
-        <div className="episode-container">
+        <div className="episode-container" onClick={onClick}>
             <div className="episode-preview">
-                <img src={photo} alt={title} />
+                <img src={episode.photo} alt={episode.title} />
             </div>
             <div className="episode-content">
                 <div className="episode-title">
-                    <h2>{episodeNumber}. <b>{title}</b></h2>
+                    <h2>{episode.num}. <b>{episode.title}</b></h2>
                 </div>
                 <div className="episode-length">
-                    <p>{description}</p>
+                    <p>{episode.description}</p>
                 </div>
             </div>
         </div>

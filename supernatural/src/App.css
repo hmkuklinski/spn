@@ -662,6 +662,7 @@ button:hover{
 .episode-container{
   height: auto;
   margin: 12px 0px;
+  cursor:pointer;
 }
 
 .episode-content{
@@ -687,8 +688,108 @@ button:hover{
 .episode-title h2{
   margin:0;
 }
+/*---------------------------- episode pop up formatting! ----------------------------*/
 
-/* season selection formatting!*/
+.episode-extra{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  flex-direction:column;
+  position: fixed; /* sits above the main layout */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 90%;
+  z-index: 1000;
+   background-image: repeating-linear-gradient(
+    to bottom,
+    #fdf6e3,
+    #fdf6e3 23px,
+    #c8c8c8 24px
+  );
+  padding: 8px 14px;
+}
+
+.episode-extra-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  font-family: 'Grape Nuts', monospace;
+  position:relative;
+  bottom:40px;
+  margin: 0px 0px 20px 0px;
+  padding: 0px 8px;
+  width:100%;
+}
+.episode-description{
+  font-size: 18px;
+}
+.preview-content{
+  /* margin-left: 20px;  */
+  width:100%;
+}
+.extra-content{
+  margin-top: 20px;
+}
+/*formatting for the image and image container*/
+.preview-img{
+  width: 85%;
+}
+.preview-img img{
+  height: 280px;
+  width: 100%;
+}
+/*holds the header and info for the stats on pop up preview*/
+.episode-info{
+  display:flex;
+  align-items:center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 8px 0px;
+}
+.extra-answer{
+  margin-left: 8px;
+  font-size: 20px;
+}
+.info-header h3{
+  margin:0;
+  font-size: 21px;
+}
+/* formatting for the title container and the season + episode descriptor*/
+.ep-title-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+#preview-title{
+  font-size: 22px;
+  text-underline-offset: 6px;
+}
+.ep-info{
+  /* margin-left: 15px; */
+  font-size: 23px;
+}
+
+/* close button formatting*/
+.preview-close{
+  position:relative;
+  left: 45%;
+  top: 14px;
+  z-index: 1050;
+}
+.preview-close button{
+  background-color:transparent;
+  color: var(--exit-color);
+  border:none;
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+}
+
+/* ---------------------------- season selection formatting! ----------------------------*/
 .season-selection {       
   position:relative;    
   margin: 0 auto;
@@ -986,6 +1087,29 @@ button:hover{
     justify-content: center;
     flex-direction: column;
   }
+  .episode-extra{
+    width: 60%;
+  }
+  .ep-title-container{
+    flex-direction: column;
+  }
+  #preview-title h2{
+    font-size: 24px;
+  }
+  .preview-img img{
+    height: 200px;
+  }
+  .episode-info{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .preview-content{
+    margin:0;
+  }
+  .ep-info{
+    font-size:19px;
+  }
+
   
 }
 
