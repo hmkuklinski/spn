@@ -78,7 +78,7 @@ export default function InfoDiv({title, text=null, infoType, stat=null, quoteFac
         long: infoLong,
         quotes: infoQuotes,
         deaths: infoList,
-        facts: infoFacts
+        facts: infoFacts,
     }
     
     //return the div of specified info type or return nothing (in case of invalid infoType)
