@@ -40,8 +40,16 @@ export default function NavBar() {
           <li><NavLink to="/sigils">Sigils</NavLink></li>
         </ul>
       </li>
+      <li className="dropdown" id="extras" >
+        <span>Extras</span>
+        <ul className="dropdown-menu" id="extras-menu">
+          <li><NavLink to="/podcast" className={({ isActive }) => isActive ? "active" : ""}>Then and Now</NavLink></li>
+          <li><NavLink to="/conventions"className={({ isActive }) => isActive ? "active" : ""}>Conventions</NavLink> </li>
+          <li><NavLink to="/beyondspn"className={({ isActive }) => isActive ? "active" : ""}>Beyond SPN</NavLink> </li>
+        </ul>
+      </li>
 
-      <li><NavLink to="/beyondspn" className={({ isActive }) => isActive ? "active" : ""}>#BeyondSPN</NavLink></li>
+      
     </ul>
   );
    const navMobile = (
@@ -52,7 +60,9 @@ export default function NavBar() {
       <li onClick={() => setShowHamburger(false)}><NavLink to="/characters" className={({ isActive }) => isActive ? "active" : ""}>Characters</NavLink></li>
       <li onClick={() => setShowHamburger(false)}><NavLink to="/monsters" className={({ isActive }) => isActive ? "active" : ""}>The Lore</NavLink></li>
       <li onClick={() => setShowHamburger(false)}><NavLink to="/sigils" className={({ isActive }) => isActive ? "active" : ""}>Sigils</NavLink></li>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/beyondspn" className={({ isActive }) => isActive ? "active" : ""}>#BeyondSPN</NavLink></li>
+      <li onClick={() => setShowHamburger(false)}><NavLink to="/beyondspn" className={({ isActive }) => isActive ? "active" : ""}>Beyond SPN</NavLink></li>
+      <li onClick={() => setShowHamburger(false)}><NavLink to="/podcast" className={({ isActive }) => isActive ? "active" : ""}>Then and Now</NavLink></li>
+      <li onClick={() => setShowHamburger(false)}><NavLink to="/conventions"className={({ isActive }) => isActive ? "active" : ""}>Conventions</NavLink> </li>
     </ul>
   );
 

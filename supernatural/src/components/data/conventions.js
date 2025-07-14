@@ -1,0 +1,30 @@
+// {id:"", location:"", eventLocation:"", startMonth:"", startDate:"", startYear:"", guests:""},
+export const conventions= [
+    {
+        id:"convention1", name:"The Road So Far... The Road Ahead Creation Tour- Celebrating 20 Years of Supernatural", desc:"We are ready for 2025 with 10 incredible in-person engagements with superstars Jensen Ackles and Jared Padalecki. We celebrate 20 years of Supernatural with \"the boys\" and highlight their upcoming projects. Make your plans to be with us and check the calendar below for dates!", imgsrc:"/assets/beyond/20years.jpg",
+        conventionList:[
+            {id:"michigan", location:"Novi, Mi", eventLocation:"Suburban Collection Showplace", startMonth:"JULY", startDate:"11", startYear:"2025", guests:"Jensen Ackles, Misha Collins, Mark Sheppard, Alexander Calvert, Jim Beaver, Ruth Connell, Richard Speight Jr., Rob Benedict, Matt Cohen, Alaina Huffman, Kim Rhodes, Briana Buckmaster, Samantha Smith, Jake Abel, DJ Qualls, Gil McKinney, Chad Lindberg, Steven Williams, Jason Manns, Steve Carlson, and Louden Swain" },
+            {id:"texas", location:"Austin, Tx", eventLocation:"Marriott Austin Downtown Hotel", startMonth:"AUG", startDate:"22", startYear:"2025", guests:"Jensen Ackles, Jared Padalecki, Misha Collins, Mark Sheppard, Alexander Calvert, Jim Beaver, Ruth Connell, Richard Speight Jr., Rob Benedict, Matt Cohen, Alaina Huffman, Kim Rhodes, Briana Buckmaster, Samantha Smith, Jake Abel, DJ Qualls, Gil McKinney, Chad Lindberg, Jason Manns, and Louden Swain"},
+            {id:"chicago", location:"Chicago, Il", eventLocation:"Hyatt Regency O'Hare Hotel", startMonth:"SEPT", startDate:"5", startYear:"2025", guests:"Jensen Ackles, Jared Padalecki, Misha Collins, Mark Sheppard, Alexander Calvert, Jim Beaver, Ruth Connell, Rob Benedict, Richard Speight Jr., Matt Cohen, Alaina Huffman, Kim Rhodes, Briana Buckmaster, Samantha Smith, Felicia Day, Jake Abel, DJ Qualls, Gil McKinney, Jason Manns, and Louden Swain"},
+            {id:"vancouver", location:"Vancouver, BC", eventLocation:"Westin Bayshore Hotel", startMonth:"SEPT", startDate:"26", startYear:"2025", guests:"Jensen Ackles, Jared Padalecki, Misha Collins, Mark Sheppard, Alexander Calvert, Jim Beaver, Ruth Connell, Richard Speight Jr., Rob Benedict, Matt Cohen, Alaina Huffman, Kim Rhodes, Briana Buckmaster, Samantha Smith, Jake Abel, DJ Qualls, Gil McKinney, Jason Manns, and Louden Swain"},
+            {id:"philly", location:"Philadelphia, PA", eventLocation:"Sheraton Philadelphia Downtown Hotel", startMonth:"OCT", startDate:"3", startYear:"2025", guests:"Jensen Ackles, Jared Padalecki, Misha Collins , Mark Sheppard, Alexander Calvert, Jim Beaver, Felicia Day, Ruth Connell,  Rob Benedict, Richard Speight Jr., Matt Cohen, Alaina Huffman, Kim Rhodes, Briana Buckmaster, Samantha Smith, Jake Abel, Julie McNiven, DJ Qualls, Gil McKinney, Jeffrey Vincent Parise, Jason Manns, and Louden Swain"},
+            {id:"nashville", location:"Nashville, TN", eventLocation:"Grand Hyatt Nashville Hotel", startMonth:"OCT", startDate:"31", startYear:"2025", guests:"Jensen Ackles, Jared Padalecki, Misha Collins , Mark Sheppard, Alexander Calvert, Jim Beaver, Felicia Day, Ruth Connell,  Rob Benedict, Richard Speight Jr., Matt Cohen, Alaina Huffman, Kim Rhodes, Briana Buckmaster, Samantha Smith, Jake Abel, DJ Qualls, Gil McKinney, David Haydn-Jones, Jason Manns, and Louden Swain"},
+        ]
+    }, 
+    {
+        id:"convention2", name:"The Road So Far... The Road Ahead On The High Seas", desc:"The Creation's SPN20 High Seas Cruise on the wondrous Royal Caribbean Cruise on the Wonder of the Seas Cruise Ship will cap the 20th Anniversary year of celebrating Supernatural in top-of-the-line luxury style and YOU are cordially invited!",imgsrc:"/assets/beyond/cruise.jpg",
+        conventionList: [
+            {id:"cruise", location:"Miami, Florida", eventLocation:"Port of Miami (Royal Caribbean Cruise Terminal)", startMonth:"NOV", startDate:"17", startYear:"2025", guests:"Misha Collins, Mark Sheppard, Ruth Connell, Rob Benedict, Richard Speight Jr., Kim Rhodes, Briana Buckmaster, DJ Qualls, Matt Cohen, Gil McKinney, and Clif Kosterman"}
+        ]
+    },
+    {
+        id:"convention3", name:"The Road So Far... The Road Ahead. Creation Tour", desc:"We are ready for 2026 with several incredible in-person engagements with superstars Jensen Ackles and Jared Padalecki. We celebrate the adventures of two brothers who set of on a journey to save people and hunt things. Make your plans to be with us and check the calendar below for dates!",imgsrc:"/assets/beyond/rsf.png",
+        conventionList: [
+            {id:"vegas", location:"Las Vegas, NV", eventLocation:"Rio Las Vegas Hotel", startMonth:"JAN", startDate:"16", startYear:"2026", guests:"Jensen Ackles, Jared Padalecki, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"},
+            {id:"boston", location:"Boston, MA", eventLocation:"Westin Boston Seaport District Hotel", startMonth:"JUN", startDate:"12", startYear:"2026", guests:"Jensen Ackles, Jared Padalecki, Misha Collins, Rob Benedict, Richard Speight Jr., Kim Rhodes, and Briana Buckmaster"},
+            {id:"toronto", location:"Toronto, ON", eventLocation:"The Westin Harbour Castle Hotel", startMonth:"JUL", startDate:"10", startYear:"2026", guests:"Jensen Ackles, Jared Padalecki, Misha Collins, Rob Benedict, Richard Speight Jr., Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"},
+            {id:"charlotte", location:"Charlotte, NC", eventLocation:"Embassy Suites Charlotte-Concord Resort", startMonth:"SEPT", startDate:"25", startYear:"2026", guests:"Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"},
+        ]
+    }
+    
+];

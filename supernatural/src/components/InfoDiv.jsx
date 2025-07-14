@@ -71,6 +71,21 @@ export default function InfoDiv({title, text=null, infoType, stat=null, quoteFac
         </div> 
     );
 
+    //for strengths and weaknesses: converts array into single line with , as delimiter
+    const infoListText = (
+        <div className="info-longer">
+            <div className="info-title2"><h4>{title}</h4></div>
+            <div className="info-quotes-text">
+                <ul>
+                    {Array.isArray(text) && text.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+
+
     //map to appropriate format based on infoType
     const infoFormat = {
         short: infoShort,
@@ -79,6 +94,7 @@ export default function InfoDiv({title, text=null, infoType, stat=null, quoteFac
         quotes: infoQuotes,
         deaths: infoList,
         facts: infoFacts,
+        infolist: infoListText
     }
     
     //return the div of specified info type or return nothing (in case of invalid infoType)

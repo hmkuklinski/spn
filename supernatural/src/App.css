@@ -25,13 +25,22 @@
   font-weight: 400;
   font-style: normal;
 }
+.loading-screen{
+  width: 100%;
+  height: 100vh;
+}
+.loading-screen img{
+  width:100%;
+  height:100%;
+}
 
 /*----------------------------GENERAL FLEX FORMATTING BLOCKS (to make code cleaner) ---------------------------- */
 /* flex center column format*/
 .layout-container, .main-container, .pagebtn-container, .search-btn, .gallery-image, .redirect, .redirect-content, 
 .return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer, .season-container, .season-text,
 .season-title, .char-updates, .update-container, .char-intros, .intro-container, .char-deaths, .updates, .spoilers, #glossary-left, #glossary-right,
-.feature-container, .feature-subtitle, .feature-button, #warning, #season-spoilers, .death-container, .loading-screen{
+.feature-container, .feature-subtitle, .feature-button, #warning, #season-spoilers, .death-container, .loading-screen,
+.convention-landing-container{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +51,7 @@
 }
 /* flex center row format*/
 .home-banner, .information, .journal-container, .pages, .info-section, .info, .search-container, .info-slogan,
-.features-container,.episode-container{
+.features-container,.episode-container, .all-events, .event-container{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +164,6 @@ button:hover{
   gap: 0.5rem;
   z-index: 1000;
 }
-
 /* Each link inside dropdown */
 .nav .dropdown-menu li {
   padding: 0 1rem;
@@ -167,6 +175,10 @@ button:hover{
   display: flex;
 }
 
+.nav #extras .dropdown-menu {
+  left: auto;
+  right: 0;
+}
 
 
 /*---------------------------- Main Container Formatting ----------------------------*/
@@ -623,6 +635,11 @@ button:hover{
   padding: 3px;
 }
 
+#monster-img img{
+  width: 100%;
+  height: 340px;
+}
+
 /*---------------------------- Seasons Formatting---------------------------- */
 .season-titlecard{
   width: 85%;
@@ -1005,6 +1022,81 @@ button:hover{
   color: var(--nav-hover);
 }
 
+/*convention container formatting*/
+.convention-landing-container{
+  width: 100%;
+  margin: 15px 0px;
+  padding: 8px;
+}
+/*convention banner image container and img properties*/
+.convention-landing-img{
+  padding: 8px;
+}
+.convention-landing-img img{
+  width:100%;
+}
+/*format for description of the convention*/
+.convention-landing-description{
+  padding: 8px;
+  font-family:"Julius Sans One";
+  font-size: 16px;
+  width: 80%;
+  height:auto;
+  text-align: center;
+}
+/* title of "Upcoming Events" */
+.convention-title{
+  font-family:"Julius Sans One";
+  text-align:center;
+  font-size: 18px;
+}
+/* has title and all-events div and contents*/
+.convention-landing-events{
+  width:100%;
+  margin-top:20px;
+}
+/*container that holds all event-container*/
+.all-events{
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 8px 0px;
+}
+/*holds all information for the event*/
+.event-container{
+  font-family:"Julius Sans One";
+  width: calc(32% - 9px);
+  margin: 7px; 
+  padding: 5px;
+}
+/* holds the date and month for event box*/
+.event-left{
+  width: 22%;
+  height: 100%;
+  padding: 8px 10px;
+  text-align: center;
+  background-color: var(--main-color);
+}
+
+.event-day{
+  font-size: 32px;
+}
+/*holds information about location and eventLocation*/
+.event-right{
+  width: 60%;
+  padding: 8px;
+  text-align:left;
+}
+.event-location{
+  font-size: 20px;
+  font-weight:600;
+  width: 100%;
+  padding: 3px;
+}
+.event-host-site{
+  padding: 3px;
+  font-size: 14px;
+}
 
 
 @media (max-width: 767px){
@@ -1235,6 +1327,13 @@ button:hover{
     top: 37%;
     left: 0%;
     height: 380px;
+  }
+  .event-container{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .event-day{
+    font-size: 40px;
   }
   
 }

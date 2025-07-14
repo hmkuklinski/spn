@@ -9,6 +9,8 @@ import NotFound from './components/NotFound';
 import JournalRedirect from './components/journal/JournalRedirect';
 import TheLore from './components/monsters/TheLore';
 import Episodes from './components/episodes/Episodes';
+import Podcast from './components/beyond/Podcast';
+import Conventions from './components/beyond/Conventions';
 import {Route, Routes} from "react-router-dom";
 import { useState, useEffect } from 'react';
 import './App.css';
@@ -55,6 +57,8 @@ function App() {
           <Route path="/monsters/:id" element={<TheLore />} />
           <Route path="/monsters/redirect" element={<JournalRedirect redirect="thelore" />} />
           <Route path="/beyondspn" element={<BeyondSpn />} />
+          <Route path="/podcast" element={<Podcast/>} />
+          <Route path="/conventions" element={<Conventions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
