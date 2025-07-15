@@ -41,7 +41,7 @@ export default function Features(){
             const episodeSelected = Math.floor(Math.random()*numEpisodes);
             const episode = season.epInfo[episodeSelected];
 
-            setMyEp({...episode, feature:"Featured Episode", linkText:"Visit the Archives"});
+            setMyEp({...episode, feature:"Featured Episode", link:`/episodes/season${seasonSelected+1}`,linkText:"Visit the Archives"});
         }
 
         randomChar();

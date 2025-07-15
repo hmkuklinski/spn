@@ -40,7 +40,7 @@
 .return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer, .season-container, .season-text,
 .season-title, .char-updates, .update-container, .char-intros, .intro-container, .char-deaths, .updates, .spoilers, #glossary-left, #glossary-right,
 .feature-container, .feature-subtitle, .feature-button, #warning, #season-spoilers, .death-container, .loading-screen,
-.convention-landing-container{
+.convention-landing-container, .podcast-landing-container, .platform-text, .platform-desc, .platform-text{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,8 @@
 }
 /* flex center row format*/
 .home-banner, .information, .journal-container, .pages, .info-section, .info, .search-container, .info-slogan,
-.features-container,.episode-container, .all-events, .event-container{
+.features-container,.episode-container, .all-events, .event-container, .seen-item,
+.podcast-streaming-links, .podcast-streaming-container{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -1021,8 +1022,24 @@ button:hover{
   background-color: transparent;
   color: var(--nav-hover);
 }
+.active-page {
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  position:relative;
+  top: 130px;
+  width: 100%;
+  background-color: black;
+  color:whitesmoke;
+  text-align: center;
+  padding: 8px 0;
+  font-family: "Julius Sans One";
+  font-size: 18px;
+  height: 30px;
+}
 
-/*convention container formatting*/
+
+/*---------------convention container formatting ---------------*/
 .convention-landing-container{
   width: 100%;
   margin: 15px 0px;
@@ -1096,6 +1113,159 @@ button:hover{
 .event-host-site{
   padding: 3px;
   font-size: 14px;
+}
+
+/* --------------- podcast formatting ---------------*/
+.podcast-landing-container{
+  background-image:url("/public/assets/beyond/podcast1.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position-x: 25%;
+  min-height: 550px;
+  position:relative;
+  font-family:"Julius Sans One";
+}
+/* holds title, description, and listen links*/
+.podcast-landing-info{
+  position:relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  width: 40%;
+  right: 26%;
+  top: 25%;
+  padding: 6px;
+}
+.podcast-title h2{
+  font-size: 30px;
+}
+/*holds both the "buttons" for the spotify and apple music*/
+.podcast-streaming-links{
+  /* justify-content: flex-start; */
+  width:100%;
+}
+/* the div that holds the icon, listen to, streaming site name and link for streaming*/
+.podcast-streaming-container{
+  height: 50px;
+  margin: 0px 8px;
+  cursor:pointer;
+  border-radius: 25px;
+  background-color: var(--second-color);
+  border: 1px solid whitesmoke;
+  padding: 5px;
+}
+.podcast-streaming-container:hover{
+  background-color: whitesmoke;
+}
+.podcast-streaming-container:hover .podcast-img{
+   filter: brightness(0);
+}
+.podcast-streaming-container:hover .platform-text{
+  color:black;
+}
+
+/*the icon themselves for the streaming*/
+.podcast-img{
+  padding: 5px;
+  filter: brightness(0) invert(1);
+}
+.podcast-img img{
+  height:40px;
+  width: 40px;
+}
+/*special formatting for apple icon*/
+#Apple-img img{
+  height: 30px;
+  width: 30px;
+}
+/*holds listen on and streaming site name divs*/
+.platform-text{
+  align-items: flex-start;
+  padding: 4px;
+  margin: 0px 15px;
+  color:whitesmoke;
+}
+/*listen on div*/
+.platform-desc{
+  height: 20px;
+}
+.platform-desc h5{
+  font-size: 8px;
+}
+/*streaming platform name div*/
+.platform-name{
+  font-size: 13px;
+}
+/* --------------- pod ep previews ---------------*/
+.podcast-previews-container{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  flex-direction:column;
+  width: 100%;
+  font-family:"Julius Sans One";
+}
+.pod-pre-title{
+  font-size: 25px;
+  position:relative;
+  left: 4%;
+}
+/*holds all my podcast previews*/
+.pod-pre-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  width: 100%;
+ 
+}
+
+/*individual podcast preview container*/
+.pod-ep-container{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction:column;
+  flex:1;
+  width: 100px;
+  margin: 15px;
+}
+.pod-content{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction:column;
+  text-align:center;
+}
+.pod-ep-photo{
+  width: 50%;
+}
+.pod-ep-photo img{
+  width:100%;
+}
+.pod-title{
+  font-size: 18px;
+  font-weight: 650;
+}
+.pod-guests{
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.pod-link{
+  margin-top: 15px;
+}
+
+
+
+
+
+
+/* --------------- for socials ---------------*/
+.icons{
+  height: 30px;
+  width: 30px;
 }
 
 
@@ -1295,6 +1465,7 @@ button:hover{
   /*search button formatting*/
   .search-container{
     width: 90%;
+    margin-top: 10px;
   }
   .search-input{
     width: 60%;
@@ -1309,7 +1480,7 @@ button:hover{
     display:none;
   }
   .search-button, .search-home{
-    width: 14%;
+    width: 12%;
   }
   .search-button button, .search-home button{
     width: 80%;
@@ -1334,6 +1505,87 @@ button:hover{
   }
   .event-day{
     font-size: 40px;
+  }
+  /*podcast container formatting*/
+  .mobile-podcast{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .podcast-landing-container{
+    background-image: url("https://i.pinimg.com/736x/65/75/b0/6575b06a860c82a640d411bce93f991c.jpg");
+    position:relative;
+    /* background-size:cover; */
+    background-size: 110%;
+    background-position: 45% center;
+    height: 100vh;
+    width: 100%;
+  }
+  .podcast-landing-info{
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 14px;
+    width: 98%;
+    position:relative;
+    top: 120px;
+    left: 0%;
+  }
+  .podcast-title h2{
+    font-family:"Julius Sans One";
+    font-size: 20px;
+    text-align: center;
+    text-decoration:underline;
+    text-underline-offset: 2px;
+  }
+  .podcast-description p{
+    font-size: 13px;
+    width: 96%;
+  }
+
+  .platform-desc h5{
+    font-size: 8px;
+  }
+  /*streaming platform name div*/
+  .platform-name{
+    font-size: 12px;
+  }
+  .podcast-streaming-links{
+    width:100%;
+  }
+  .podcast-streaming-container{
+    padding: 0px 7px;
+  }
+  .podcast-streaming-container:hover{
+    background-color: #111;
+  }
+  .podcast-streaming-container:hover .podcast-img{
+    filter: brightness(0) invert(1);
+  }
+  .podcast-streaming-container:hover .platform-text{
+    color:whitesmoke;
+  }
+  /*podcast preview formatting*/
+  .pod-pre-row{
+    flex-direction:column;
+  }
+  .pod-ep-container{
+    flex-direction: row;
+    width:100%;
+  }
+  .pod-ep-photo{
+    width: 30%;
+  }
+  .pod-ep-photo img{
+    width:100%;
+  }
+  .pod-content{
+    width: 65%;
+  }
+  .podcast-previews-container{
+    align-items: center;
+  }
+  .pod-desc{
+    display:flex;
   }
   
 }

@@ -1,6 +1,6 @@
-import Layout from '../Layout';
+import Layout from '../../Layout';
 import ConventionLanding from './ConventionLanding';
-import { conventions } from '../data/conventions';
+import { conventions } from '../../data/conventions';
 
 export default function Conventions(){
     return (

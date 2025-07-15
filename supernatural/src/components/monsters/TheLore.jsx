@@ -4,7 +4,7 @@ import Search from '../searchbar/Search.jsx';
 import SearchFailed from '../searchbar/SearchFailed.jsx';
 import Monster from './Monster.jsx';
 import { monsters } from '../data/monsterInfo.js';
-import {useParams, useNavigate} from "react-router-dom";
+import {useParams, useNavigate, Link} from "react-router-dom";
 import { useState} from 'react';
 
 export default function TheLore(){
@@ -69,12 +69,19 @@ export default function TheLore(){
         }
     }
 
+    const homeBtn = (
+        <Link to="/monsters" className="page-nav bottom-middle" aria-label="Next page">
+            <ion-icon name="home-outline"></ion-icon>
+        </Link>
+    );
+
     return (
         <Layout>
             <Search searchType="monsters" placeholder="Enter Monsters Name Here..." searchEntry={searchEntry} setSearchEntry={setSearchEntry} clickAction={updateCurrMonsters} buttonLink="/monsters"/>
             {failed && <SearchFailed buttonText="Glossary" buttonLink ="/monsters" />}
             <JohnsJournal prevPageLink={prevLink} nextPageLink={nextLink}>
                 <Monster {...currMonsters} />
+                {homeBtn}
             </JohnsJournal>
         </Layout>
     );
