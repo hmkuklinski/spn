@@ -12,7 +12,7 @@ export default function PodcastPreview({ep, img}){
                     {ep.guests}
                 </div>
                 <div className="pod-link">
-                    <a href={ep.link}>Listen Now  </a>
+                    <a href={ep.link}><ion-icon name="play-outline"></ion-icon> Listen Now  </a>
                 </div>
             </div>
         </div>

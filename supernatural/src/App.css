@@ -40,7 +40,8 @@
 .return-glossary, .return-link, .info-multiple, .info-title2, .info-text, .info-long, .info-longer, .season-container, .season-text,
 .season-title, .char-updates, .update-container, .char-intros, .intro-container, .char-deaths, .updates, .spoilers, #glossary-left, #glossary-right,
 .feature-container, .feature-subtitle, .feature-button, #warning, #season-spoilers, .death-container, .loading-screen,
-.convention-landing-container, .podcast-landing-container, .platform-text, .platform-desc, .platform-text{
+.convention-landing-container, .podcast-landing-container, .platform-text, .platform-desc, .platform-text,
+.podcast-hosts-container, .host-container{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +53,7 @@
 /* flex center row format*/
 .home-banner, .information, .journal-container, .pages, .info-section, .info, .search-container, .info-slogan,
 .features-container,.episode-container, .all-events, .event-container, .seen-item,
-.podcast-streaming-links, .podcast-streaming-container{
+.podcast-streaming-links, .podcast-streaming-container, .podcast-hosts-row, .host-main-container{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -1120,7 +1121,7 @@ button:hover{
   background-image:url("/public/assets/beyond/podcast1.png");
   background-size:cover;
   background-repeat: no-repeat;
-  background-position-x: 25%;
+  background-position-x: 50%;
   min-height: 550px;
   position:relative;
   font-family:"Julius Sans One";
@@ -1205,6 +1206,7 @@ button:hover{
   flex-direction:column;
   width: 100%;
   font-family:"Julius Sans One";
+  margin-top: 20px;
 }
 .pod-pre-title{
   font-size: 25px;
@@ -1230,42 +1232,262 @@ button:hover{
   flex:1;
   width: 100px;
   margin: 15px;
+  padding: 6px;
 }
 .pod-content{
   display:flex;
   align-items:center;
   justify-content: center;
   flex-direction:column;
-  text-align:center;
+  width: 90%;
+  margin-top: 10px;
+  height: 125px;
 }
 .pod-ep-photo{
-  width: 50%;
+  width: 60%;
+  position: relative;
+  right: 4%;
 }
 .pod-ep-photo img{
   width:100%;
+  border-radius: 12px;
 }
 .pod-title{
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 650;
+  width: 75%;
+  text-align: left;
 }
 .pod-guests{
-  font-size: 13px;
+  width: 75%;
+  margin-top: 5px;
+  font-size: 12px;
   font-weight: 400;
+  height: 50px;
 }
 
 .pod-link{
-  margin-top: 15px;
+  margin-top: 7px;
+  width: 80%;
+  padding: 5px;
+}
+.pod-link a{
+  text-decoration:none; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 60%;
+  font-size: 15px;
+}
+.pod-link ion-icon{
+  margin: 0px 5px;
+  font-size: 15px;
 }
 
+/* --------------- podcast stats formatting ---------------*/
+.stats-landing-container{
+  width: 100%;
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction:row;
+  font-family: "Julius Sans One";
+  margin-top: 20px;
+  height:auto;
+}
+
+.stats-photo{
+  width: 60%;
+}
+.stats-text{
+  width: 35%;
+  margin: 0px 14px;
+}
+.stats-photo{
+  height:100%;
+}
+
+.stats-photo img{
+  width: 100%;
+  height:580px;
+  object-fit: cover;
+}
+.stats-content{
+  font-size: 18px;
+  padding: 6px;
+}
+.stats-title{
+  width:100%;
+  text-align: center;
+}
+
+/* --------------- podcast long stats formatting ---------------*/
+.stat-individual{
+  height: 120px;
+  margin: 5px;
+  flex: 1;
+}
+/*entire container for title and stat*/
+.stat-individual .info-long{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+/*div holding title for the individual stat container*/
+.stat-individual .info-title2 {
+  text-align:center;
+  height: 50px;
+  padding: 3px;
+  width: 100%;
+}
+.stat-individual .info-title2 h4{
+  font-size: 18px;
+}
+/* div holding the stat for the individual stat container*/
+.stat-individual .info-answer-long{
+  width:100%;
+  text-align:center;
+  margin-top: 7px;
+  font-size: 22px;
+}
+
+/*container that holds all the stats and the stats section title*/
+.podcast-long-stats{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  width: 96%;
+  font-family: "Julius Sans One";
+  margin-top: 20px;
+}
+/*the div that holds all the stats*/
+.stats-info{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  width: 97%;
+  border-radius: 12px;
+}
+/* --------------- for podcast hosts ---------------*/
+.podcast-hosts-container{
+  width: 100%;
+  font-family:"Julius Sans One";
+  height:auto;
+  margin-top: 15px;  
+}
+/*div that holds every host on the podcast*/
+.podcast-hosts-row{
+  margin: 5px;
+  padding: 4px;
 
 
+}
+/*div that holds all the host information*/
+.host-main-container{
+  width:50%;
+  align-items: flex-start;
+  height: inherit;
+  margin: 0px 12px;
+}
+/*holds host img, name, and role */
+.host-container{
+  margin: 5px 15px;
+  width: 40%;
+}
 
+/*formatting for host's images*/
+.host-img{
+  width: 100%;
+}
+.host-img img{
+  width:100%;
+  height:200px;
+}
+/* holds the host's name and role*/
+.host-info{
+  padding: 5px;
+  width: 100%;
+}
+.host-name h3{
+  margin:0;
+  font-size: 21px;
+  font-weight: 650;
+}
 
+.host-role{
+  margin-top: 9px;
+}
+.host-role h5{
+  margin:0;
+  font-size: 12px;
+}
+/*formatting for host description div*/
+.host-background{
+  width: 60%;
+  font-size: 14px;
+  height: auto;
+}
+
+/* --------------- for production ---------------*/
+.production{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  width: 100%;
+  height: auto;
+  background-color:#333;
+  font-family: "Julius Sans One";
+}
+.production .stats-title{
+  color: whitesmoke;
+}
+.production-logo{
+  width: 75%;
+}
+.production-logo img{
+  width: 100%;
+  height: 100px;
+}
+
+#spn-then-and-now-logo img{
+  height: 200px;
+}
+#about-socials{
+  width: 100%;
+}
+#about-socials .icons{
+  height: 65px;
+  width: 65px;
+}
+#about-socials .social-container{
+  margin: 8px;
+}
 
 /* --------------- for socials ---------------*/
 .icons{
-  height: 30px;
-  width: 30px;
+  height: 80px;
+  width: 80px;
+}
+/*container that holds the socials*/
+.productions-socials{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  width: 80%;
+}
+/*individual social div*/
+.social-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  cursor:pointer;
+  flex:1;
+  margin: 15px;
 }
 
 
@@ -1570,13 +1792,20 @@ button:hover{
   }
   .pod-ep-container{
     flex-direction: row;
-    width:100%;
+    align-items: flex-start;
+    width:95%;
+    height: 100px;
   }
   .pod-ep-photo{
-    width: 30%;
+    padding: 5px;
+    width: 32%;
+    height: 170px;
+    position: relative;
+    left: 2%;
   }
   .pod-ep-photo img{
     width:100%;
+    height: 100%;
   }
   .pod-content{
     width: 65%;
@@ -1587,6 +1816,76 @@ button:hover{
   .pod-desc{
     display:flex;
   }
+  .pod-content{
+    margin:15px;
+  }
+  .pod-title{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 650;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+  }
+  .pod-guests{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 13px;
+    height: 50px;
+    text-align:center;
+  }
+  .pod-link{
+    width: 100%;
+  }
+  .pod-link a{
+    width:100%;
+  }
+
+  .stats-landing-container{
+    flex-direction:column;
+    width: 100%;
+    height:auto;
+  }
+  .stats-text{
+    width: 93%;
+    padding: 3px;
+    text-align:center;
+  }
+  .stats-info{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .stat-individual{
+    flex: 1;
+    width: 32%;
+    text-align: center;
+  }
+  .stat-individual .info-long{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  .stats-photo{
+    display:none;
+  }
+  .podcast-hosts-row{
+    flex-direction:column;
+  }
+  .host-main-container{
+    width: 100%;
+    height: auto;
+    margin: 7px 0px;
+  }
+
   
 }
 
@@ -1614,6 +1913,52 @@ button:hover{
   }
   .season-titlecard img{
     height: 150px;
+    width: 100%;
+  }
+    .pod-ep-photo{
+    padding: 5px;
+    width: 50%;
+    height: 170px;
+    position: relative;
+    left: 2%;
+  }
+  .pod-ep-photo img{
+    width:100%;
+    height: 100%;
+  }
+  .pod-content{
+    height:130px;
+  }
+  .pod-title{
+    font-size: 15px;
+    height: auto;
+    max-height: 50px;
+  }
+  .pod-guests{
+    font-size: 12px;
+    height: 40px;
+  }
+  .pod-link{
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+  }
+  .pod-link a{
+    text-decoration:none; 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 100%;
+    font-size: 13px;
+  }
+  .pod-link ion-icon{
+    margin: 0px 5px;
+    font-size: 13px;
+  }
+  .stats-info{
+    flex-direction: column;
+  }
+  .stat-individual{
     width: 100%;
   }
   
