@@ -7,8 +7,7 @@ export const spnPodcast = [
         bannerImg:"/assets/beyond/spnthenandnow.png",
         coverImg:"/assets/beyond/podcastCover.jpg",
         statsImg:"https://pbs.twimg.com/media/F5HEfR2bQAA32S9?format=jpg&name=4096x4096",
-        logo:"/assets/beyond/spn-podcast-logo.png",
-        sectionTitle:"Stay Connected",
+        logo:"/assets/beyond/redlogo.png",
         desc:"In 2005, Sam and Dean Winchester set off on a road trip that would save the world and change television.\nFor fifteen seasons and three hundred and twenty-seven episodes, the CW's Supernatural, created by Eric Kripke, took audiences on a wild ride of family, fate, and faith with a rocking soundtrack and a seriously cool car. But that was then, and now … it's time for another ride.\n\nJoin hosts Rob Benedict (Chuck Shurley/God) and Richard Speight Jr (Gabriel and director of many episodes) for Supernatural: Then and Now, a winding road trip through every episode of this iconic series, one by one, every week, with guests each episode from the cast and crew that made the wild ride possible.",
         desc2:"With humor, heart, and a deep love for the fandom, Rob and Rich explore how Supernatural shaped their lives—and the lives of millions around the world. Each episode brings personal stories, behind-the-scenes insights, and candid conversations with cast, crew, and creatives who helped build the show’s legacy. Produced by Story Mill Media, this podcast isn’t just a rewatch—it’s a weekly invitation to revisit, reflect, and rediscover the magic of Supernatural through a fresh, insider perspective. Whether you're a longtime fan or just starting the journey, there's always room to join the family.",
         hosts: [
@@ -20,7 +19,8 @@ export const spnPodcast = [
                 id:"story-mill-media",
                 name:"Story Mill Media",
                 sectionTitle:"Production Company", 
-                logo:"https://images.squarespace-cdn.com/content/v1/617995c71f9f523ffa4ad635/6a2fe71b-6d13-404f-8ed3-dd9a01fe9a3e/_STORYMILL+MEDIA+LOGO+final+%28500+%C3%97+250+px%29.png",
+                logo:"/assets/beyond/smBW.png",
+                // logo:"https://images.squarespace-cdn.com/content/v1/617995c71f9f523ffa4ad635/6a2fe71b-6d13-404f-8ed3-dd9a01fe9a3e/_STORYMILL+MEDIA+LOGO+final+%28500+%C3%97+250+px%29.png",
                 website:"https://wwww.storymill.media", 
                 desc:"Founded by award-winning podcast producers, StoryMill partners with reputable brands to create audio programs that engage, inform, and entertain new and existing audiences. StoryMill not only delivers award-winning podcasts, but complete digital and social campaigns to drive audience growth.",
                 socials: [

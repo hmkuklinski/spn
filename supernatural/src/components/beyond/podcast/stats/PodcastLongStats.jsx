@@ -15,7 +15,7 @@ export default function PodcastLongStats(props){
     }, []);
 
     const statTitle = (
-        <div className="stats-title">
+        <div className="stats-title" id="long-title">
             <h2>Podcast Stats</h2>
         </div>
     );

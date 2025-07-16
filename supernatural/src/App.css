@@ -1357,10 +1357,13 @@ button:hover{
   align-items:center;
   justify-content:center;
   flex-direction:column;
-  width: 96%;
+  width: 98%;
   font-family: "Julius Sans One";
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  /* background-color: black;
+  color:whitesmoke; */
 }
+
 /*the div that holds all the stats*/
 .stats-info{
   display:flex;
@@ -1440,9 +1443,11 @@ button:hover{
   height: auto;
   background-color:#333;
   font-family: "Julius Sans One";
+  margin-top: 50px;
 }
 .production .stats-title{
   color: whitesmoke;
+  margin-top:10px;
 }
 .production-logo{
   width: 75%;
@@ -1452,18 +1457,32 @@ button:hover{
   height: 100px;
 }
 
-#spn-then-and-now-logo img{
-  height: 200px;
+
+/* --------------- podcast socials banner ---------------*/
+#spn-then-and-now-container{
+  background-color: #333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  width: 98%;
+  margin: 25px 0px;
 }
-#about-socials{
+#spn-then-and-now-title{
+  color:black;
+}
+#spn-then-and-now-logo{
+  width: 55%;
+}
+#spn-then-and-now-logo img{
+  height: 210px;
   width: 100%;
 }
-#about-socials .icons{
-  height: 65px;
-  width: 65px;
+#spn-then-and-now-socials{
+  width: 45%;
 }
-#about-socials .social-container{
-  margin: 8px;
+#spn-then-and-now-socials .social-container{
+  flex: 0.5;
 }
 
 /* --------------- for socials ---------------*/
@@ -1478,6 +1497,7 @@ button:hover{
   justify-content:center;
   flex-direction:row;
   width: 80%;
+  margin-top: 20px;
 }
 /*individual social div*/
 .social-container{
@@ -1738,7 +1758,6 @@ button:hover{
   .podcast-landing-container{
     background-image: url("https://i.pinimg.com/736x/65/75/b0/6575b06a860c82a640d411bce93f991c.jpg");
     position:relative;
-    /* background-size:cover; */
     background-size: 110%;
     background-position: 45% center;
     height: 100vh;
@@ -1885,6 +1904,13 @@ button:hover{
     height: auto;
     margin: 7px 0px;
   }
+  #spn-then-and-now-logo{
+    width: 100%;
+  }
+  #spn-then-and-now-container{
+    flex-direction:column;
+    margin-top: 25px;
+  }
 
   
 }
@@ -1961,5 +1987,6 @@ button:hover{
   .stat-individual{
     width: 100%;
   }
+  
   
 }

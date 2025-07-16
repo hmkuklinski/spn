@@ -16,10 +16,13 @@ export default function Podcast(){
                 <PodcastLanding podcast={myPod} />
                 <PodcastPreviews podcast={myPod} />
                 <PodcastStats {...myPod} />
-                {/* <Production {...myPod} /> */}
+                
+
+                <Production {...myPod} />
                 <PodcastLongStats {...myPod} />
                 <PodcastHosts {...myPod} />
                 <Production {...prod} />
+                
             </div>
         </Layout>);
 }
