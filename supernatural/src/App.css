@@ -303,7 +303,7 @@ button:hover{
   gap: 1.4rem;
   height: auto;
   margin: 10px 10px 80px 10px;
-  width:93%;
+  width:96%;
   border-radius: 13px;
   background-color: var(--johns-journal);
   
@@ -1647,9 +1647,9 @@ button:hover{
     left: 50%;
     top: 100px;
     transform: translateX(-50%);
-    width: 85%;
+    width: 80%;
     height: auto;
-    max-height: 90vh;
+    max-height: 100vh;
     z-index: 999;
   }
   .ep-title-container{
@@ -1991,6 +1991,31 @@ button:hover{
 
 
 @media (max-width: 450px){
+  .left-page{
+    padding: 10px 5px 20px 5px;
+  }
+  .episode-container{
+    flex-direction:column;
+    width: 100%;
+  }
+  .episode-preview, .episode-content, .episode-title{
+    width: 100%;
+  }
+  .episode-content{
+    text-align: center;
+  }
+  .episode-title h2{
+    font-size: 22px;
+  }
+  .episode-length p{
+    font-size: 15px;
+  }
+  .preview-img{
+    width:100%;
+  }
+  .ep-title-container{
+    text-align: center;
+  }
   /* --------------- SEASONS FORMATTING---------------*/
   .seasons{
     display:flex;
