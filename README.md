@@ -90,3 +90,23 @@ If you try to enter the name of a character that doesn't exist or make a spellin
 
 The navigation is the same as those established in the characters page.
 
+## Monsters- Navigation via Search
+<img width="1345" height="767" alt="Screenshot 2025-07-17 142804" src="https://github.com/user-attachments/assets/a5756144-bc6b-498e-9519-1edb8faad0ac" />
+
+If you have a character's name in mind (or so you think), you can type it into the search bar and either click the search button or hit enter.
+
+## Monsters- Valid Search Entry
+
+If you enter a valid character name, you will automatically be directed to the appropriate page. The search bar will clear of all text, allowing you to make further entries after viewing the page if you so desire.
+<img width="1342" height="767" alt="Screenshot 2025-07-17 142814" src="https://github.com/user-attachments/assets/2d964b16-00b4-458c-b53e-f10b9fe76dec" />
+
+## Monsters- Invalid Search Entry
+<img width="1352" height="767" alt="Screenshot 2025-07-17 142823" src="https://github.com/user-attachments/assets/a1327980-cc5d-4be1-aa60-57d1b7864f72" />
+
+If you try to enter the name of a character that doesn't exist or make a spelling error, you will get an error message.
+<img width="1348" height="767" alt="Screenshot 2025-07-17 142834" src="https://github.com/user-attachments/assets/4e595857-248b-4593-b1fd-bd271a81f318" />
+
+## Monsters- Redirect/Photo Gallery
+![Uploading Screenshot 2025-07-17 142856.png…]()
+
+If you reach the end of the monster entries, you'll arrive at the redirect page. It's at this point you can either click the arrow on the left page to go back to the previous entry, or click the button to go back to the beginning
