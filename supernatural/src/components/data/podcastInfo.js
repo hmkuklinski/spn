@@ -27,7 +27,7 @@ export const spnPodcast = [
                     {id:"Twitter", imgsrc:"/assets/icons/twitter.png",  link:"https://x.com/StoryMillMedia"},
                     {id:"Instagram", imgsrc:"/assets/icons/instagram.png", link:"https://www.instagram.com/storymillmedia/"},
                     {id:"LinkedIn", imgsrc:"/assets/icons/linkedin.jpg", link:"https://www.linkedin.com/company/story-mill-media"},
-                    {id:"Facebook", imgsrc:"/assets/icons/facebook.jpg", link:"https://www.facebook.com/StoryMillMedia/"}
+                    // {id:"Facebook", imgsrc:"/assets/icons/facebook.jpg", link:"https://www.facebook.com/StoryMillMedia/"}
                 ],
             }
         ],

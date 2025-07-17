@@ -10,9 +10,6 @@ export default function Production(props){
             <div className="production-logo" id={`${props.id}-logo`}>
                 <img src={props.logo} alt={props.id} />
             </div>
-            {/* <div className="production-about">
-                <p>{props.desc}</p>
-            </div> */}
             <div className="productions-socials"id={`${props.id}-socials`}>
                 {props.socials.map((soc)=>(
                     <Social {...soc} />

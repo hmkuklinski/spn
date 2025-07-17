@@ -32,9 +32,9 @@ function App() {
     );
   }
 
-  const charGlossary = {title:"Character Glossary", imgsrc:"https://pbs.twimg.com/media/FUGzeJzWAAA_TMy.jpg:large", description:"Learn more about your favorite characters!", nextLink:"/characters/dean", glossaryType:"characters",baseLink: "characters"};
-  const monsterGlossary = {title:"Monster Glossary", imgsrc:"https://preview.redd.it/w8h6m48xzg971.jpg?width=428&format=pjpg&auto=webp&s=b251f4caebc51398b733ddfab2128d3dd1a67218", description:"Explore the lore and learn how to defeat every monster that hunters have faced in the series!", nextLink:"/monsters/ghosts", glossaryType:"monsters",baseLink: "monsters"};
-  const sigilGlossary = {title:"Sigil Glossary", imgsrc:"https://ih1.redbubble.net/image.3917354333.4738/flat,750x,075,f-pad,750x1000,f8f8f8.jpg", description:"Learn more about what sigils you can use to target dangerous monsters or supernatural beings!", nextLink:"/sigils/devils-trap", glossaryType:"sigils", baseLink:"sigils"};
+  const charGlossary = {title:"Character Glossary", imgsrc:"/assets/glossary/cglossary.png", description:"Learn more about your favorite characters!", nextLink:"/characters/dean", glossaryType:"characters",baseLink: "characters"};
+  const monsterGlossary = {title:"Monster Glossary", imgsrc:"/assets/glossary/mglossary.png", description:"Explore the lore and learn how to defeat every monster that hunters have faced in the series!", nextLink:"/monsters/ghosts", glossaryType:"monsters",baseLink: "monsters"};
+  const sigilGlossary = {title:"Sigil Glossary", imgsrc:"/assets/glossary/sigilGlossary.png", description:"Learn more about what sigils you can use to target dangerous monsters or supernatural beings!", nextLink:"/sigils/devils-trap", glossaryType:"sigils", baseLink:"sigils"};
   return (
     <div className="App">
       <div className="container">

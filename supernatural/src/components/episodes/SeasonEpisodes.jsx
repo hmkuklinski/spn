@@ -11,10 +11,38 @@ export default function SeasonEpisodes({seasonNumber, seasonDropdown}) {
 
     const [previewEp, setPreviewEp]= useState(null);
     const [showPreview, setShowPreview] = useState(false);
+    const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
 
-    const displayPreview = (ep) =>{
+
+    const displayPreview = (e, ep, container) =>{
+        const isMobile = window.innerWidth <= 768;
+        const parent = !isMobile ? document.querySelector(".pages"): document.querySelector(container); 
+        const popupWidth = 300;  
+        const popupHeight = 400; 
+        //get parent container
+        const parentRect = parent.getBoundingClientRect();
+
+        const clickX = window.innerWidth / 2;
+        const clickY = isMobile? window.scrollY -100: e.pageY - 200;
+
+        // determine where the popup's min/max x and y positions are to stay inside container
+        const minX = parentRect.left + popupWidth / 2;
+        const maxX = parentRect.right - popupWidth / 2;
+        const minY = parentRect.top + popupHeight / 2;
+        const maxY = parentRect.bottom - popupHeight / 2;
+
+        // select their position
+        const x = Math.min(Math.max(clickX, minX), maxX);
+        const y = Math.min(Math.max(clickY, minY), maxY);
+
+        //update the states to trigger different renderings
+        setPopupPosition({ x, y });
         setPreviewEp(ep);
         setShowPreview(true);
+
+        setTimeout(() => {
+            document.querySelector(".episode-extra")?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 0);
     }
     const closePreview = () =>{
         setPreviewEp(null);
@@ -22,7 +50,15 @@ export default function SeasonEpisodes({seasonNumber, seasonDropdown}) {
     }
 
     let epPreview= showPreview && previewEp? (
-        <div className="episode-extra">
+        <div 
+            className="episode-extra"
+            style={{
+                position: "absolute",
+                left: popupPosition.x,
+                top: popupPosition.y,
+                transform: "translateX(-50%)" 
+            }}
+        >
             <div className="preview-close">
                 <button onClick={closePreview}>X</button>
             </div>
@@ -39,9 +75,9 @@ export default function SeasonEpisodes({seasonNumber, seasonDropdown}) {
                             {`Season ${seasonNumber+1} Episode ${previewEp.num}`}
                         </div>
                     </div>
-                    {/* <div className="episode-description">
+                    <div className="episode-description">
                         <p>{previewEp.description}</p>
-                    </div> */}
+                    </div>
                     <div className="extra-content">
                         <PopUpInfo cat="Date Aired" ans={previewEp.aired} />
                         <PopUpInfo cat="Writers" ans={previewEp.writ} />
@@ -61,12 +97,12 @@ export default function SeasonEpisodes({seasonNumber, seasonDropdown}) {
                 <div className="left-page" >
                     {seasonDropdown}
                     {left.map((ep) => (
-                        <Episode key={ep.id} episode={ep} onClick={()=>displayPreview(ep)} />
+                        <Episode key={ep.id} episode={ep} onClick={(e)=>displayPreview(e, ep, '.left-page')} />
                     ))}
                 </div>
                 <div className="right-page">
                     {right.map((ep) => (
-                        <Episode key={ep.id} episode={ep} onClick={()=>displayPreview(ep)} />
+                        <Episode key={ep.id} episode={ep} onClick={(e)=>displayPreview(e, ep, '.right-page')} />
                     ))}
                 </div>
             </div>
