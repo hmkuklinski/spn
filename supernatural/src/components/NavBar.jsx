@@ -34,14 +34,14 @@ export default function NavBar() {
   else if (path.startsWith("/characters")) pageTitle = "Characters";
   else if (path.startsWith("/monsters")) pageTitle = "The Lore";
   else if (path.startsWith("/sigils")) pageTitle = "Sigils";
-  else if (path.startsWith("/podcast")) pageTitle = "Then and Now";
+  else if (path.startsWith("/spn-then-and-now")) pageTitle = "Then and Now";
   else if (path.startsWith("/conventions")) pageTitle = "Conventions";
   else if (path.startsWith("/beyondspn")) pageTitle = "Beyond SPN";
 
   //booleans to see if they are a part of the dropdown- for ease
   const journeySelection = path.startsWith("/episodes") || path.startsWith("/seasons");
   const theLoreSelection = path.startsWith("/monsters") || path.startsWith("/sigils");
-  const extraSelection = path.startsWith("/podcast") || path.startsWith("/conventions") || path.startsWith("/beyondspn");
+  const extraSelection = path.startsWith("/spn-then-and-now") || path.startsWith("/conventions") || path.startsWith("/beyondspn");
 
 
 
@@ -67,7 +67,7 @@ export default function NavBar() {
       <li className="dropdown" id="extras" >
         <span className={extraSelection ? "active" : ""}>Extras</span>
         <ul className="dropdown-menu" id="extras-menu">
-          <li><NavLink to="/podcast" className={({ isActive }) => isActive ? "active" : ""}>Podcast</NavLink></li>
+          <li><NavLink to="/spn-then-and-now" className={({ isActive }) => isActive ? "active" : ""}>SPN Then and Now</NavLink></li>
           <li><NavLink to="/conventions"className={({ isActive }) => isActive ? "active" : ""}>Conventions</NavLink> </li>
           {/* <li><NavLink to="/beyondspn"className={({ isActive }) => isActive ? "active" : ""}>Beyond SPN</NavLink> </li> */}
         </ul>
@@ -85,7 +85,7 @@ export default function NavBar() {
       <li onClick={() => setShowHamburger(false)}><NavLink to="/monsters" className={({ isActive }) => isActive ? "active" : ""}>The Lore</NavLink></li>
       <li onClick={() => setShowHamburger(false)}><NavLink to="/sigils" className={({ isActive }) => isActive ? "active" : ""}>Sigils</NavLink></li>
       {/* <li onClick={() => setShowHamburger(false)}><NavLink to="/beyondspn" className={({ isActive }) => isActive ? "active" : ""}>Beyond SPN</NavLink></li> */}
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/podcast" className={({ isActive }) => isActive ? "active" : ""}>Then and Now</NavLink></li>
+      <li onClick={() => setShowHamburger(false)}><NavLink to="/spn-then-and-now" className={({ isActive }) => isActive ? "active" : ""}>SPN Then and Now</NavLink></li>
       <li onClick={() => setShowHamburger(false)}><NavLink to="/conventions"className={({ isActive }) => isActive ? "active" : ""}>Conventions</NavLink> </li>
     </ul>
   );

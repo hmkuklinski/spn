@@ -57,7 +57,7 @@ function App() {
           <Route path="/monsters/:id" element={<TheLore />} />
           <Route path="/monsters/redirect" element={<JournalRedirect redirect="thelore" />} />
           <Route path="/beyondspn" element={<BeyondSpn />} />
-          <Route path="/podcast" element={<Podcast/>} />
+          <Route path="/spn-then-and-now" element={<Podcast/>} />
           <Route path="/conventions" element={<Conventions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
