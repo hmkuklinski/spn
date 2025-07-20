@@ -1,4 +1,4 @@
-<img width="1339" height="637" alt="Screenshot 2025-07-17 170318" src="https://github.com/user-attachments/assets/46649e7c-94eb-4fbe-b380-17acbe6c3ecd" /># Supernatural Lore
+# Supernatural Lore
 
 This website was created to provide information to Supernatural fans at any point in their viewing journey. This website has different information about the episodes, the season, characters, monsters, and sigils. As well as fun features like a featured episode, character, and monster. There's also additional information about projects outside of Supernatural, including Podcasts, Conventions, Extras (In Progress) and Music (In Progress).
 
