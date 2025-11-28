@@ -6,11 +6,16 @@ import { episodes } from '../data/episodeInfo';
 import {useState, useEffect} from "react";
 
 export default function Seasons({isEpisodes=null}){
+
     let nextPageLink = isEpisodes===null?"/seasons/1":"/episodes/season1";
 
     //to check if user is currently on mobile setup:
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
+        episodes.forEach(ep => {
+            const img = new Image();
+            img.src = ep.imgsrc;
+        });
         function handleResize() {
         setIsMobile(window.innerWidth < 768);
         }
@@ -18,6 +23,7 @@ export default function Seasons({isEpisodes=null}){
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
 
     //conditional render based on whether its for episodes or seasons component
     let seasonDescription = (

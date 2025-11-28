@@ -27,7 +27,7 @@ function App() {
   if (loading) {
     return (
       <div className="loading-screen">
-        <img src="https://technometrics.net/wp-content/uploads/2020/11/loading-icon-animated-gif-19-1.gif" alt="loading-gif"/>
+        <img src="https://loading.io/assets/mod/spinner/default/lg.gif" alt="loading-gif"/>
       </div>
     );
   }
