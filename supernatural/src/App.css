@@ -1716,6 +1716,11 @@ button:hover{
   .section-title h2{
     margin: 3px;
   }
+  .section-info:hover{
+    left: 0%;
+    top: 10%;
+    box-shadow: 3px 3px 3px;
+  }
   /* --------------- EPISODE PAGE FORMATTING---------------*/
   .entire-container{
     width: 100%;
