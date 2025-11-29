@@ -1,15 +1,14 @@
 import HomeLanding from './HomeLanding';
 import Layout from '../Layout';
 import Features from './Features';
-import SectionDesc from './SectionDesc';
-import { sections } from '../data/sectionInfo';
+import MySections from './MySections';
 export default function Home(){
     return (
     <Layout>
         <div className="main-container">
             <HomeLanding />
+            <MySections />
             <Features />
-            {/* <SectionDesc {...sections[0]} /> */}
         </div>
     </Layout>
     );

@@ -8,11 +8,13 @@
   --dark-main-color: navy;
   --dark-second-color: whitesmoke;
   --nav-active: skyblue;
-  --nav-hover: blue;
+  --nav-hover: rgb(61, 61, 244);
   --button-color: rgb(48, 28, 221);
   --button-hover: rgb(25, 14, 124);
   --johns-journal: rgb(185, 115, 22);
   --exit-color:  rgb(199,4,4);
+  --home-sections: #c7c7c7;
+  --featured-title: #9e9e9e;
 }
 /*---------------------------- Fonts ---------------------------- */
 .grape-nuts-regular {
@@ -249,8 +251,10 @@ button:hover{
 }
 .feature-title{
   height: 87px;
+    color:var(--featured-title);
 }
 .feature-subtitle h2{
+  color: var(--home-sections);
   text-decoration: underline;
   font-size: 18px;
 }
@@ -286,34 +290,63 @@ button:hover{
 .section-info{
   display:flex;
   align-items: center;
-  justify-content: center;
+  justify-content:flex-start;
   flex-direction: row;
-  width: 100%;
-  padding: 5px;
-  margin: 6px;
-  height: 250px;
+  width: 95%;
+  padding: 15px 0px;
+  margin: 50px 20px;
+  height: 310px;
   font-family: "Julius Sans One";
+  border-radius: 12px;
+  /* border: 1px solid black; */
+  background-color: var(--home-sections); 
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: left 0.4s ease-in-out, top 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
+.section-link{
+  text-decoration: none;
+  color:var(--second-color);
+  cursor:pointer;
+}
+
+.section-info:hover{
+  left: 2%;
+  top: 10%;
+  box-shadow: 3px 3px 3px;
+ 
+}
+
+
 .section-img{
-  width: 20%;
+  width: 30%;
   height: inherit;
   margin-right: 15px;
 }
 .section-img img{
   width:100%;
   height:100%;
+  border-radius:15px 0px 0px 15px;
+  filter:grayscale(100%);
 }
 .section-content{
   width: 70%;
   height:inherit;
   display:flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
+  padding: 5px;
+  margin: 8px;
+}
+.section-content h2{ 
+  margin-left: 10px;
 }
 .section-description{
   margin: 5px;
   padding: 5px;
+  font-size: 16px;
 }
 
 
@@ -1664,6 +1697,24 @@ button:hover{
   }
   .feature-image img{
     height:100%;
+  }
+  .section-info{
+    height:auto;
+    margin: 10px;
+  }
+  .section-img{
+    display:none;
+  }
+  .section-content{
+    align-items: center;
+    width:100%;
+  }
+  .section-description{
+    width: 100%;
+    text-align: center;
+  }
+  .section-title h2{
+    margin: 3px;
   }
   /* --------------- EPISODE PAGE FORMATTING---------------*/
   .entire-container{

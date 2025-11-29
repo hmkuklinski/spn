@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 export default function SectionDesc({title, imgsrc, desc, buttonLink}){
-    return (
+    return (<Link to={buttonLink} className="section-link">
         <div className="section-info">
             <div className="section-img">
                 <img src={imgsrc} alt="section graphic here" />
@@ -12,9 +12,7 @@ export default function SectionDesc({title, imgsrc, desc, buttonLink}){
                 <div className="section-description">
                     <p>{desc}</p>
                 </div>
-                <button className="btn-section">
-                    <Link to={buttonLink}>{title}</Link></button>
             </div>
-        </div>
+        </div></Link>
     );
 }

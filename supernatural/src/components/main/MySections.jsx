@@ -1,5 +1,5 @@
 import { sections } from "../data/sectionInfo"
-import SectionDesc from "./SectionDesc"
+import SectionDesc from "./SectionDesc";
 export default function MySections(){
     return (
         <div className="my-sections">
