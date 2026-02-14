@@ -86,8 +86,67 @@ code{
 .code-preview{
   align-items: center;
 }
-.outputs p{
+.outputs p, .api-main-container p{
   margin: 5px 2px;
+}
+.api-main-container{
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  font-family: "Arial";
+}
+.api-banner{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.api-endpoint a{
+  text-decoration: none;
+  cursor:hover;
+  color: var(--nav-hover);
+}
+.api-endpoint a:hover{
+  color: var(--nav-active);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: ease-in all 0.4s;
+}
+.endpoint-title{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  height:auto;
+}
+
+.api-method-title{
+  font-size: 20px;
+}
+
+.div-get, .div-post, .div-delete, .div-put{
+  background-color: blue;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 22px;
+  border-radius: 8px;
+  margin: 5px 20px;
+  font-size: 14px;
+  color:whitesmoke;
+  cursor:default;
+}
+.div-post{
+  background-color: green;
+}
+.div-put{
+  background-color: orange;
+}
+.div-delete{
+  background-color: red;
 }
 
 /*---------------------------- Button ---------------------------- */

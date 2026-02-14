@@ -92,6 +92,9 @@ export default function NavBar() {
           <li>
             <Link href="/conventions" className={path.startsWith("/conventions") ? "active" : ""}> Conventions</Link>
           </li>
+          <li>
+            <Link href="/view_api" className={path.startsWith("/view_api") ? "active" : ""}>Winchester's Archive API</Link>
+          </li>
         </ul>
       </li>
     </ul>
@@ -121,6 +124,9 @@ export default function NavBar() {
       </li>
       <li onClick={() => setShowHamburger(false)}>
         <Link href="/conventions" className={path.startsWith("/conventions") ? "active" : ""}> Conventions</Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/view_api" className={path.startsWith("/view_api") ? "active" : ""}> Vinchester's Archive API</Link>
       </li>
     </ul>
   );

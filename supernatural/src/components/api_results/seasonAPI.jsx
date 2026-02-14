@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import Layout from '../Layout';
-
+import SampleResult from "./SampleResult";
+import EndpointInfo from "./EndpointInfo";
 //this page shows the information about this API endpoint along with sample output
 export default function SeasonAPI({ seasonNum }){
     const [season, setSeason] = useState(null);
@@ -24,36 +25,9 @@ export default function SeasonAPI({ seasonNum }){
         <div className="api-container">
             <div className="api-format">
                 <h1>Get Entire Season Information:</h1>
-                <code>
-                    <p>
-                        http://supernatural-lore.vercel.app/api/episodesAPI?seasonNum=1
-                    </p>
-                    <p><b>Base URL: </b>/api/episodesAPI</p>
-                    <p><b>Query Parameter:</b> seasonNum=int, where the number is in the range 1-15 (inclusive)</p>
-                    <p><b>Output Fields: </b></p>
-                    <div className="outputs">
-                        <p><i>"num"</i> - the number ID of the season (int)</p>
-                        <p><i>"title"</i> - season number typed out (string) </p>
-                        <p><i>"imgsrc"</i> - a photo path of the season titlecard, used for seasons and episodes list (string) </p>
-                        <p><i>"photo"</i> - a photo path of the season titlecard gif, used for the season summary pages (string) </p>
-                        <p><i>"description"</i> - a short summary of the season (string) </p>
-                        <p><i>"characterIntros"</i> - a list that shows new characters introduced this season (list- characterInfo objects)</p>
-                        <p><i>"majorDeaths"</i> - a list that shows the characters that died this season with a short description (list- characterInfo objects)</p>
-                        <p><i>"majorUpdates"</i> - a list of characters that experience a major update this season (list- characterInfo objects)</p>
-                        <p><i>"epNumbers"</i> - The total number of episodes in the season (string)</p>
-                        <p><i>"yearAired"</i> - The year the season premiered (string)</p>
-                        <p><i>"ratings"</i> - The IDMB rating for the season (string)</p>
-                        <p><i>"bodyCount"</i> - The number of people that died this season (int)</p>
-                        <p><i>"seasonMonsters"</i> - a list of the monsters that are faced this season, along with their appearance count (list- monsterInfo objects)</p>
-                        <p><i>"epInfo"</i> - a list that contains information about each episode (list- episodeInfo objects)</p>
-                   </div>
-                </code>
-                <div className="code-preview">
-                    <p>Sample Output</p>
-                    <pre style={{ whiteSpace:"pre-wrap", background: '#242424', color: "rgb(8, 120, 249)", padding: "2.5rem", fontSize:"15px", fontFamily:"Arial", textAlign:"justify"}}>
-                        {JSON.stringify(example_data, null, 2)}
-                    </pre>
-                </div>
+                <EndpointInfo indexId={0} />
+                
+                <SampleResult example_data={example_data} /> 
             </div>
         </div>
         </Layout>
