@@ -24,6 +24,19 @@ export const apiEndpointsInfo = [
             {"name": "epInfo", "desc": "a list that contains information about each episode", "valueType": "(list - episodeInfo objects)"}
 
         ]
+    },
+    {
+        "id":2,
+        "endpoint_name": "Season Episode List",
+        "base_url": "/api/episodesAPI?",
+        "example_url": "http://supernatural-lore.vercel.app/api/episodesAPI?seasonNum=1&type=epList",
+        "parameters": [
+            {"name": "seasonNum", "type": "int", "notes": "where the number is in the range 1-15 (inclusive)"},
+            {"name":"type", "type":"epList", "notes": "where epList is a string specifying that you want the season's episode list"}
+        ],
+        "outputs": [
+            {"name": "epList", "desc":"A list of all the episodes in the season with information about the id, title, num, photo, description, date aired, directors, and writers.", "valueType":"(list)",}
+        ]
     }
 ];
 
@@ -35,5 +48,13 @@ export const apiPreviews = [
         "link": "/view_api/season/1",
         "description": "Fetches detailed information about a specific Supernatural season, including the season title, titlecard images, episode list, character introductions, major deaths, episode count, ratings, and other season metadata.",
         "code": "sample request: GET http://supernatural-lore.vercel.app/api/episodesAPI?seasonNum=1"
+    },
+    {
+        "id": 2,
+        "title": "Season Episode List",
+        "methodType": "GET",
+        "link":"/view_api/epList",
+        "description": "Fetches detailed information about the episodes of a specific Supernatural season, including information about the id, title, num, photo, description, date aired, directors, and writers.",
+        "code": "sample request: GET http://supernatural-lore.vercel.app/api/episodesAPI?seasonNum=1&type=epList"
     }
 ];

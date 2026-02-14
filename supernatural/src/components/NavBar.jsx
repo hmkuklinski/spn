@@ -40,6 +40,7 @@ export default function NavBar() {
   else if (path.startsWith("/spn-then-and-now")) pageTitle = "Then and Now";
   else if (path.startsWith("/conventions")) pageTitle = "Conventions";
   else if (path.startsWith("/beyondspn")) pageTitle = "Beyond SPN";
+  else if(path.startsWith("/view_api")) pageTitle= "Winchester's Archive API";
 
   //booleans to see if they are a part of the dropdown- for ease
   const journeySelection = path.startsWith("/episodes") || path.startsWith("/seasons");
@@ -126,7 +127,7 @@ export default function NavBar() {
         <Link href="/conventions" className={path.startsWith("/conventions") ? "active" : ""}> Conventions</Link>
       </li>
       <li onClick={() => setShowHamburger(false)}>
-        <Link href="/view_api" className={path.startsWith("/view_api") ? "active" : ""}> Vinchester's Archive API</Link>
+        <Link href="/view_api" className={path.startsWith("/view_api") ? "active" : ""}> Winchester's Archive API</Link>
       </li>
     </ul>
   );
