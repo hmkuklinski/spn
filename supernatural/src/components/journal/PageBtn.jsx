@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function PageBtn({isBackwards, navLink}){
     const linkStyle = {};
@@ -10,8 +9,8 @@ export default function PageBtn({isBackwards, navLink}){
 
     return (
         <div className="pagebtn-container" style={linkStyle}>
-            {isBackwards && <Link to={navLink} className="nav-backwards"><ion-icon name="arrow-back-outline"></ion-icon></Link>}
-            {!isBackwards && <Link to={navLink} className="nav-forwards"><ion-icon name="arrow-forward-outline"></ion-icon></Link>}
+            {isBackwards && <Link href={navLink} className="nav-backwards"><ion-icon name="arrow-back-outline"></ion-icon></Link>}
+            {!isBackwards && <Link href={navLink} className="nav-forwards"><ion-icon name="arrow-forward-outline"></ion-icon></Link>}
         </div>
     );
 }

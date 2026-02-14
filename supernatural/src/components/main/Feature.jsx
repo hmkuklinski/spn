@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {Link} from "react-router-dom";
+import Link from "next/link";
 
 export default function Feature({contentType, ...props}){
     const [isMobile, setIsMobile] = useState(false);
@@ -43,14 +43,38 @@ export default function Feature({contentType, ...props}){
         </div>
     );
 
+    const defaultLinks = {
+        monster: "/monsters",
+        character: "/characters",
+        episode: "/episodes",
+        sigil: "/sigils",
+    };
+
     const featureButton = (
         <div className="feature-button">
-            <button className="basic-btn">
-                <Link to={props.link}>{props.linkText}</Link>
-            </button>
+            <Link href={props.link || defaultLinks[contentType]}>
+                <button className="basic-btn">{props.linkText || "Learn More"}</button>
+            </Link>
         </div>
+
     );
 
+
+    // const featureButton = (
+    //     <div className="feature-button">
+    //     {props.link ? (
+    //         <Link href={props.link} className="basic-btn">
+    //         {props.linkText || "Learn More"}
+    //         </Link>
+    //     ) : (
+    //         <button className="basic-btn" disabled>
+    //         {props.linkText || "No Link"}
+    //         </button>
+    //     )}
+    //     </div>
+    // );
+
+    
 
     //arrange layout based on whether the user is on mobile or not:
     if (!isMobile){

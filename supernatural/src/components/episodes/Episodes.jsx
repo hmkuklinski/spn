@@ -1,14 +1,16 @@
 import { useState} from 'react';
-import { useParams, useNavigate, Link } from "react-router-dom";
 import Layout from '../Layout';
 import JohnsJournal from '../journal/JohnsJournal';
 import SearchFailed from '../searchbar/SearchFailed';
 import SeasonEpisodes from './SeasonEpisodes';
 import { episodes } from '../data/episodeInfo';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
-export default function Episodes() {
-    const { id } = useParams(); //current id is :/season1, /season2, /season3, etc...
-    const navigate = useNavigate();
+export default function Episodes({ seasonId }) {
+    const id= seasonId; //current id is :/season1, /season2, /season3, etc...
+    const router = useRouter();
+
     const [isOpen, setIsOpen] = useState(false); 
 
     //parse the value here- get full id, remove the text, parse the int by 10 to get numerical value (base10)
@@ -38,7 +40,7 @@ export default function Episodes() {
 
     //navigate to correct episodes page of desired selection:
     const handleSeasonSelect = (num) => {
-        navigate(`/episodes/season${num}`);
+        router.push(`/episodes/season${num}`);
         setIsOpen(false); //close it
     };
 
@@ -67,7 +69,7 @@ export default function Episodes() {
     );
 
     const homeBtn = (
-        <Link to="/episodes" className="page-nav bottom-middle" aria-label="Next page">
+        <Link href="/episodes" className="page-nav bottom-middle" aria-label="Next page">
             <ion-icon name="home-outline"></ion-icon>
         </Link>
     );

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {Link} from "react-router-dom";
+import Link from "next/link";
 
 export default function SeasonMap({mapType, data}){
     const [showSpoilers, setShowSpoilers] = useState(mapType === "intro");
@@ -34,7 +34,7 @@ export default function SeasonMap({mapType, data}){
                     {data.map((char) => (
                         <div className="char-entry" key={char.id}>
                             <div className="char-name">
-                                <Link to={`/characters/${char.id}`}>
+                                <Link href={`/characters/${char.id}`}>
                                     <h3>{char.name}</h3>
                                 </Link>
                             </div>

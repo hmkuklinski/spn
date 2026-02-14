@@ -4,14 +4,16 @@ import { sigils } from '../data/sigilInfo.js';
 import Layout from '../Layout.jsx';
 import Search from '../searchbar/Search.jsx';
 import SearchFailed from '../searchbar/SearchFailed.jsx';
-import {Link, useParams, useNavigate} from "react-router-dom";
 import { useState} from 'react';
+import Link from 'next/link.js';
+import { useRouter } from 'next/router.js';
 
-export default function Sigils(){
+export default function Sigils({ sigilId }){
     //get current /sigils/:id (need to render correct page)
-    const {id} = useParams();
+    
     //to "change" the page if user types valid name in search bar and clicks button/enter
-    const navigate = useNavigate(); 
+    const router = useRouter(); 
+    const id = sigilId;
 
     //for search bar function:
     const [searchEntry, setSearchEntry] = useState("");
@@ -54,7 +56,7 @@ export default function Sigils(){
             //clear input box:
             setSearchEntry("");
             //change the current address to matching character
-            navigate(`/sigils/${matching.id}`);
+            router.push(`/sigils/${matching.id}`);
         }
         else{
             const journal = document.getElementById("jj");
@@ -74,7 +76,7 @@ export default function Sigils(){
     }
 
     const homeBtn = (
-        <Link to="/sigils" className="page-nav bottom-middle" aria-label="Next page">
+        <Link href="/sigils" className="page-nav bottom-middle" aria-label="Next page">
             <ion-icon name="home-outline"></ion-icon>
         </Link>
     );

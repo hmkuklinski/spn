@@ -1,5 +1,7 @@
 import {useState, useEffect} from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 
 export default function NavBar() {
   const navlogo = <img src="/assets/home/devilstrap.png" alt="logo-img" />;
@@ -7,8 +9,9 @@ export default function NavBar() {
   const [showHamburger, setShowHamburger]= useState(false);
 
   //get the current path using location:
-  const location = useLocation();
-  const path = location.pathname;
+  const router = useRouter();
+  const path = router.asPath; 
+
 
   //check if the user is on mobile:
   useEffect(() => {
@@ -48,45 +51,77 @@ export default function NavBar() {
   //The actual nav links themselves:
   const navUl = (
     <ul>
-      <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>
-       <li className="dropdown">
+      <li>
+        <Link href="/" className={path === "/" ? "active" : ""}>Home</Link>
+      </li>
+
+      <li className="dropdown">
         <span className={journeySelection ? "active" : ""}>The Journey</span>
         <ul className="dropdown-menu">
-          <li><NavLink to="/episodes" className={({ isActive }) => isActive ? "active" : ""}>Episode Guide</NavLink></li>
-          <li><NavLink to="/seasons" className={({ isActive }) => isActive ? "active" : ""}>Season Overview</NavLink></li>
-        </ul>
-      </li>
-      <li><NavLink to="/characters" className={({ isActive }) => isActive ? "active" : ""}>Characters</NavLink></li>
-      <li className="dropdown">
-        <span className={theLoreSelection ? "active" : ""}>The Lore</span>
-        <ul className="dropdown-menu">
-          <li><NavLink to="/monsters">Monsters</NavLink></li>
-          <li><NavLink to="/sigils">Sigils</NavLink></li>
-        </ul>
-      </li>
-      <li className="dropdown" id="extras" >
-        <span className={extraSelection ? "active" : ""}>Extras</span>
-        <ul className="dropdown-menu" id="extras-menu">
-          <li><NavLink to="/spn-then-and-now" className={({ isActive }) => isActive ? "active" : ""}>SPN Then and Now</NavLink></li>
-          <li><NavLink to="/conventions"className={({ isActive }) => isActive ? "active" : ""}>Conventions</NavLink> </li>
-          {/* <li><NavLink to="/beyondspn"className={({ isActive }) => isActive ? "active" : ""}>Beyond SPN</NavLink> </li> */}
+          <li>
+            <Link href="/episodes" className={path.startsWith("/episodes") ? "active" : ""}> Episode Guide </Link>
+          </li>
+          <li>
+            <Link href="/seasons" className={path.startsWith("/seasons") ? "active" : ""}> Season Overview</Link>
+          </li>
         </ul>
       </li>
 
-      
+      <li>
+        <Link href="/characters" className={path.startsWith("/characters") ? "active" : ""}> Characters</Link>
+      </li>
+
+      <li className="dropdown">
+        <span className={theLoreSelection ? "active" : ""}>The Lore</span>
+        <ul className="dropdown-menu">
+          <li>
+            <Link href="/monsters" className={path.startsWith("/monsters") ? "active" : ""}>Monsters</Link>
+          </li>
+          <li>
+            <Link href="/sigils" className={path.startsWith("/sigils") ? "active" : ""}>Sigils</Link>
+          </li>
+        </ul>
+      </li>
+
+      <li className="dropdown" id="extras">
+        <span className={extraSelection ? "active" : ""}>Extras</span>
+        <ul className="dropdown-menu" id="extras-menu">
+          <li>
+            <Link href="/spn-then-and-now" className={path.startsWith("/spn-then-and-now") ? "active" : ""}> SPN Then and Now </Link>
+          </li>
+          <li>
+            <Link href="/conventions" className={path.startsWith("/conventions") ? "active" : ""}> Conventions</Link>
+          </li>
+        </ul>
+      </li>
     </ul>
   );
-   const navMobile = (
+  const navMobile = (
     <ul>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/episodes" className={({ isActive }) => isActive ? "active" : ""}>Episodes</NavLink></li>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/seasons" className={({ isActive }) => isActive ? "active" : ""}>Seasons</NavLink></li>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/characters" className={({ isActive }) => isActive ? "active" : ""}>Characters</NavLink></li>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/monsters" className={({ isActive }) => isActive ? "active" : ""}>The Lore</NavLink></li>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/sigils" className={({ isActive }) => isActive ? "active" : ""}>Sigils</NavLink></li>
-      {/* <li onClick={() => setShowHamburger(false)}><NavLink to="/beyondspn" className={({ isActive }) => isActive ? "active" : ""}>Beyond SPN</NavLink></li> */}
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/spn-then-and-now" className={({ isActive }) => isActive ? "active" : ""}>SPN Then and Now</NavLink></li>
-      <li onClick={() => setShowHamburger(false)}><NavLink to="/conventions"className={({ isActive }) => isActive ? "active" : ""}>Conventions</NavLink> </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/" className={path === "/" ? "active" : ""}>Home </Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/episodes" className={path.startsWith("/episodes") ? "active" : ""}> Episodes</Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/seasons" className={path.startsWith("/seasons") ? "active" : ""}>Seasons </Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/characters" className={path.startsWith("/characters") ? "active" : ""}> Characters</Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/monsters" className={path.startsWith("/monsters") ? "active" : ""}> The Lore</Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/sigils" className={path.startsWith("/sigils") ? "active" : ""}>Sigils</Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/spn-then-and-now" className={path.startsWith("/spn-then-and-now") ? "active" : ""}> SPN Then and Now </Link>
+      </li>
+      <li onClick={() => setShowHamburger(false)}>
+        <Link href="/conventions" className={path.startsWith("/conventions") ? "active" : ""}> Conventions</Link>
+      </li>
     </ul>
   );
 

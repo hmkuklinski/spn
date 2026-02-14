@@ -1,5 +1,5 @@
 import Layout from './Layout';
-import {Link} from "react-router-dom";
+import Link from 'next/link';
 
 export default function NotFound(){
     return (
@@ -7,7 +7,7 @@ export default function NotFound(){
         <div className="main-container">
             <h1>404- Page Loading Error</h1>
             <p>Time to pull over. You've made a wrong turn somewhere.</p>
-            <Link to="/"><button>Go Back Home</button></Link>
+            <Link href="/"><button>Go Back Home</button></Link>
         </div>   
     </Layout>
     )

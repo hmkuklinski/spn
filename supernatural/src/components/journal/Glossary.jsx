@@ -6,7 +6,8 @@ import SearchFailed from '../searchbar/SearchFailed';
 import { characters } from '../data/characterInfo';
 import { sigils } from '../data/sigilInfo';
 import {monsters} from '../data/monsterInfo';
-import { Link, useNavigate} from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Glossary(props){
     
@@ -18,7 +19,7 @@ export default function Glossary(props){
     const [showHelp, setShowHelp] = useState(false);
 
     //to "change" the page if user types valid name in search bar and clicks button/enter
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const chFirst = characters[0].id;
     const monFirst = monsters[0].id;
@@ -62,7 +63,7 @@ export default function Glossary(props){
             //clear input box:
             setSearchEntry("");
             //change the current address to matching character
-            navigate(`/${props.baseLink}/${matching.id}`);
+            router.push(`/${props.baseLink}/${matching.id}`);
 
               
 
@@ -107,7 +108,7 @@ export default function Glossary(props){
                     <ol className="glossary-ul">
                         {dataInfo.slice(0, leftStop).map(item => (
                         <li key={item.id} className="glossary-li">
-                            <Link to={`/${props.baseLink}/${item.id}`}>
+                            <Link href={`/${props.baseLink}/${item.id}`}>
                             {item.name}
                             </Link>
                         </li>
@@ -120,7 +121,7 @@ export default function Glossary(props){
                     <ol className="glossary-ul" start={leftStop + 1}>
                         {dataInfo.slice(leftStop, dataInfo.length).map(item => (
                         <li key={item.id} className="glossary-li">
-                            <Link to={`/${props.baseLink}/${item.id}`}>
+                            <Link href={`/${props.baseLink}/${item.id}`}>
                             {item.name}
                             </Link>
                         </li>

@@ -4,14 +4,15 @@ import Layout from '../Layout.jsx';
 import Search from '../searchbar/Search.jsx';
 import SearchFailed from '../searchbar/SearchFailed.jsx';
 import {characters} from '../data/characterInfo.js';
-import {useParams, useNavigate, Link} from "react-router-dom";
 import { useState} from 'react';
+import Link from 'next/link.js';
+import { useRouter } from 'next/router';
 
-export default function Characters(){
+
+export default function Characters({ characterId }){
     //get current /characters/:id (need to render correct page)
-    const {id} = useParams();
-    //to "change" the page if user types valid name in search bar and clicks button/enter
-    const navigate = useNavigate(); 
+    const id= characterId;
+    const router = useRouter();
 
     //for search bar function:
     const [searchEntry, setSearchEntry] = useState("");
@@ -54,7 +55,7 @@ export default function Characters(){
             //clear input box:
             setSearchEntry("");
             //change the current address to matching character
-            navigate(`/characters/${matching.id}`);
+            router.push(`/characters/${matching.id}`);
         }
         else{
             const journal = document.getElementById("jj");
@@ -73,7 +74,7 @@ export default function Characters(){
         setShowHelp(prev =>!prev);
     }
     const homeBtn = (
-        <Link to="/characters" className="page-nav bottom-middle" aria-label="Next page">
+        <Link href="/characters" className="page-nav bottom-middle" aria-label="Next page">
             <ion-icon name="home-outline"></ion-icon>
         </Link>
     );

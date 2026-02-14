@@ -1,6 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import Link from 'next/link';
 export default function HomeLanding(){
     return (
         <div className="home-banner">
@@ -20,7 +18,7 @@ export default function HomeLanding(){
                     <p>Explore the world of the Supernatural with Sam and Dean Winchester as they travel across the country in their '67 impala, hunting monsters, demons, angels, and fighting their destiny. </p>
                 </div>
                 <div className="button-div">
-                    <button className="basic-btn"><Link to="/episodes">Join the Hunt</Link></button>
+                    <button className="basic-btn"><Link href="/episodes">Join the Hunt</Link></button>
                 </div>
             </div>
         </div>

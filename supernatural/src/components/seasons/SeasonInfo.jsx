@@ -3,8 +3,7 @@ import { episodes } from "../data/episodeInfo";
 import SeasonMap from "./SeasonMap";
 import InfoDiv from "../InfoDiv";
 import { useState} from "react";
-import { useNavigate } from "react-router-dom";
-
+import { useRouter } from "next/router";
 export default function SeasonInfo({num}){
 
     //get the information for the current season:
@@ -22,14 +21,14 @@ export default function SeasonInfo({num}){
 
     //for the selections options:
     const [isOpen, setIsOpen] = useState(false); 
-    const navigate = useNavigate();
+    const router = useRouter();
 
     //function to know state of whether the selection menu is open:
     const handleToggle = () => setIsOpen((prev) => !prev);
 
     //navigate to correct episodes page of desired selection:
     const handleSeasonSelect = (num) => {
-        navigate(`/seasons/${num}`);
+        router.push(`/seasons/${num}`);
         setIsOpen(false); //close it
     };
 

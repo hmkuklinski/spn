@@ -1,20 +1,22 @@
 //this component allows for the navigation between pages once user reaches seasons/1 through seasons/15
-import { useParams, useNavigate, Link } from "react-router-dom";
 import SeasonInfo from './SeasonInfo';
 import JohnsJournal from '../journal/JohnsJournal';
 import Layout from '../Layout';
 import { episodes } from '../data/episodeInfo';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
-export default function SeasonRouting() {
-    const { num } = useParams();
-    const navigate = useNavigate();
+
+export default function SeasonRouting({ seasonId }) {
+    const num = seasonId;
+    const router = useRouter();
 
     // Convert route param from string to integer, adjust to 0-based index
     const seasonNum = parseInt(num) - 1;
 
     // If invalid season (non-number or out of bounds), redirect to main seasons page
     if (isNaN(seasonNum) || seasonNum < 0 || seasonNum >= episodes.length) {
-        navigate("/seasons");
+        router.push("/seasons");
         return null;
     }
 
@@ -27,7 +29,7 @@ export default function SeasonRouting() {
         : "/seasons/redirect";
 
     const homeBtn = (
-        <Link to="/seasons" className="page-nav bottom-middle" aria-label="Next page">
+        <Link href="/seasons" className="page-nav bottom-middle" aria-label="Next page">
             <ion-icon name="home-outline"></ion-icon>
         </Link>
     );

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 export default function SearchFailed({buttonText, buttonLink, message=null}){
     const closeSearchFailed=()=>{
         const warning = document.getElementById("warning");
@@ -22,7 +22,7 @@ export default function SearchFailed({buttonText, buttonLink, message=null}){
             </div>
             {messageDiv}
             <div className="failed-button">
-                <button className="basic-btn"><Link to={buttonLink}>{buttonText}</Link></button>
+                <button className="basic-btn"><Link href={buttonLink}>{buttonText}</Link></button>
             </div>
         </div>
     );

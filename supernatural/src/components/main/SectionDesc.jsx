@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 export default function SectionDesc({title, imgsrc, desc, buttonLink}){
-    return (<Link to={buttonLink} className="section-link">
+    return (<Link href={buttonLink} className="section-link">
         <div className="section-info">
             <div className="section-img">
                 <img src={imgsrc} alt="section graphic here" />

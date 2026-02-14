@@ -1,11 +1,11 @@
 import {characters} from '../data/characterInfo';
-import {Link} from "react-router-dom";
 import JohnsJournal from "./JohnsJournal";
 import GalleryImage from "./GalleryImage";
 import { monsters } from "../data/monsterInfo";
 import Layout from "../Layout";
 import { episodes } from '../data/episodeInfo';
 import { sigils } from '../data/sigilInfo';
+import Link from 'next/link';
 
 export default function JournalRedirect(props){
     let rightPageContents, prevLink, redirectLink, redirectImage, redirectText;
@@ -13,7 +13,7 @@ export default function JournalRedirect(props){
         const prevChar = characters[characters.length-1];
         prevLink = `/characters/${prevChar.id}`;
         redirectText = <p>Unfortunately that's all that John wrote here. If you still want to learn more, you can always review.</p>;
-        redirectLink = <Link to="/characters">Start Over</Link>;
+        redirectLink = <Link href="/characters">Start Over</Link>;
         redirectImage = <img src="/assets/redirects/characters/characterredirect.gif" alt="redirect"/>;
         rightPageContents = (
             <div className="gallery-redirect">
@@ -35,7 +35,7 @@ export default function JournalRedirect(props){
     else if(props.redirect === "thelore"){
         const prevMon = monsters[monsters.length-1];
         prevLink = `/monsters/${prevMon.id}`;
-        redirectLink = <Link to="/monsters">Start Over</Link>;
+        redirectLink = <Link href="/monsters">Start Over</Link>;
         redirectText = <p>That's all the lore that John wrote in his journal. If you still want to learn more, you can always review what is written here, check the Men of Letters' Library, or ask a friend.</p>;
         redirectImage =  <img src="/assets/redirects/monsters/mredirect.gif" alt="redirect" width="100%" height="350px"/>;
         rightPageContents = (
@@ -51,7 +51,7 @@ export default function JournalRedirect(props){
     else if(props.redirect === "season"){
         const prevSeason = episodes[episodes.length-1];
         prevLink = `/seasons/${prevSeason.id}`;
-        redirectLink = <Link to="/seasons">Start Over</Link>;
+        redirectLink = <Link href="/seasons">Start Over</Link>;
         redirectImage= <img src="/assets/redirects/seasons/seasonredirect.gif" alt="redirect" />;
         redirectText = <p>That's the end of the road. Maybe we should look back to see how far we've come!</p>;
         rightPageContents = (
@@ -68,7 +68,7 @@ export default function JournalRedirect(props){
     else if(props.redirect === "episodes"){
         const prevSeason = episodes[episodes.length-1];
         prevLink = `/episodes/seasons${prevSeason.id}`;
-        redirectLink = <Link to="/episodes">Start Over</Link>;
+        redirectLink = <Link href="/episodes">Start Over</Link>;
         redirectImage= <img src="/assets/redirects/seasons/seasonredirect.gif" alt="redirect" />;
         redirectText = <p>That's the end of the road. Maybe we should look back to see how far we've come!</p>;
         rightPageContents = (
@@ -84,7 +84,7 @@ export default function JournalRedirect(props){
     else if(props.redirect === "sigils"){
         const prevSigil = sigils[sigils.length-1];
         prevLink = `/sigils/${prevSigil.id}`;
-        redirectLink = <Link to="/sigils">Start Over</Link>;
+        redirectLink = <Link href="/sigils">Start Over</Link>;
         redirectImage= <img src="https://i.pinimg.com/736x/2e/d2/15/2ed21577a58cf779925e54c3c2372722.jpg" alt="redirect" />;
         redirectText = <p>That's the end of the road.If you still want to learn more, you can always review what is written here, check the Men of Letters' Library, or see if there is anything in the Book of the Damned.</p>;
         rightPageContents = (

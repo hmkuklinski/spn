@@ -4,14 +4,15 @@ import Search from '../searchbar/Search.jsx';
 import SearchFailed from '../searchbar/SearchFailed.jsx';
 import Monster from './Monster.jsx';
 import { monsters } from '../data/monsterInfo.js';
-import {useParams, useNavigate, Link} from "react-router-dom";
 import { useState} from 'react';
+import { useRouter } from 'next/router.js';
+import Link from 'next/link.js';
 
-export default function TheLore(){
+export default function TheLore({ monsterId }){
     //get current /monsters/:id (need to render correct page)
-    const {id} = useParams();
+    const id = monsterId;
     //to "change" the page if user types valid name in search bar and clicks button/enter
-    const navigate = useNavigate(); 
+    const router = useRouter();
 
     //for search bar function:
     const [searchEntry, setSearchEntry] = useState("");
@@ -54,7 +55,7 @@ export default function TheLore(){
             //clear input box:
             setSearchEntry("");
             //change the current address to matching monsters
-            navigate(`/monsters/${matching.id}`);
+            router.push(`/monsters/${matching.id}`);
         }
         else{
             const journal = document.getElementById("jj");
@@ -70,7 +71,7 @@ export default function TheLore(){
     }
 
     const homeBtn = (
-        <Link to="/monsters" className="page-nav bottom-middle" aria-label="Next page">
+        <Link href="/monsters" className="page-nav bottom-middle" aria-label="Next page">
             <ion-icon name="home-outline"></ion-icon>
         </Link>
     );

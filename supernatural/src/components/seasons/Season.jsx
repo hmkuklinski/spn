@@ -1,18 +1,16 @@
 //This component is used for the season cards and routing to the appropriate season summary page
-
-import { useNavigate } from "react-router-dom";
-
+import { useRouter } from "next/router";
 export default function Season({ seasonNumber, imgsrc, num, isEpisodes}) {
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const handleClick = () => {
         
         if(isEpisodes){
-            navigate(`/episodes/season${num}`);
+            router.push(`/episodes/season${num}`);
 
         }
         else{
-            navigate(`/seasons/${num}`);
+            router.push(`/seasons/${num}`);
         }
     };
     return (

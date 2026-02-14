@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Julius+Sans+One&display=swap');
+
 *{
   box-sizing: border-box;
 }
@@ -17,6 +19,8 @@
   --featured-title: #9e9e9e;
 }
 /*---------------------------- Fonts ---------------------------- */
+
+
 .grape-nuts-regular {
   font-family: "Grape Nuts", cursive;
   font-weight: 400;
@@ -43,7 +47,7 @@
 .season-title, .char-updates, .update-container, .char-intros, .intro-container, .char-deaths, .updates, .spoilers, #glossary-left, #glossary-right,
 .feature-container, .feature-subtitle, .feature-button, #warning, #season-spoilers, .death-container, .loading-screen,
 .convention-landing-container, .podcast-landing-container, .platform-text, .platform-desc, .platform-text,
-.podcast-hosts-container, .host-container{
+.podcast-hosts-container, .host-container, .api-container, .api-format{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +70,24 @@
 }
 body{
   margin: 0;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+/* ----------------------API INFORMATION FORMATTING -------------------------- */
+code{
+  width: 95%;
+}
+.outputs, .code-preview{
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.code-preview{
+  align-items: center;
+}
+.outputs p{
+  margin: 5px 2px;
 }
 
 /*---------------------------- Button ---------------------------- */
@@ -251,7 +273,8 @@ button:hover{
 }
 .feature-title{
   height: 87px;
-    color:var(--featured-title);
+  color:var(--featured-title);
+    
 }
 .feature-subtitle h2{
   color: var(--home-sections);
