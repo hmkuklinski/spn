@@ -4,21 +4,22 @@ import SampleResult from "./SampleResult";
 import EndpointInfo from "./EndpointInfo";
 import { apiEndpointsInfo } from "../data/apiInfo";
 //this page shows the information about this API endpoint along with sample output
-export default function SeasonAPI({ seasonNum, indexId, example_data }){
+export default function SeasonAPI({ seasonNum, fetchUrl, indexId, example_data }){
     const [season, setSeason] = useState(null);
 
     useEffect(()=>{
         if (!seasonNum) return;
 
-        fetch(`/api/episodesAPI?seasonNum=${seasonNum}`)
+        fetch(fetchUrl)
         .then(res=>res.json())
         .then(data => setSeason(data));
-    }, [seasonNum]);
+    }, [seasonNum, fetchUrl]);
 
     if (!season) {
         return <div>Loading...</div>;
     }
 
+    
 
     return (
         <Layout>

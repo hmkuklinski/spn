@@ -74,22 +74,18 @@ body{
 }
 
 /* ----------------------API INFORMATION FORMATTING -------------------------- */
-code{
-  width: 95%;
-}
-.outputs, .code-preview{
+.api-main-container{
   display:flex;
   align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
 }
-.code-preview{
-  align-items: center;
-}
-.outputs p, .api-main-container p{
-  margin: 5px 2px;
-}
-.api-main-container, .api-container{
+
+/* holds all information when clicking specific API endpoint */
+.api-container{
   display:flex;
   align-items: flex-start;
   justify-content: center;
@@ -97,12 +93,17 @@ code{
   margin: 10px;
   font-family: "Arial";
 }
+/* holds api name/link, with get method on /view_api/ home */
 .api-banner{
   display:flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+  padding: 4px;
+  margin: 4px 0px;
+  width:100%;
 }
+/* API link from /view_api/ to the specific endpoint documention*/
 .api-endpoint a{
   text-decoration: none;
   cursor:hover;
@@ -114,18 +115,21 @@ code{
   text-underline-offset: 2px;
   transition: ease-in all 0.4s;
 }
+
+/* ie. season- episode list on /view_api/ */
 .endpoint-title{
   display:flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
-  height:auto;
+  padding: 4px;
 }
 
 .api-method-title{
   font-size: 20px;
 }
 
+/* the method boxes*/
 .div-get, .div-post, .div-delete, .div-put{
   background-color: blue;
   display:flex;
@@ -139,6 +143,7 @@ code{
   color:whitesmoke;
   cursor:default;
 }
+
 .div-post{
   background-color: green;
 }
@@ -148,6 +153,60 @@ code{
 .div-delete{
   background-color: red;
 }
+
+
+/* -----------------------------API Sidebar */
+.div-get.sidebar, .div-post.sidebar, .div-delete.sidebar, .div-put.sidebar{
+  width: 40px;
+  height: 15px;
+  font-size: 8px;
+  margin: 10px;
+  border-radius: 4px;
+}
+.api-navbar{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  float:left;
+  margin: 10px 20px;
+  background: rgb(214, 214, 214);
+  width: 20%;
+}
+.api-seasons{
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.api-section-title{
+  text-align: center ;
+  margin: 14px;
+  color: blue;
+}
+.api-seasons-links{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  list-style: none;
+  padding: 0px;
+  height: 50px;
+}
+.api-seasons-links a{
+  text-decoration: none;
+  color: var(--second-color);
+  margin: 10px;
+  font-size: 14px;
+}
+.api-seasons-links a:hover{
+  color: var(--nav-hover);
+  transition: ease-in 0.4s all;
+}
+.api-overview{
+  width: 75%;
+}
+
 
 /*---------------------------- Button ---------------------------- */
 button{
@@ -2162,7 +2221,12 @@ button:hover{
   .gallery-image.portrait .gallery-img img {
     height: 400px;
   }
-
+  .api-overview{
+    width: 100%;
+  }
+  .api-navbar{
+    width:100%;
+  }
   
 }
 
@@ -2264,6 +2328,9 @@ button:hover{
   }
   .stat-individual{
     width: 100%;
+  }
+  .api-navbar{
+    display:none;
   }
   
   
