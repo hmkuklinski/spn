@@ -75,24 +75,33 @@ body{
 
 /* ----------------------API INFORMATION FORMATTING -------------------------- */
 .api-main-container{
-  display:flex;
+display: flex;
   align-items: flex-start;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
   padding: 10px;
   margin: 10px;
-  width: 100%;
+  /* font-family: "arial"; */
 }
+.api-container {
+  transition: opacity 0.2s ease-in-out;
+}
+
 
 /* holds all information when clicking specific API endpoint */
 .api-container{
   display:flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 10px;
-  font-family: "Arial";
 }
+
+.table-title{
+  margin-top: 24px;
+}
+
+
 /* holds api name/link, with get method on /view_api/ home */
 .api-banner{
   display:flex;
@@ -102,6 +111,19 @@ body{
   padding: 4px;
   margin: 4px 0px;
   width:100%;
+}
+
+/* holds all endpoint information */
+.api-endpoint{
+  margin: 20px 0px;
+  display:flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 18px;
+  background-color: rgb(250, 250, 250);
+  /* border-top: 1px solid black; */
 }
 /* API link from /view_api/ to the specific endpoint documention*/
 .api-endpoint a{
@@ -115,6 +137,9 @@ body{
   text-underline-offset: 2px;
   transition: ease-in all 0.4s;
 }
+.api-endpoint p{
+  font-size: 15px;
+}
 
 /* ie. season- episode list on /view_api/ */
 .endpoint-title{
@@ -127,21 +152,25 @@ body{
 
 .api-method-title{
   font-size: 20px;
+  margin: 10px 0px 0px 0px;
 }
 
 /* the method boxes*/
-.div-get, .div-post, .div-delete, .div-put{
+.div-get, .div-post, .div-delete, .div-put, .div-home{
   background-color: blue;
   display:flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 22px;
+  width: 60px;
+  height: 25px;
   border-radius: 8px;
-  margin: 5px 20px;
-  font-size: 14px;
+  margin: 0px 20px;
+  font-size: 13px;
   color:whitesmoke;
   cursor:default;
+}
+.div-home{
+  background-color: purple;
 }
 
 .div-post{
@@ -156,7 +185,7 @@ body{
 
 
 /* -----------------------------API Sidebar */
-.div-get.sidebar, .div-post.sidebar, .div-delete.sidebar, .div-put.sidebar{
+.div-get.sidebar, .div-post.sidebar, .div-delete.sidebar, .div-put.sidebar, .div-home.sidebar{
   width: 40px;
   height: 15px;
   font-size: 8px;
@@ -168,10 +197,11 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  float:left;
   margin: 10px 20px;
-  background: rgb(214, 214, 214);
-  width: 20%;
+  background: rgb(240, 240, 240);
+  border-radius: 8px;
+  width: 200px;
+  flex-shrink: 0;
 }
 .api-seasons{
   display:flex;
@@ -181,8 +211,9 @@ body{
 }
 .api-section-title{
   text-align: center ;
-  margin: 14px;
-  color: blue;
+  margin: 12px;
+  color: black;
+  font-size: 16px;
 }
 .api-seasons-links{
   display:flex;
@@ -192,20 +223,52 @@ body{
   list-style: none;
   padding: 0px;
   height: 50px;
+  font-size: 12px;
 }
 .api-seasons-links a{
   text-decoration: none;
   color: var(--second-color);
   margin: 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .api-seasons-links a:hover{
   color: var(--nav-hover);
   transition: ease-in 0.4s all;
 }
-.api-overview{
-  width: 75%;
+.api-overview {
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+pre {
+  white-space: pre-wrap;   
+  word-break: break-word;
+  overflow-x: auto; 
+  padding: 10px;
+}
+
+
+.api-overview > div{
+  margin-top: 30px;
+  border-top: 2px solid black;
+}
+
+.contact-ul{
+  display:flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width:100%;
+}
+
+.contact-ul li{
+  margin: 14px;
+  list-style: none;
+}
+
+.api-main-title{
+  text-align: center;
+}
+
 
 
 /*---------------------------- Button ---------------------------- */
@@ -2224,6 +2287,9 @@ button:hover{
   .api-overview{
     width: 100%;
   }
+  .api-overview p, .api-overview h2{
+    text-align: center ;
+  }
   .api-navbar{
     width:100%;
   }
@@ -2332,6 +2398,8 @@ button:hover{
   .api-navbar{
     display:none;
   }
-  
+  .api-main-title{
+    display:none;
+  }
   
 }

@@ -1,6 +1,6 @@
-import SeasonAPI from "../../../src/components/api_results/seasonAPI";
+import SeasonAPI from "../../src/components/api_results/seasonAPI";
 
-export default function ViewSummaryInfo(){
+export default function ViewYearAiredInfo(){
     const fetchUrl = `/api/episodesAPI?seasonNum=1&type=year_aired`;
     const indexId = 7;
     const example_data = "2005";

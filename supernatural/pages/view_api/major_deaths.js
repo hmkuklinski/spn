@@ -1,6 +1,6 @@
-import SeasonAPI from "../../../src/components/api_results/seasonAPI";
+import SeasonAPI from "../../src/components/api_results/seasonAPI";
 
-export default function ViewSummaryInfo(){
+export default function ViewSeasonDeathInfo(){
     const fetchUrl = `/api/episodesAPI?seasonNum=1&type=major_deaths`;
     const indexId = 4;
     const example_data = ([{"id":"jessica","name":"Jessica Moore","text":"Killed by Azazel, then pinned to the ceiling and set on fire. Her death mirrored Mary Winchester's."}]);

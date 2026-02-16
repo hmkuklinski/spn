@@ -4,6 +4,7 @@ import ScrollToTop from '../src/ScrollToTop';
 import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
+  
   return (
     <>
         <Script
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }) {
       />
       <ScrollToTop />
       <Component {...pageProps} />
+      
     </>
+    
   );
 }
 

@@ -27,16 +27,16 @@ export default function EndpointPreview({apiLink, apiTitle, apiMethodType, apiDe
     return (
         <div className="api-endpoint">
             <div className="api-banner">
-            <Link href={apiLink} className="endpoint-title">
-                <h2 className="api-method-title">
-                    {apiTitle} 
-                </h2>
-                
-            </Link>
-            {apiMethodType==="GET" && getDiv}
-            {apiMethodType === "POST" && postDiv}
-            {apiMethodType === "DELETE" && deleteDiv}
-            {apiMethodType === "PUT" && putDiv}
+                <Link href={apiLink} className="endpoint-title">
+                    <h2 className="api-method-title">
+                        {apiTitle} 
+                    </h2>
+                    
+                </Link>
+                {apiMethodType==="GET" && getDiv}
+                {apiMethodType === "POST" && postDiv}
+                {apiMethodType === "DELETE" && deleteDiv}
+                {apiMethodType === "PUT" && putDiv}
             </div>
             <p>{apiDescription}</p>
             <br />

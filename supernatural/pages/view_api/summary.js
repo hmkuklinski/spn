@@ -1,4 +1,4 @@
-import SeasonAPI from "../../../src/components/api_results/seasonAPI";
+import SeasonAPI from "../../src/components/api_results/seasonAPI";
 
 export default function ViewSummaryInfo(){
     const fetchUrl = `/api/episodesAPI?seasonNum=1&type=summary`;

@@ -1,6 +1,6 @@
-import SeasonAPI from "../../../src/components/api_results/seasonAPI";
+import SeasonAPI from "../../src/components/api_results/seasonAPI";
 
-export default function ViewSummaryInfo(){
+export default function ViewSeasonCharacterIntroInfo(){
     const fetchUrl = `/api/episodesAPI?seasonNum=1&type=character_intro`;
     const indexId = 3;
     const example_data = ([{"id":"dean","name":"Dean Winchester","text":"A loyal, battle-ready hunter searching for their missing father."},{"id":"sam","name":"Sam Winchester","text":"A reluctant hunter drawn back in after his girlfriend's death."},{"id":"john","name":"John Winchester","text":"A missing hunter whose quest for revenge drives the story."},{"id":"mary","name":"Mary Winchester","text":"Sam and Dean's mom. Once a hunter herself, she was killed by Azazel."},{"id":"azazel","name":"Azazel","text":"The Yellow-Eyed Demon who killed Mary and has eyes for Sam."},{"id":"meg","name":"Meg","text":"A demon who is originally loyal to Hell, but ends up helping the Winchesters."},{"id":"bobby","name":"Bobby Singer","text":"A father figure to Sam and Dean, Bobby is an experienced, no-nonsense hunter who helps guide and support them."},{"id":"missouri","name":"Missouri Mosely","text":"A powerful psychic who helps the Winchesters during a hunt."},{"id":"jess","name":"Jessica (Jess) Moore","text":"Sam's supportive girlfriend at Stanford."},{"id":"harry","name":"Harry Spangler","text":"A supernaturalist who is best friends with Ed. Will eventually launch the Ghostfacers."},{"id":"ed","name":"Ed Zeddmore","text":"A supernaturalist who is friends with Harry. Will eventually launch the Ghostfacers."}]);
