@@ -1242,7 +1242,7 @@ button:hover{
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  min-height: 160px;
+  min-height: 200px;
 }
 
 .nav-button{
@@ -1259,7 +1259,7 @@ button:hover{
   font-family: "Julius Sans One";
   width: 100%;
   position: absolute;
-  top: 160px;
+  top: 90px;
   left: 0px;
   z-index: 100;
   background-color:whitesmoke;
@@ -1307,7 +1307,7 @@ button:hover{
   align-items: center;
   justify-content:center;
   position:relative;
-  top: 130px;
+  top: 170px;
   width: 100%;
   background-color: black;
   color:whitesmoke;
@@ -1397,7 +1397,7 @@ button:hover{
 
 /* --------------- podcast formatting ---------------*/
 .podcast-landing-container{
-  background-image:url("/public/assets/beyond/podcast1.png");
+  background-image:url("../public/assets/beyond/podcast-updated.jpg");
   background-size:cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
@@ -1412,26 +1412,37 @@ button:hover{
   align-items: center;
   justify-content: center;
   flex-direction:column;
-  width: 40%;
-  right: 26%;
-  top: 25%;
+  /* width: 37%;
+  right: 28%;
+  top: 25%; */
+  top: 130px;
+  z-index:1000;
+  border-radius: 0px 0px 12px 12px;
   padding: 6px;
+  background-color: rgba(249, 249, 249, 1);
 }
 .podcast-title h2{
-  font-size: 30px;
+  font-size: 25px;
 }
 .podcast-subtitle h5{
   margin: 7px;
+}
+.podcast-description{
+  padding: 4px;
+}
+.podcast-description p{
+  font-size: 14px;
 }
 /*holds both the "buttons" for the spotify and apple music*/
 .podcast-streaming-links{
   /* justify-content: flex-start; */
   width:100%;
+  padding: 4px;
 }
 /* the div that holds the icon, listen to, streaming site name and link for streaming*/
 .podcast-streaming-container{
   height: 50px;
-  margin: 0px 8px;
+  margin: 0px ;
   cursor:pointer;
   border-radius: 25px;
   background-color: var(--second-color);
@@ -2097,22 +2108,21 @@ button:hover{
     flex-direction: column;
   }
   .podcast-landing-container{
-    background-image: url("https://i.pinimg.com/736x/65/75/b0/6575b06a860c82a640d411bce93f991c.jpg");
+    background-image: url("../public/assets/beyond/podcast-mobile.jpg");
     position:relative;
-    background-size: 110%;
+    background-size: 120%;
     background-position: 45% center;
     /* height: 100vh; */
     width: 100%;
   }
   .podcast-landing-info{
-    background-color: rgba(245, 245, 245, 0.8);
-    border-radius: 14px;
-    width: 98%;
+    background-color: rgba(245, 245, 245, 1);
     position:relative;
-    top: 110px;
+    top: 140px;
     left: 0%;
   }
   .podcast-title h2{
+    display:none;
     font-family:"Julius Sans One";
     font-size: 19px;
     text-align: center;
@@ -2121,7 +2131,7 @@ button:hover{
     margin:5px;
   }
   .podcast-description p{
-    font-size: 13px;
+    font-size: 12px;
     width: 96%;
   }
 
