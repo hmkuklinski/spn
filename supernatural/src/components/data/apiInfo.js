@@ -179,7 +179,112 @@ export const apiEndpointsInfo = [
             {"name": "all_episodes", "desc":"Information about each episode in the series.", "valueType":"(list)",}
         ]
     },
-
+    //EPISODES- RANDOM EPISODE (ALL)
+    {
+        "id":13,
+        "endpoint_name": "Episode- Get Random Episode (All Seasons)",
+        "base_url": "/api/episodesAPI?",
+        "example_url":"http://supernatural-lore.vercel.app/api/episodeListAPI?type=random_episode",
+        "parameters": [
+            {"name":"type", "type":"random_episode", "notes": "where random_episode is a string specifying that you want to see the episodes information for a randomly selected episode in the series."}
+        ],
+        "outputs": [
+            {"name": "random_episode", "desc":"Information about the randomly selected episode in the series.", "valueType":"(object)",}
+        ]
+    },
+    //Episodes- search by title
+    {
+        "id":14,
+        "endpoint_name": "Episode- Search By Title",
+        "base_url": "/api/episodesAPI?",
+        "example_url":"http://supernatural-lore.vercel.app/api/episodeListAPI?type=search_title&title_keyword=mystery%20spot",
+        "parameters": [
+            {"name":"type", "type":"search_title", "notes": "where search_title is a string specifying that you want to search the episode list to get episodes information for the matching episode in the series."},
+            {"name": "title_keyword", "type":"title", "notes": "where title is a string that represents the title they are trying to search for. The title must be completely lower cased and if there are spaces in the title, the user must add %20 or + between them. ie) Bloody Mary becomes title_search=bloody%20mary or title_search=bloody+mary"}
+        ],
+        "outputs": [
+            {"name": "episode_info", "desc":"Information about the matching episode or an error message if no title exists/poor formatting.", "valueType":"(object)",}
+        ]
+    },
+    //Episodes -get title
+    {
+        "id":15,
+        "endpoint_name": "Episodes- Get Title",
+        "base_url": "/api/episodesAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=2&type=get_title",
+        "parameters": [
+            {"name": "seasonNum", "type": "int", "notes": "where the number is in the range 1-15 (inclusive)"},
+            {"name": "epNum", "type": "int", "notes": "where the number is a valid episode number of the specified season"},
+            {"name":"type", "type":"get_title", "notes": "where get_title is a string specifying that you want to see what the title is for a specified episode."}
+        ],
+        "outputs": [
+            {"name": "ep_title", "desc":"The title of the episode or an error stating that seasonNum or epNum is invalid", "valueType":"(string)",}
+        ]
+    },
+    //episode- description
+    {
+        "id":16,
+        "endpoint_name": "Episodes- Get Desc",
+        "base_url": "/api/episodesAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_desc  or https://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_desc",
+        "parameters": [
+            {"name": "seasonNum", "type": "int", "notes": "where the number is in the range 1-15 (inclusive)"},
+            {"name": "epNum", "type": "int", "notes": "where the number is a valid episode number of the specified season"},
+            {"name": "epId", "type": "string", "notes":"An alternative string you can pass in both the seasonNum and epNum at the same time. in format s#e##"},
+            {"name":"type", "type":"get_desc", "notes": "where get_desc is a string specifying that you want to see what the description is for a specified episode."}
+        ],
+        "outputs": [
+            {"name": "ep_desc", "desc":"The description of the episode or an error stating that seasonNum or epNum is invalid", "valueType":"(string)"}
+        ]
+    },
+    //episode- directors
+      {
+        "id":17,
+        "endpoint_name": "Episodes- Get Directors",
+        "base_url": "/api/episodesAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_director  or https://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_director",
+        "parameters": [
+            {"name": "seasonNum", "type": "int", "notes": "where the number is in the range 1-15 (inclusive)"},
+            {"name": "epNum", "type": "int", "notes": "where the number is a valid episode number of the specified season"},
+            {"name": "epId", "type": "string", "notes":"An alternative string you can pass in both the seasonNum and epNum at the same time. in format s#e##"},
+            {"name":"type", "type":"get_director", "notes": "where get_director is a string specifying that you want to see who directed a specified episode."}
+        ],
+        "outputs": [
+            {"name": "ep_director", "desc":"Returns the directors of the episode or an error stating that seasonNum or epNum is invalid", "valueType":"(string)"}
+        ]
+    },
+    //episode- writers
+      {
+        "id":18,
+        "endpoint_name": "Episodes- Get Writers",
+        "base_url": "/api/episodesAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_writers  or https://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_writers",
+        "parameters": [
+            {"name": "seasonNum", "type": "int", "notes": "where the number is in the range 1-15 (inclusive)"},
+            {"name": "epNum", "type": "int", "notes": "where the number is a valid episode number of the specified season"},
+            {"name": "epId", "type": "string", "notes":"An alternative string you can pass in both the seasonNum and epNum at the same time. in format s#e##"},
+            {"name":"type", "type":"get_writers", "notes": "where get_writers is a string specifying that you want to see who wrote a specified episode."}
+        ],
+        "outputs": [
+            {"name": "ep_writers", "desc":"Returns the writers of the episode or an error stating that seasonNum or epNum is invalid", "valueType":"(string)"}
+        ]
+    },
+     //episode- aired
+    {
+        "id":18,
+        "endpoint_name": "Episodes- Get Air Date",
+        "base_url": "/api/episodesAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_aired  or https://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_aired",
+        "parameters": [
+            {"name": "seasonNum", "type": "int", "notes": "where the number is in the range 1-15 (inclusive)"},
+            {"name": "epNum", "type": "int", "notes": "where the number is a valid episode number of the specified season"},
+            {"name": "epId", "type": "string", "notes":"An alternative string you can pass in both the seasonNum and epNum at the same time. in format s#e##"},
+            {"name":"type", "type":"get_aired", "notes": "where get_aired is a string specifying that you want to see the aired date for a specified episode."}
+        ],
+        "outputs": [
+            {"name": "ep_writers", "desc":"Returns the air date of the episode or an error stating that seasonNum or epNum is invalid", "valueType":"(string)"}
+        ]
+    },
 ];
 
 export const apiPreviews = [
@@ -327,5 +432,88 @@ export const apiPreviews = [
         "description": "Gets information about every episode in the series",
         "code": "sample request: GET http://supernatural-lore.vercel.ap/api/episodeListAPI?type=all_episodes"
     },
-
+    //Episodes- Randomly Generated Ep
+    {
+        "id":13,
+        "key": "random_episode",
+        "title": "Episodes- Get Random Episode (All)",
+        "sideTitle":"Random Episode",
+        "methodType": "GET",
+        "category":"episodes",
+        "link": "/view_api/random_episode",
+        "description": "Randomly selects an episode in the series and returns its information",
+        "code": "sample request: GET http://supernatural-lore.vercel.ap/api/episodeListAPI?type=random_episode"
+    },
+    //Episodes- search title
+    {
+        "id":14,
+        "key": "search_title",
+        "title": "Episodes- Search By Title",
+        "sideTitle":"Search for Title",
+        "methodType": "GET",
+        "category":"episodes",
+        "link": "/view_api/search_title",
+        "description": "Goes through all the episodes to see if the episode matches a title",
+        "code": "sample request: GET http://supernatural-lore.vercel.ap/api/episodeListAPI?type=search_title&title_keyword=mystery%20spot"
+    },
+    //episodes - get title
+     {
+        "id":15,
+        "key": "get_title",
+        "title": "Episodes- Get Title",
+        "sideTitle":"Get Title",
+        "methodType": "GET",
+        "category":"episodes",
+        "link": "/view_api/get_title",
+        "description": "Gets the individual episode data based on passed seasonNum and epNum values and returns the title",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=2&type=get_title"
+    },
+    //episodes- get desc
+    {
+        "id":16,
+        "key": "get_desc",
+        "title": "Episodes- Get Description",
+        "sideTitle":"Get Description",
+        "methodType": "GET",
+        "category":"episodes",
+        "link": "/view_api/get_desc",
+        "description": "Gets the individual episode data based on passed seasonNum and epNum values and returns the episode description",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_desc or GET http://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_desc"
+    },
+    //episodes- directors
+    {
+        "id":17,
+        "key": "get_director",
+        "title": "Episodes- Get Director",
+        "sideTitle":"Get Director",
+        "methodType": "GET",
+        "category":"episodes",
+        "link": "/view_api/get_director",
+        "description": "Gets the information who the directors were on a passed seasonNum and epNum values",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_director or GET http://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_director"
+    },
+     //episodes- writers
+     {
+        "id":18,
+        "key": "get_writers",
+        "title": "Episodes- Get Writers",
+        "sideTitle":"Get Writers",
+        "methodType": "GET",
+        "category":"episodes",
+        "link": "/view_api/get_writers",
+        "description": "Gets the information who the writers were on a passed seasonNum and epNum values",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_writers or GET http://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_writers"
+    },
+    //episodes- air date
+    {
+        "id":18,
+        "key": "get_aired",
+        "title": "Episodes- Get Aired Date",
+        "sideTitle":"Get Aired Date",
+        "methodType": "GET",
+        "category":"episodes",
+        "link": "/view_api/get_aired",
+        "description": "Gets the original air date of the episode based on the passed seasonNum and epNum values",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_aired or GET http://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_aired"
+    },
 ];

@@ -33,8 +33,8 @@ export default function handler(request, response){
         }
         
         //valid epNumber
-        const totalEpSeason = episodes[seasonIndex].length;
-        if (episodeIndex<0 || episodeIndex>totalEpSeason){
+        const totalEpSeason = episodes[seasonIndex].epInfo.length;
+        if (episodeIndex<0 || episodeIndex>=totalEpSeason){
             return response.status(404).json({error:"Episode number is outside of the scope of the specified season. "});
         }
 
@@ -44,7 +44,7 @@ export default function handler(request, response){
 
         //invalid epId:
         if (!results){
-            return response.status(404).json({error: "Error with episodeId. episodeId are in the form of s1e1. Please try with this format."});
+            return response.status(404).json({error: "Error retrieving information. Please check your seasonNum and epNum values."});
         }
     }
     else if (type === "random_episode"){
@@ -52,7 +52,13 @@ export default function handler(request, response){
         results = allEpisodes[randomSelected];
     }
     else if (type ==="search_title" && title_keyword){
-        results = allEpisodes.filter(ep=>ep.title.toLowerCase().includes(title_keyword));
+        results = allEpisodes.filter(ep =>
+            ep.title.toLowerCase().includes(title_keyword.toLowerCase())
+        );
+       if (results.length === 0) {
+            return response.status(404).json({error: "No titles match your search."});
+        }
+
     }
     else{
         results = allEpisodes;
@@ -71,7 +77,7 @@ export default function handler(request, response){
             return response.status(200).json(results.title);
         //can use (/api/episodeListAPI?epId=s1e1&type=get_desc) or(/api/episodeListAPI?seasonNum=1&epNum=1&type=get_desc)
         case "get_desc":
-            return response.status(200).json(results.desc);
+            return response.status(200).json(results.description);
         case "get_director":
             return response.status(200).json(results.dir);
         case "get_writers":

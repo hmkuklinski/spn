@@ -3,19 +3,19 @@ import Layout from '../Layout';
 import EndpointInfo from "./EndpointInfo";
 import { apiEndpointsInfo } from "../data/apiInfo";
 //this page shows the information about this API endpoint along with sample output
-export default function SeasonAPI({ seasonNum, fetchUrl, indexId, example_data }){
-    const [season, setSeason] = useState(example_data || null);
+export default function EpisodeAPI({fetchUrl, indexId, example_data }){
+    const [episode, setEpisode] = useState(example_data || null);
 
     useEffect(() => {
         if (!fetchUrl) return;
         fetch(fetchUrl)
         .then(res => res.json())
-        .then(data => setSeason(data))
+        .then(data => setEpisode(data))
         .catch(err => console.error(err));
     }, [fetchUrl]);
 
 
-    if (!season) {
+    if (!episode) {
         return <div>Loading...</div>;
     }
 

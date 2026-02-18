@@ -17,6 +17,13 @@ import ViewRatingsInfo from "./ratings";
 import ViewSeasonInfo from "./season_info";
 import ViewSummaryInfo from "./summary";
 import ViewYearAiredInfo from './year_aired';
+import ViewRandomEpisodeInfo from "./random_episode";
+import ViewSearchedEpisodeInfo from "./search_title";
+import ViewEpTitle from "./get_title";
+import ViewEpDesc from "./get_desc";
+import ViewDirectors from "./get_director";
+import ViewWriters from "./get_writers";
+import ViewAirDate from "./get_aired";
 
 export default function ShowAPIDoc() {
   const [showSeason, setShowSeason] = useState(false);
@@ -259,7 +266,14 @@ export default function ShowAPIDoc() {
     ratings: <ViewRatingsInfo />,
     season_info: <ViewSeasonInfo />,
     summary: <ViewSummaryInfo />,
-    year_aired: <ViewYearAiredInfo />
+    year_aired: <ViewYearAiredInfo />,
+    random_episode: <ViewRandomEpisodeInfo />,
+    search_title: <ViewSearchedEpisodeInfo />,
+    get_title: <ViewEpTitle />,
+    get_desc: <ViewEpDesc />,
+    get_director: <ViewDirectors />,
+    get_writers: <ViewWriters />,
+    get_aired : <ViewAirDate />
   };
 
   return (
