@@ -4,7 +4,7 @@ export default function ApiNavbar({ setActiveTab }) {
     const mainSections = ["API Overview", "Introduction", "Getting Started", "Output"]
 
   return (
-    <nav className="api-navbar">
+    <nav className="api-navbar open-sans-regular">
       <div className="api-seasons">
         <h3 className="api-section-title">About API</h3>
         {mainSections.map((item, index)=>(

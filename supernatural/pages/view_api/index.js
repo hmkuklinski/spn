@@ -36,7 +36,7 @@ export default function ShowAPIDoc() {
 
   // Home tab content
   const home = (
-    <div className="api-overview">
+    <div className="api-overview open-sans-regular">
       <h1 className="api-main-title">The Winchester's Archive API</h1>
       <div>
         <h2>API Overview</h2>
