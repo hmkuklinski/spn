@@ -285,6 +285,31 @@ export const apiEndpointsInfo = [
             {"name": "ep_writers", "desc":"Returns the air date of the episode or an error stating that seasonNum or epNum is invalid", "valueType":"(string)"}
         ]
     },
+    //CHARACTER-Start
+    {
+        "id":19,
+        "endpoint_name": "Character- Get Character By Name",
+        "base_url": "/api/characterAPI?",
+        "example_url":"https://supernatural-lore.vercel.appapi/characterAPI?character_name=dean%20winchester",
+        "parameters": [
+            {"name": "character_name", "type": "string", "notes": "where the character_name is the full name of the character, with spaces using %20 or +."},
+        ],
+        "outputs": [
+            {"name": "character", "desc":"Returns the character object with the matching character or returns an error", "valueType":"(object)"}
+        ]
+    },
+      {
+        "id":20,
+        "endpoint_name": "Character- Get Character By ID",
+        "base_url": "/api/characterAPI?",
+        "example_url":"https://supernatural-lore.vercel.appapi/characterAPI?character_id=dean",
+        "parameters": [
+            {"name": "character_id", "type": "string", "notes": "where the character_name is the first name of the character only, in lowercase."},
+        ],
+        "outputs": [
+            {"name": "character", "desc":"Returns the character object with the matching character or returns an error", "valueType":"(object)"}
+        ]
+    },
 ];
 
 export const apiPreviews = [
@@ -515,5 +540,28 @@ export const apiPreviews = [
         "link": "/view_api/get_aired",
         "description": "Gets the original air date of the episode based on the passed seasonNum and epNum values",
         "code": "sample request: GET https://supernatural-lore.vercel.app/api/episodeListAPI?seasonNum=1&epNum=1&type=get_aired or GET http://supernatural-lore.vercel.app/api/episodeListAPI?epId=s1e1&type=get_aired"
+    },
+    //CHARACTER!!!
+    {
+        "id":19,
+        "key": "get_character",
+        "title": "Character- Get Character by Name",
+        "sideTitle":"Get Character (by NAME)",
+        "methodType": "GET",
+        "category":"character",
+        "link": "/view_api/get_character",
+        "description": "Gets the character object of the character searched (if applicable). otherwise returns error.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/characterAPI?character_name=dean%20winchester"
+    },
+    {
+        "id":20,
+        "key": "get_character_by_id",
+        "title": "Character- Get Character by ID",
+        "sideTitle":"Get Character (by ID)",
+        "methodType": "GET",
+        "category":"character",
+        "link": "/view_api/get_character_by_id",
+        "description": "Gets the character object of the character searched (if applicable). The character's ID is normally their first name only, in lowercase. otherwise returns error.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/characterAPI?character_id=dean"
     },
 ];

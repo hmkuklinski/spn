@@ -24,6 +24,8 @@ import ViewEpDesc from "./get_desc";
 import ViewDirectors from "./get_director";
 import ViewWriters from "./get_writers";
 import ViewAirDate from "./get_aired";
+import ViewCharacterInfo from "./get_character";
+import ViewCharacterInfoById from "./get_character_by_id";
 
 export default function ShowAPIDoc() {
   const [showSeason, setShowSeason] = useState(false);
@@ -273,7 +275,10 @@ export default function ShowAPIDoc() {
     get_desc: <ViewEpDesc />,
     get_director: <ViewDirectors />,
     get_writers: <ViewWriters />,
-    get_aired : <ViewAirDate />
+    get_aired : <ViewAirDate />,
+    get_character: <ViewCharacterInfo/>,
+    get_character_by_id: <ViewCharacterInfoById />
+    
   };
 
   return (
