@@ -26,10 +26,27 @@ import ViewWriters from "./get_writers";
 import ViewAirDate from "./get_aired";
 import ViewCharacterInfo from "./get_character";
 import ViewCharacterInfoById from "./get_character_by_id";
+import ViewRandomCharacter from "./get_random_character";
+import ViewCharacterDesc from "./get_char_desc";
+import ViewCharacterSpecies from "./get_char_species";
+import ViewCharacterStatus from "./get_char_alive";
+import ViewCharacterJob from "./get_char_job";
+import ViewCharacterNicknames from "./get_char_nicknames";
+import ViewCharacterAge from "./get_char_age";
+import ViewCharacterRelationships from "./get_char_relationships";
+import ViewCharacterCatchphrases from "./get_char_catchphrases";
+import ViewCharacterStrengths from "./get_char_strengths";
+import ViewCharacterWeaknesses from "./get_char_weaknesses";
+import ViewCharacterQuotes from "./get_char_quotes";
+import ViewCharacterDeathCount from "./get_char_deaths";
+import ViewCharacterDeathInfo from "./get_deaths_info";
+import ViewCharacterActorInfo from "./get_actor";
+import ViewCharacterFunfacts from "./get_char_funfacts";
 
 export default function ShowAPIDoc() {
   const [showSeason, setShowSeason] = useState(false);
   const [showEpisode, setShowEpisode] = useState(false);
+  const [showCharacter, setShowCharacter] = useState(false);
   const [selectedEndpoint, setSelectedEndpoint] = useState(null);
   const [activeTab, setActiveTab] = useState("home");
 
@@ -216,7 +233,30 @@ export default function ShowAPIDoc() {
         <p>Click an endpoint title to view episode details:</p>
         {showEpisode && (
           <div>
-            {apiPreviews.slice(11).map((prev, key) => (
+            {apiPreviews.slice(11,19).map((prev, key) => (
+              <div key={key} style={{ cursor: "pointer", margin: "5px 0" }} onClick={() => setActiveTab(prev.key)}>
+                 <EndpointPreview
+                    key={key}
+                    apiTitle={prev.title}
+                    apiMethodType={prev.methodType}
+                    apiDescription={prev.description}
+                    apiCommand={prev.code}
+                    apiLink={prev.link}
+                    onClick={() => setSelectedEndpoint(prev)}
+                  />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      <div>
+        <h2 onClick={() => setShowCharacter(!showCharacter)} style={{ cursor: "pointer" }}>
+          {showCharacter? isOpen : notOpen} Character Information
+        </h2>
+        <p>Click an endpoint title to view character details:</p>
+        {showCharacter && (
+          <div>
+            {apiPreviews.slice(20).map((prev, key) => (
               <div key={key} style={{ cursor: "pointer", margin: "5px 0" }} onClick={() => setActiveTab(prev.key)}>
                  <EndpointPreview
                     key={key}
@@ -277,8 +317,23 @@ export default function ShowAPIDoc() {
     get_writers: <ViewWriters />,
     get_aired : <ViewAirDate />,
     get_character: <ViewCharacterInfo/>,
-    get_character_by_id: <ViewCharacterInfoById />
-    
+    get_character_by_id: <ViewCharacterInfoById />,
+    get_random_character: <ViewRandomCharacter />,
+    get_char_desc: <ViewCharacterDesc />,
+    get_char_species: <ViewCharacterSpecies />,
+    get_char_alive: <ViewCharacterStatus />,
+    get_char_job: <ViewCharacterJob />,
+    get_char_age: <ViewCharacterAge />,
+    get_char_nicknames: <ViewCharacterNicknames />,
+    get_char_relationships: <ViewCharacterRelationships />,
+    get_char_catchphrases: <ViewCharacterCatchphrases />,
+    get_char_strengths: <ViewCharacterStrengths />,
+    get_char_weaknesses: <ViewCharacterWeaknesses />,
+    get_char_quotes: <ViewCharacterQuotes />,
+    get_deaths: <ViewCharacterDeathCount />,
+    get_deaths_info: <ViewCharacterDeathInfo />,
+    get_actor: <ViewCharacterActorInfo />,
+    get_char_funfacts: <ViewCharacterFunfacts />,
   };
 
   return (

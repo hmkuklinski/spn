@@ -1,0 +1,8 @@
+import CharacterAPI from "../../src/components/api_results/CharacterAPI";
+
+export default function ViewRandomCharacter(){
+    const fetchUrl = "http://supernatural-lore.vercel.app/api/characterAPI?type=get_random";
+    const indexId = 21;
+    const example_data = ({"name":"Adam Milligan","id":"adam","type":"human","description":"Sam and Dean's half-brother, born to John Winchester and another woman. He becomes Michael's vessel and is eventually trapped in the Cage with Lucifer for years. His arc reflects the consequences of John's choices.","imgsrc":"/assets/characters/adam.gif","species":"Human","status":"Alive","occupation":"Human Vessel","age":"35","nicknames":"","relationships":"John (Father), Kate(Mother), Sam and Dean (half-brothers)","catchphrase":"I just want a normal life.","strengths":"Resilience, strong moral compass","weaknesses":"Lack of combat training, human vulnerability","quotes":[{"id":1,"text":"Guess we all have Daddy issues, huh?"},{"id":2,"text":"Since when do we get what we deserve?"},{"id":3,"text":"You and that toilet have something in common. You are both full of crap. Practically overflowing, Dean."}],"totalDeaths":1,"deaths":[{"id":1,"text":"Killed by a Ghoul"}],"actor":"Jake Abel","funfacts":[{"id":1,"text":"Adam is brought back by Zachariah to be the vessel for Michael after Dean refuses. He later develops a close relationship with Michael after being locked in the Cage together."}]});
+    return <CharacterAPI character_name={"Dean Winchester"} fetchUrl={fetchUrl} example_data={example_data} indexId={indexId}/>;
+}

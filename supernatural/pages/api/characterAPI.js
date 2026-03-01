@@ -5,16 +5,16 @@ export default function handler(request, response){
 
     
     let results = null;
-    if (!character_name && charId && type != "random_character"){
+    if (!character_name && charId && type != "get_random"){
         results = characters.find(character => character.id === charId);
     }
-    else if (character_name && !charId && type != "random_character"){
+    else if (character_name && !charId && type != "get_random"){
         results = characters.find(character=> character_name.toLowerCase() === character.name.toLowerCase());
     }
     else if (character_name && charId){
         return response.status(404).json({error: "You cannot pass both a character id and a character name. Please pick one to continue your search."});
     }
-    else if (type == "random_character"){
+    else if (type == "get_random"){
         const randomIndex = Math.floor(Math.random()*characters.length);
         results = characters[randomIndex];
     }
