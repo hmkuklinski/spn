@@ -2,7 +2,10 @@ import Layout from "../../src/components/Layout";
 import ApiNavbar from "../../src/components/api_results/ApiNavbar";
 import EndpointPreview from "../../src/components/api_results/EndpointPreview";
 import { apiPreviews } from "../../src/components/data/apiInfo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {useRouter} from "next/router";
+import SectionPreview from "../../src/components/api_results/SectionPreview";
+
 
 // Import all tab components
 import ViewAllEpisodesInfo from './all_episodes';
@@ -52,6 +55,12 @@ export default function ShowAPIDoc() {
 
   const notOpen = (<ion-icon name="caret-forward-outline"></ion-icon>);
   const isOpen = (<ion-icon name="caret-down-outline"></ion-icon>);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    setActiveTab("home");
+  }, [router.pathname]);
 
   // Home tab content
   const home = (
@@ -201,77 +210,14 @@ export default function ShowAPIDoc() {
         
         <p>Possible Endpoints are listed below. Click on the section to expand it and see a sneak preview of the possible endpoints for that section!</p>
       </div>
+      {/* Season */}
+      <SectionPreview passedState={showSeason} isOpen={isOpen} notOpen={notOpen} infoType="Season" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={0} endIndex={11} />
+      {/* Episode */}
+      <SectionPreview passedState={showEpisode} isOpen={isOpen} notOpen={notOpen} infoType="Episode" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={11} endIndex={19} />
 
-      <div>
-        <h2 onClick={() => setShowSeason(!showSeason)} style={{ cursor: "pointer" }}>
-          {showSeason ? isOpen : notOpen} Season Information
-        </h2>
-        <p>Click an endpoint title to view season details:</p>
-        {showSeason && (
-          <div>
-            {apiPreviews.slice(0, 11).map((prev, key) => (
-              <div key={key} style={{ cursor: "pointer", margin: "5px 0" }} onClick={() => setActiveTab(prev.key)}>
-                 <EndpointPreview
-                    key={key}
-                    apiTitle={prev.title}
-                    apiMethodType={prev.methodType}
-                    apiDescription={prev.description}
-                    apiCommand={prev.code}
-                    apiLink={prev.link}
-                    onClick={() => setSelectedEndpoint(prev)}
-                  />
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      {/* Character */}
+      <SectionPreview passedState={showCharacter} isOpen={isOpen} notOpen={notOpen} infoType="Character" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={20} endIndex={36} />
 
-      <div>
-        <h2 onClick={() => setShowEpisode(!showEpisode)} style={{ cursor: "pointer" }}>
-          {showEpisode ? isOpen : notOpen} Episode Information
-        </h2>
-        <p>Click an endpoint title to view episode details:</p>
-        {showEpisode && (
-          <div>
-            {apiPreviews.slice(11,19).map((prev, key) => (
-              <div key={key} style={{ cursor: "pointer", margin: "5px 0" }} onClick={() => setActiveTab(prev.key)}>
-                 <EndpointPreview
-                    key={key}
-                    apiTitle={prev.title}
-                    apiMethodType={prev.methodType}
-                    apiDescription={prev.description}
-                    apiCommand={prev.code}
-                    apiLink={prev.link}
-                    onClick={() => setSelectedEndpoint(prev)}
-                  />
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      <div>
-        <h2 onClick={() => setShowCharacter(!showCharacter)} style={{ cursor: "pointer" }}>
-          {showCharacter? isOpen : notOpen} Character Information
-        </h2>
-        <p>Click an endpoint title to view character details:</p>
-        {showCharacter && (
-          <div>
-            {apiPreviews.slice(20).map((prev, key) => (
-              <div key={key} style={{ cursor: "pointer", margin: "5px 0" }} onClick={() => setActiveTab(prev.key)}>
-                 <EndpointPreview
-                    key={key}
-                    apiTitle={prev.title}
-                    apiMethodType={prev.methodType}
-                    apiDescription={prev.description}
-                    apiCommand={prev.code}
-                    apiLink={prev.link}
-                    onClick={() => setSelectedEndpoint(prev)}
-                  />
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
       <div>
         <h2>About the Stack</h2>
         <p>The information for this project was originally gathered for a supernatural themed website. I later developed this API to help myself understand how to implement/design APIs and to allow other developers to use my work in their own creation and analyses.</p>

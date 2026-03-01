@@ -1,7 +1,6 @@
 import { apiEndpointsInfo } from "../data/apiInfo";
 import SampleResult from "./SampleResult";
-import Link from "next/link";
-export default function EndpointInfo({ indexId , example_data, setA}){
+export default function EndpointInfo({ indexId , example_data}){
     const endpoint = apiEndpointsInfo[indexId];
     
     return (
@@ -119,6 +118,7 @@ export default function EndpointInfo({ indexId , example_data, setA}){
                 </div>
                 <SampleResult example_data={example_data }/>
             </code>
+            
             
         </div>
     );
