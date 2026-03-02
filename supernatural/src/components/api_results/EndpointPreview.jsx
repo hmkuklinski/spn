@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function EndpointPreview({apiLink, apiTitle, apiMethodType, apiDescription, apiCommand}){
+export default function EndpointPreview({apiLink, apiTitle, apiMethodType, apiDescription, setActiveTab, apiCommand}){
     const getDiv = (
         <div className="div-get">
             <h3>GET</h3>
@@ -27,12 +27,9 @@ export default function EndpointPreview({apiLink, apiTitle, apiMethodType, apiDe
     return (
         <div className="api-endpoint">
             <div className="api-banner">
-                <Link href={apiLink} className="endpoint-title">
-                    <h2 className="api-method-title">
-                        {apiTitle} 
-                    </h2>
-                    
-                </Link>
+                <h2 className="api-method-title endpoint-title" onClick={() => { setActiveTab(apiLink); window.scrollTo({ top: 0, behavior: "smooth" });}} style={{ cursor: "pointer" }}>
+                    {apiTitle}
+                </h2>
                 {apiMethodType==="GET" && getDiv}
                 {apiMethodType === "POST" && postDiv}
                 {apiMethodType === "DELETE" && deleteDiv}
@@ -40,7 +37,7 @@ export default function EndpointPreview({apiLink, apiTitle, apiMethodType, apiDe
             </div>
             <p>{apiDescription}</p>
             <br />
-            <code>{apiCommand}</code>
+            <code className="api-code">{apiCommand}</code>
         </div>
     );
 }

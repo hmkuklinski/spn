@@ -1,10 +1,12 @@
 import { apiEndpointsInfo } from "../data/apiInfo";
 import SampleResult from "./SampleResult";
+import Link from "next/link";
 export default function EndpointInfo({ indexId , example_data}){
     const endpoint = apiEndpointsInfo[indexId];
     
     return (
         <div className="api-endpoint-info">
+        
             <code>
                 <h2 className="table-title">Example:</h2>{endpoint.example_url}
                 <h2 className="table-title">Base URL:</h2>{endpoint.base_url}
@@ -118,7 +120,10 @@ export default function EndpointInfo({ indexId , example_data}){
                 </div>
                 <SampleResult example_data={example_data }/>
             </code>
-            
+            <div className="api-reroute">
+                <button><a href="/view_api">Go Home</a></button>
+            </div>
+           
             
         </div>
     );

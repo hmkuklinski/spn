@@ -21,7 +21,10 @@ export default function SectionPreview({passedState, isOpen, notOpen, infoType, 
                         apiDescription={prev.description}
                         apiCommand={prev.code}
                         apiLink={prev.link}
-                        onClick={() => setSelectedEndpoint(prev)}
+                        setActiveTab={setActiveTab}
+                        onClick={() => {
+                        setSelectedEndpoint(prev);
+                        }}
                         />
                     </div>
                 ))}

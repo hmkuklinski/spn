@@ -283,6 +283,9 @@ pre {
   text-align: center;
 }
 
+.api-reroute{
+  display:none;
+}
 
 
 /*---------------------------- Button ---------------------------- */
@@ -2432,5 +2435,16 @@ button:hover{
   .api-main-title{
     display:none;
   }
+  .api-reroute{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .api-endpoint{
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
   
 }
