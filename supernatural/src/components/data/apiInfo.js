@@ -564,6 +564,35 @@ export const apiEndpointsInfo = [
             {"name": "funfacts", "desc":"Returns a list with information of character's fun facts.", "valueType":"(list)"}
         ]
     },
+    //MONSTERS START!!! 
+    //all monsters:
+    {
+        "id":38,
+        "endpoint_name": "Monsters- Get All Monsters",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI",
+        "parameters": [
+            {"name": "all_monsters", "type": "string", "notes": "where all_monsters is a string specifying the user wants to get all monsters."},
+     
+        ],
+        "outputs": [
+            {"name": "all_monsters", "desc":"Returns a list with information of all monsters in the series.", "valueType":"(list)"}
+        ]
+    },
+    //monster- get random
+    {
+        "id":39,
+        "endpoint_name": "Monster- Get Random Monster",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?type=get_random",
+        "parameters": [
+            {"name": "get_random", "type": "string", "notes": "where get_random is a string specifying the user wants to get a randomly generated monster."},
+       
+        ],
+        "outputs": [
+            {"name": "random_monster", "desc":"Returns a monster object- with information about the randomly selected monster.", "valueType":"(object)"}
+        ]
+    },
 ];
 
 export const apiPreviews = [
@@ -1010,5 +1039,28 @@ export const apiPreviews = [
         "link": "/view_api/get_char_funfacts",
         "description": "Gets fun facts about a specified character.",
         "code": "sample request: GET https://supernatural-lore.vercel.app/api/characterAPI?charId=dean&type=get_funfacts OR GET https://supernatural-lore.vercel.app/api/characterAPI?character_name=dean%20winchester&type=get_funfacts"
+    },
+    //MONSTERS STARTS!
+    {
+        "id":38,
+        "key": "all_monsters",
+        "title": "Monsters- Get All Monsters",
+        "sideTitle":"All Monsters",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/all_monsters",
+        "description": "Gets all monster information.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?type=all_monsters"
+    },
+    {
+        "id":39,
+        "key": "get_monsters_random",
+        "title": "Monsters- Get Random Monsters",
+        "sideTitle":"Random Monster",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster",
+        "description": "Gets a randomly generated monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?type=get_random"
     },
 ];

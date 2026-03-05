@@ -45,7 +45,8 @@ import ViewCharacterDeathCount from "./get_char_deaths";
 import ViewCharacterDeathInfo from "./get_deaths_info";
 import ViewCharacterActorInfo from "./get_actor";
 import ViewCharacterFunfacts from "./get_char_funfacts";
-
+import ViewRandomMonster from "./get_monsters_random";
+import ViewMonstersInfo from "./all_monsters";
 export default function ShowAPIDoc() {
   const [showSeason, setShowSeason] = useState(false);
   const [showEpisode, setShowEpisode] = useState(false);
@@ -280,6 +281,8 @@ export default function ShowAPIDoc() {
     get_deaths_info: <ViewCharacterDeathInfo />,
     get_actor: <ViewCharacterActorInfo />,
     get_char_funfacts: <ViewCharacterFunfacts />,
+    all_monsters: <ViewMonstersInfo />,
+    get_monsters_random: <ViewRandomMonster />
   };
 
   return (

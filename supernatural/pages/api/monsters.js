@@ -1,1 +1,0 @@
-import { monsters } from "../../src/components/data/monsterInfo";
