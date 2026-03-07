@@ -1,0 +1,1795 @@
+{
+	"info": {
+		"_postman_id": "5f824ae4-eed0-4305-9ac2-d426d297847f",
+		"name": "Supernatural API Export",
+		"description": "These are the endpoints for the Winchesters Archive API. Feel free to use this for testing the API or gathering information from the API! :D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49274138",
+		"_collection_link": "https://hmkuklinski-2178059.postman.co/workspace/2c0f312b-88c7-48e5-8798-a641b7ee7af3/collection/49274138-5f824ae4-eed0-4305-9ac2-d426d297847f?action=share&source=collection_link&creator=49274138"
+	},
+	"item": [
+		{
+			"name": "Seasons",
+			"item": [
+				{
+					"name": "Season's Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=summary",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "summary"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Body Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=body_count",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "body_count"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Character Deaths",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=major_deaths",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "major_deaths"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Character Updates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=major_updates",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "major_updates"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Number of Episodes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=num_episodes",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "num_episodes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Monster Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=season_monsters",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "season_monsters"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Character Introductions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=character_intro",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "character_intro"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season's Episodes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=epList",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "epList"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Year Aired",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=year_aired",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "year_aired"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodesAPI}}?seasonNum=1&type=ratings",
+							"host": [
+								"{{episodesAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "type",
+									"value": "ratings"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Episodes",
+			"item": [
+				{
+					"name": "All Episodes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?type=all_episodes",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "all_episodes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Random Episode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?type=random_episode",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "random_episode"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search By Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?type=search_title&title_keyword=mystery%20spot",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "search_title"
+								},
+								{
+									"key": "title_keyword",
+									"value": "mystery%20spot",
+									"description": "title of the episode, in lower case. all spaces separated with %20 or +"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?seasonNum=1&epNum=2&type=get_title",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "epNum",
+									"value": "2",
+									"description": "where epNum is a valid number based on number of episodes in current season"
+								},
+								{
+									"key": "type",
+									"value": "get_title"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Title (with epId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?epId=s1e1&type=get_title",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "epId",
+									"value": "s1e1",
+									"description": "where the epId format is s#e#"
+								},
+								{
+									"key": "type",
+									"value": "get_title"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Description",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?seasonNum=1&epNum=1&type=get_desc",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "epNum",
+									"value": "1",
+									"description": "where epNum is a number in valid range based on season's total episode numbers"
+								},
+								{
+									"key": "type",
+									"value": "get_desc"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Description (with epId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?epId=s1e1&type=get_desc",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "epId",
+									"value": "s1e1",
+									"description": "where epId is s#e#\n"
+								},
+								{
+									"key": "type",
+									"value": "get_desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Directors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?seasonNum=1&epNum=1&type=get_director",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15\n"
+								},
+								{
+									"key": "epNum",
+									"value": "1",
+									"description": "where epNum is a number in valid range based on season's total episode numbers"
+								},
+								{
+									"key": "type",
+									"value": "get_director"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Directors (with epId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?type=get_director&epId=s1e1",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "get_director"
+								},
+								{
+									"key": "epId",
+									"value": "s1e1",
+									"description": "where epId is in format s#e#"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Writers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?seasonNum=1&epNum=1&type=get_writers",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15\n"
+								},
+								{
+									"key": "epNum",
+									"value": "1",
+									"description": "where epNum is a number in valid range based on season's total episode numbers"
+								},
+								{
+									"key": "type",
+									"value": "get_writers"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Writers (with epId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?epId=s1e1&type=get_writers",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "epId",
+									"value": "s1e1",
+									"description": "where epId in format s#e#\n"
+								},
+								{
+									"key": "type",
+									"value": "get_writers"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Air Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?seasonNum=1&epNum=1&type=get_aired",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "seasonNum",
+									"value": "1",
+									"description": "where seasonNum is 1-15"
+								},
+								{
+									"key": "epNum",
+									"value": "1",
+									"description": "where epNum is a number in valid range based on season's total episode numbers"
+								},
+								{
+									"key": "type",
+									"value": "get_aired"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Air Date (with epId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{episodeListAPI}}?epId=s1e1&type=get_aired",
+							"host": [
+								"{{episodeListAPI}}"
+							],
+							"query": [
+								{
+									"key": "epId",
+									"value": "s1e1",
+									"description": "where epId is in format s#e#"
+								},
+								{
+									"key": "type",
+									"value": "get_aired"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Characters",
+			"item": [
+				{
+					"name": "Get Character by Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Character by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_id=dean",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_id",
+									"value": "dean",
+									"description": "character's first name in lower case\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Random Character",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?type=get_random",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "get_random",
+									"description": "generates a random character from list of characters"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Description",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_description",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_description",
+									"description": "returns character description"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Description (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_description",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_description"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_species",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_species",
+									"description": "will return species of specified character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Type (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_species",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_species",
+									"description": "returns the species of the character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Alive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_alive",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_alive",
+									"description": "returns whether they are alive or dead"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Alive (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_alive",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_alive",
+									"description": "returns whether character is alive or dead"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_occupation",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_occupation",
+									"description": "returns occupation/job of character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Job (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_occupation",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_occupation",
+									"description": "returns the occupation/job of the character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Age",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_age",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_age",
+									"description": "returns age of character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Age (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_age",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_age",
+									"description": "returns the age of the character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Nicknames",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_nicknames",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_nicknames",
+									"description": "returns the characters nicknames, with information on who calls them the nickname"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Nicknames (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_nicknames",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_nicknames",
+									"description": "returns the characters nicknames, with information about who calls them that"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Relationships",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_relationships",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_relationships",
+									"description": "gets the name and relationship of related characters"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Relationships (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_relationships",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_relationships",
+									"description": "returns the characters name and their relationship to the character passed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Catchphrases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_catchphrases",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_catchphrases",
+									"description": "returns the catchphrases of the character, separated by commas"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Catchphrases (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_catchphrases",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_catchphrases",
+									"description": "returns the character's catchphrase"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Strengths",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_strengths",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_strengths",
+									"description": "returns the strengths of the character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Strengths (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_strengths",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_strengths",
+									"description": "returns characters strengths"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Weaknesses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_weaknesses",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_weaknesses",
+									"description": "returns the character's weaknesses"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Weaknesses (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_weaknesses",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_weaknesses",
+									"description": "returns characters weaknesses"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Quotes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_char_quotes",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_char_quotes",
+									"description": "returns the character's quotes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Quotes (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_char_quotes",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_char_quotes",
+									"description": "returns characters quotes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Death Total",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_deaths",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_deaths",
+									"description": "returns the number of deaths the character had"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Death Total (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_deaths",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_deaths",
+									"description": "returns informaiton about the number of times a character died"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Death Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_deaths_info",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_deaths_info",
+									"description": "returns information about each death a character has (if applicable)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Death Info (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_deaths_info",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_deaths_info",
+									"description": "provides information about each death (if applicable)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character's Actor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_actor",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_actor",
+									"description": "returns the actor/actress of the character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character's Actor (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_actor",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_actor",
+									"description": "returns information about character's actor/actress"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Funfacts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?character_name=dean%20winchester&type=get_funfacts",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "character_name",
+									"value": "dean%20winchester",
+									"description": "where character name is the full name of the character, in lowercase, with spaces separated with %20 or +"
+								},
+								{
+									"key": "type",
+									"value": "get_funfacts",
+									"description": "returns funfacts about the character"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Character Funfacts (with charId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{characterAPI}}?charId=dean&type=get_funfacts",
+							"host": [
+								"{{characterAPI}}"
+							],
+							"query": [
+								{
+									"key": "charId",
+									"value": "dean",
+									"description": "where charId is the first name of the character, in lowercase"
+								},
+								{
+									"key": "type",
+									"value": "get_funfacts",
+									"description": "returns the character's funfacts"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Monsters",
+			"item": [
+				{
+					"name": "All Monsters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}",
+							"host": [
+								"{{monstersAPI}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Monsters (option 2)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?type=all_monsters",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "all_monsters",
+									"description": "returns all monsters\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Random Monster",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?type=get_random",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "get_random"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monster Species",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=reapers&type=get_species",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "reapers",
+									"description": "the monster name"
+								},
+								{
+									"key": "type",
+									"value": "get_species",
+									"description": "returns the species"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monster Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=ghoul&type=get_type",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "ghoul",
+									"description": "name of the monster"
+								},
+								{
+									"key": "type",
+									"value": "get_type",
+									"description": "returns the monster type"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monster Description",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=ghoul&type=get_description",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "ghoul",
+									"description": "name of monster"
+								},
+								{
+									"key": "type",
+									"value": "get_description",
+									"description": "returns description of monster"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monster Abilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=ghoul&type=get_abilities",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "ghoul",
+									"description": "name of monster"
+								},
+								{
+									"key": "type",
+									"value": "get_abilities",
+									"description": "returns abilities of monster"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monster Weaknesses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=ghoul&type=get_weaknesses",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "ghoul",
+									"description": "name of monster"
+								},
+								{
+									"key": "type",
+									"value": "get_weaknesses",
+									"description": "returns weaknesses of monster"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monster's Episodes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=ghoul&type=get_episodes",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "ghoul",
+									"description": "name of monster"
+								},
+								{
+									"key": "type",
+									"value": "get_episodes",
+									"description": "returns epsiodes of monster specified\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "How to Kill Monster",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=ghoul&type=get_killedby",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "ghoul",
+									"description": "name of monster"
+								},
+								{
+									"key": "type",
+									"value": "get_killedby",
+									"description": "returns method to kill monster specified\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monster Lore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{monstersAPI}}?monster_name=ghoul&type=get_mythology",
+							"host": [
+								"{{monstersAPI}}"
+							],
+							"query": [
+								{
+									"key": "monster_name",
+									"value": "ghoul",
+									"description": "name of monster"
+								},
+								{
+									"key": "type",
+									"value": "get_mythology",
+									"description": "returns mythological history of monster\n"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "episodeListAPI",
+			"value": "http://supernatural-lore.vercel.app/api/episodeListAPI"
+		},
+		{
+			"key": "characterAPI",
+			"value": "https://supernatural-lore.vercel.app/api/characterAPI"
+		},
+		{
+			"key": "monstersAPI",
+			"value": "https://supernatural-lore.vercel.app/api/monstersAPI"
+		},
+		{
+			"key": "episodesAPI",
+			"value": "http://supernatural-lore.vercel.app/api/episodesAPI"
+		}
+	]
+}
