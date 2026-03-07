@@ -593,6 +593,126 @@ export const apiEndpointsInfo = [
             {"name": "random_monster", "desc":"Returns a monster object- with information about the randomly selected monster.", "valueType":"(object)"}
         ]
     },
+    //monster- species
+    {
+        "id":40,
+        "endpoint_name": "Monster- Get Monster Species",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_species",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_species", "type": "string", "notes": "where get_species is a string specifying the user wants to get the species of the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "species", "desc":"Returns a string with information about the monster's species.", "valueType":"(string)"}
+        ]
+    },
+    //monster- type
+    {
+        "id":41,
+        "endpoint_name": "Monster- Get Monster type",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_type",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_type", "type": "string", "notes": "where get_type is a string specifying the user wants to get the type of the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "type", "desc":"Returns a string with information about the monster's type.", "valueType":"(string)"}
+        ]
+    },
+    //monster -description
+    {
+        "id":42,
+        "endpoint_name": "Monster- Get Monster Description",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_description",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_description", "type": "string", "notes": "where get_description is a string specifying the user wants to get the description of the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "description", "desc":"Returns a string with a description about the monster.", "valueType":"(string)"}
+        ]
+    },
+    //monster - abiliites
+    {
+        "id":43,
+        "endpoint_name": "Monster- Get Monster Abilities",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_abilities",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_abilities", "type": "string", "notes": "where get_abilities is a string specifying the user wants to get the abilities of the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "abilities", "desc":"Returns a string with the abilities of the monster.", "valueType":"(string)"}
+        ]
+    },
+    //monster -weaknesses
+    {
+        "id":44,
+        "endpoint_name": "Monster- Get Monster Weakness",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_description",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_weaknesses", "type": "string", "notes": "where get_weaknesses is a string specifying the user wants to get the weaknesses of the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "weaknesses", "desc":"Returns a string with the weaknesses of the monster.", "valueType":"(string)"}
+        ]
+    },
+    //monster- episodes
+    {
+        "id":45,
+        "endpoint_name": "Monster- Get Monster Episodes",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_episodes",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_episodes", "type": "string", "notes": "where get_episodes is a string specifying the user wants to get the episode list of the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "episodes", "desc":"Returns a list with episodes of that monster.", "valueType":"(list)"}
+        ]
+    },
+    //monster- how to kill
+    {
+        "id":46,
+        "endpoint_name": "Monster- Get Kill Method",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_killedby",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_killedby", "type": "string", "notes": "where get_killedby is a string specifying the user wants to learn how to kill the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "kill_method", "desc":"Returns a string with a description about how to kill/hurt the monster.", "valueType":"(string)"}
+        ]
+    },
+    //monster- mythology
+    {
+        "id":47,
+        "endpoint_name": "Monster- Get Monster Mythology",
+        "base_url": "/api/monstersAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_mythology",
+        "parameters": [
+            {"name": "monster_name", "type": "string", "notes": "where monster_name is the name of the monster, in lowercase. spaces separated with %20 or + if applicable."},
+            {"name": "get_mythology", "type": "string", "notes": "where get_mythology is a string specifying the user wants to get the mythology of the monster."},
+       
+        ],
+        "outputs": [
+            {"name": "mythology", "desc":"Returns a string with the mythology of the monster.", "valueType":"(string)"}
+        ]
+    },
 ];
 
 export const apiPreviews = [
@@ -1052,6 +1172,7 @@ export const apiPreviews = [
         "description": "Gets all monster information.",
         "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?type=all_monsters"
     },
+    //monsters random
     {
         "id":39,
         "key": "get_monsters_random",
@@ -1062,5 +1183,101 @@ export const apiPreviews = [
         "link": "/view_api/get_monster",
         "description": "Gets a randomly generated monster.",
         "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?type=get_random"
+    },
+    //monster species
+    {
+        "id":40,
+        "key": "get_monster_species",
+        "title": "Monsters- Get Monster Species",
+        "sideTitle":"Monster Species",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster_species",
+        "description": "Gets the species of a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_species"
+    },
+    //monster type
+    {
+        "id":41,
+        "key": "get_monster_type",
+        "title": "Monsters- Get Monster Type",
+        "sideTitle":"Monster Type",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster_type",
+        "description": "Gets the type of a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_type"
+    },
+    //monster description
+    {
+        "id":42,
+        "key": "get_monster_desc",
+        "title": "Monsters- Get Monster Description",
+        "sideTitle":"Monster Description",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster_desc",
+        "description": "Gets the description of a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_description"
+    },
+    //monster abilities
+    {
+        "id":43,
+        "key": "get_monster_abilities",
+        "title": "Monsters- Get Monster Abilities",
+        "sideTitle":"Monster Abilities",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster_abilities",
+        "description": "Gets the abilities of a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_abilities"
+    },
+    //monster weaknesses
+    {
+        "id":44,
+        "key": "get_monster_weaknesses",
+        "title": "Monsters- Get Monster Weaknesses",
+        "sideTitle":"Monster Weaknesses",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster_weaknesses",
+        "description": "Gets the weaknesses of a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_weaknesses"
+    },
+    //monster episodes
+    {
+        "id":45,
+        "key": "get_monster_episodes",
+        "title": "Monsters- Get Monster Episodes",
+        "sideTitle":"Monster Episodes",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster_episodes",
+        "description": "Gets the episodes of a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_episodes"
+    },
+    //monster killed by
+    {
+        "id":46,
+        "key": "get_kill_monster",
+        "title": "Monsters- How to Kill",
+        "sideTitle":"How to Kill",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_kill_monster",
+        "description": "Gets the methods to kill a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_killedby"
+    },
+     //monster mythology
+    {
+        "id":47,
+        "key": "get_monster_mythology",
+        "title": "Monsters- Mythology",
+        "sideTitle":"Mythology",
+        "methodType": "GET",
+        "category":"monster",
+        "link": "/view_api/get_monster_mythology",
+        "description": "Gets the mythology of a monster.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_mythology"
     },
 ];

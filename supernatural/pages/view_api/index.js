@@ -47,6 +47,14 @@ import ViewCharacterActorInfo from "./get_actor";
 import ViewCharacterFunfacts from "./get_char_funfacts";
 import ViewRandomMonster from "./get_monsters_random";
 import ViewMonstersInfo from "./all_monsters";
+import ViewMonsterSpecies from "./get_monster_species";
+import ViewMonsterType from "./get_monster_type";
+import ViewMonsterDesc from "./get_monster_desc";
+import ViewMonsterAbilities from "./get_monster_abilities";
+import ViewMonsterWeaknesses from "./get_monster_weaknesses";
+import ViewMonsterEpisodes from "./get_monster_episodes";
+import ViewKillMonster from "./get_kill_monster";
+import ViewMonsterMythology from "./get_monster_mythology";
 export default function ShowAPIDoc() {
   const [showSeason, setShowSeason] = useState(false);
   const [showEpisode, setShowEpisode] = useState(false);
@@ -282,7 +290,15 @@ export default function ShowAPIDoc() {
     get_actor: <ViewCharacterActorInfo />,
     get_char_funfacts: <ViewCharacterFunfacts />,
     all_monsters: <ViewMonstersInfo />,
-    get_monsters_random: <ViewRandomMonster />
+    get_monsters_random: <ViewRandomMonster />,
+    get_monster_species: <ViewMonsterSpecies />,
+    get_monster_type: <ViewMonsterType />,
+    get_monster_desc: <ViewMonsterDesc />,
+    get_monster_abilities: <ViewMonsterAbilities />,
+    get_monster_weaknesses: <ViewMonsterWeaknesses />,
+    get_monster_episodes: <ViewMonsterEpisodes />,
+    get_kill_monster: <ViewKillMonster />,
+    get_monster_mythology: <ViewMonsterMythology />
   };
 
   return (

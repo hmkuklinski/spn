@@ -1,5 +1,4 @@
 import MonsterAPI from "../../src/components/api_results/MonsterAPI";
-import { monsters } from "../../src/components/data/monsterInfo";
 export default function ViewRandomMonster(){
     const fetchUrl = "http://supernatural-lore.vercel.app/api/monstersAPI";
     const indexId = 38;
