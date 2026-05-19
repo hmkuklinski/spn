@@ -1,0 +1,386 @@
+[
+  {
+    "id": "jessica",
+    "name": "Jessica Moore",
+    "text": "Killed by Azazel, then pinned to the ceiling and set on fire. Her death mirrored Mary Winchester's.",
+    "season": 1
+  },
+  {
+    "id": "john",
+    "name": "John Winchester",
+    "text": "Makes a demon deal with Azazel to save Dean's life.",
+    "season": 2
+  },
+  {
+    "id": "azazel",
+    "name": "Azazel",
+    "text": "Shot with the Colt by Dean.",
+    "season": 2
+  },
+  {
+    "id": "sam",
+    "name": "Sam Winchester",
+    "text": "Killed by a \"gifted,\" but revived after Dean makes a deal with the crossroads demon.",
+    "season": 2
+  },
+  {
+    "id": "ash",
+    "name": "Ash",
+    "text": "Killed in a fire at Harvelle Roadhouse.",
+    "season": 2
+  },
+  {
+    "id": "bela",
+    "name": "Bela Talbot",
+    "text": "Killed by hell-hounds.",
+    "season": 3
+  },
+  {
+    "id": "dean",
+    "name": "Dean Winchester",
+    "text": "Killed by hell-hounds.",
+    "season": 3
+  },
+  {
+    "id": "gordon",
+    "name": "Gordon Walker",
+    "text": "Decapitated after turning into a vampire.",
+    "season": 3
+  },
+  {
+    "id": "lilith",
+    "name": "Lilith",
+    "text": "Killed by Sam Winchester with demon-killing knife.",
+    "season": 4
+  },
+  {
+    "id": "ruby",
+    "name": "Ruby",
+    "text": "Stabbed with the demon-killing knife by Dean.",
+    "season": 4
+  },
+  {
+    "id": "uriel",
+    "name": "Uriel",
+    "text": "Killed by Anna.",
+    "season": 4
+  },
+  {
+    "id": "alastair",
+    "name": "Alastair",
+    "text": "Killed by Sam's psychic powers.",
+    "season": 4
+  },
+  {
+    "id": "victor",
+    "name": "Victor Hendrickson",
+    "text": "Killed by Lilith's demon attack.",
+    "season": 4
+  },
+  {
+    "id": "ellen",
+    "name": "Ellen Harvelle",
+    "text": "Dies in an explosion with Jo. She didn't want her daughter to die alone.",
+    "season": 5
+  },
+  {
+    "id": "jo",
+    "name": "Jo Harvelle",
+    "text": "Dies in an explosion with Ellen. She suffered from massive hemorraging due to a hell-hound attack.",
+    "season": 5
+  },
+  {
+    "id": "zachariah",
+    "name": "Zachariah",
+    "text": "Stabbed with an angel blade by Dean shortly after he says yes to Michael.",
+    "season": 5
+  },
+  {
+    "id": "anna",
+    "name": "Anna Milton",
+    "text": "Killed by Michael when she went back in time to kill Sam.",
+    "season": 5
+  },
+  {
+    "id": "rufus",
+    "name": "Rufus Turner",
+    "text": "Killed during a hunt by a monster.",
+    "season": 6
+  },
+  {
+    "id": "raphael",
+    "name": "Raphael",
+    "text": "Killed by Castiel.",
+    "season": 6
+  },
+  {
+    "id": "samuel",
+    "name": "Samuel Campbell",
+    "text": "Headshot by Sam because he was possessed by a Khan worm.",
+    "season": 6
+  },
+  {
+    "id": "balthazar",
+    "name": "Balthazar",
+    "text": "Killed by Castiel after it is discovered he betrayed him.",
+    "season": 6
+  },
+  {
+    "id": "bobby",
+    "name": "Bobby Singer",
+    "text": "He was shot by Dick Roman.",
+    "season": 7
+  },
+  {
+    "id": "dick",
+    "name": "Dick Roman",
+    "text": "Killed by Dean with the righteous bone.",
+    "season": 7
+  },
+  {
+    "id": "frank",
+    "name": "Frank Devereaux",
+    "text": "Killed offscreen by Leviathans.",
+    "season": 7
+  },
+  {
+    "id": "meg",
+    "name": "Meg Masters",
+    "text": "Stabbed with an angel blade by Crowley",
+    "season": 8
+  },
+  {
+    "id": "benny",
+    "name": "Benny Lafeyette",
+    "text": "Beheaded by Dean to return to Purgatory to save Sam.",
+    "season": 8
+  },
+  {
+    "id": "henry",
+    "name": "Henry Winchester",
+    "text": "Time travels to the future to escape Abaddon, but ends up being killed by her.",
+    "season": 8
+  },
+  {
+    "id": "samandriel",
+    "name": "Samandriel",
+    "text": "Killed by Castiel under Naomi's control.",
+    "season": 8
+  },
+  {
+    "id": "kevin",
+    "name": "Kevin Tran",
+    "text": "Killed by Sam when he was possessed by Gadreel.",
+    "season": 9
+  },
+  {
+    "id": "abaddon",
+    "name": "Abaddon",
+    "text": "Stabbed with the First Blade by Dean.",
+    "season": 9
+  },
+  {
+    "id": "tessa",
+    "name": "Tessa",
+    "text": "Stabbed with the First Blade by Dean.",
+    "season": 9
+  },
+  {
+    "id": "gadreel",
+    "name": "Gadreel",
+    "text": "Kills himself in order to get Castiel out of Heaven's Jail.",
+    "season": 9
+  },
+  {
+    "id": "bartholomew",
+    "name": "Bartholomew",
+    "text": "Stabbed by Castiel with an angel blade.",
+    "season": 9
+  },
+  {
+    "id": "charlie",
+    "name": "Charlie Bradbury",
+    "text": "Killed by the Steins in a hotel bathtub.",
+    "season": 10
+  },
+  {
+    "id": "death",
+    "name": "Death",
+    "text": "Killed by Dean with a scythe.",
+    "season": 10
+  },
+  {
+    "id": "cain",
+    "name": "Cain",
+    "text": "Killed with the First Blade by Dean.",
+    "season": 10
+  },
+  {
+    "id": "metatron",
+    "name": "Metatron",
+    "text": "Imploded by Amara after pleading for her to spare humankind.",
+    "season": 11
+  },
+  {
+    "id": "crowley",
+    "name": "Crowley",
+    "text": "Killed by Lucifer in the Alternate Earth. He died protecting the Winchester brothers.",
+    "season": 12
+  },
+  {
+    "id": "dagon",
+    "name": "Dagon",
+    "text": "Killed by Castiel- incinerated",
+    "season": 12
+  },
+  {
+    "id": "ramiel",
+    "name": "Ramiel",
+    "text": "Killed by the Winchesters with the Lance of Michael.",
+    "season": 12
+  },
+  {
+    "id": "mick",
+    "name": "Mick Davies",
+    "text": "Killed by Ketch.",
+    "season": 12
+  },
+  {
+    "id": "toni",
+    "name": "Lady Toni Bevell",
+    "text": "Killed by Ketch.",
+    "season": 12
+  },
+  {
+    "id": "alicia",
+    "name": "Alicia Barnes",
+    "text": "Killed and replaced by a magical doll.",
+    "season": 12
+  },
+  {
+    "id": "castiel",
+    "name": "Castiel",
+    "text": "Killed by Lucifer after returning from the Alternate Earth",
+    "season": 13
+  },
+  {
+    "id": "kaia",
+    "name": "Kaia",
+    "text": "Killed by a dark figure.",
+    "season": 13
+  },
+  {
+    "id": "asmodeus",
+    "name": "Asmodeus",
+    "text": "Killed by Gabriel.",
+    "season": 13
+  },
+  {
+    "id": "lucifer",
+    "name": "Lucifer",
+    "text": "Stabbed with an Archangel Blade by Dean.",
+    "season": 13
+  },
+  {
+    "id": "gabriel",
+    "name": "Gabriel",
+    "text": "Killed by Lucifer in Alternate World",
+    "season": 13
+  },
+  {
+    "id": "missouri",
+    "name": "Missouri Mosely",
+    "text": "Killed by a Wraith.",
+    "season": 13
+  },
+  {
+    "id": "lily",
+    "name": "Lily Sunders",
+    "text": "Died after performing a spell that burned off the last of her soul (and causing her immortality magic to wear off)",
+    "season": 13
+  },
+  {
+    "id": "mary",
+    "name": "Mary Winchester",
+    "text": "Vaporized by Jack after asking him questions about what he was doing.",
+    "season": 14
+  },
+  {
+    "id": "abraxas",
+    "name": "Abraxas",
+    "text": "After being released from the Enochian puzzle box, he is stabbed by Nick after telling him he killed his family on orders from Lucifer.",
+    "season": 14
+  },
+  {
+    "id": "dean",
+    "name": "Dean Winchester",
+    "text": "Dies after being impaled with rebar when fighting with a nest of Vampires.",
+    "season": 15
+  },
+  {
+    "id": "sam",
+    "name": "Sam Winchester",
+    "text": "Dies from old age.",
+    "season": 15
+  },
+  {
+    "id": "castiel",
+    "name": "Castiel",
+    "text": "Taken to the Empty to fulfil the deal (to be taken back when he is finally happy).",
+    "season": 15
+  },
+  {
+    "id": "billie",
+    "name": "Billie",
+    "text": "Taken to the Empty with Castiel because she sent Jack as a bomb into the Empty.",
+    "season": 15
+  },
+  {
+    "id": "michael",
+    "name": "Michael",
+    "text": "Killed by God",
+    "season": 15
+  },
+  {
+    "id": "amara",
+    "name": "Amara",
+    "text": "Absorbed- becomes one with Jack after he becomes the new God.",
+    "season": 15
+  },
+  {
+    "id": "rowena",
+    "name": "Rowena MacLeod",
+    "text": "Killed executing a spell to close Hell's Gate and to absorb all of Hell's souls that escaped (to return them to their rightful place).",
+    "season": 15
+  },
+  {
+    "id": "adam",
+    "name": "Adam Milligan",
+    "text": "Destroyed after Michael is killed.",
+    "season": 15
+  },
+  {
+    "id": "maggie",
+    "name": "Maggie",
+    "text": "Erased by God along with the other hunters.",
+    "season": 15
+  },
+  {
+    "id": "ketch",
+    "name": "Arthur Ketch",
+    "text": "Heart ripped out by Ardat.",
+    "season": 15
+  },
+  {
+    "id": "belphagor",
+    "name": "Belphagor",
+    "text": "Killed by Castiel in Hell when its discovered he betrayed him and the Winchesters.",
+    "season": 15
+  },
+  {
+    "id": "duma",
+    "name": "Duma",
+    "text": "Killed with an angel blade.",
+    "season": 15
+  }
+]

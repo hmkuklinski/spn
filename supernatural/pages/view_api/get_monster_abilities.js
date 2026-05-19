@@ -1,5 +1,5 @@
 import MonsterAPI from "../../src/components/api_results/MonsterAPI";
-export default function ViewMonsterAb(){
+export default function ViewMonsterAbilities(){
     const fetchUrl = "http://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_abilities";
     const indexId = 42;
     const example_data = (["Invisibility to the living","Teleportation and intangibility","Can kill or reap with a touch"]);

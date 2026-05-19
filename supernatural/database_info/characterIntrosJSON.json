@@ -1,0 +1,506 @@
+[
+  {
+    "id": "dean",
+    "name": "Dean Winchester",
+    "text": "A loyal, battle-ready hunter searching for their missing father.",
+    "season": 1
+  },
+  {
+    "id": "sam",
+    "name": "Sam Winchester",
+    "text": "A reluctant hunter drawn back in after his girlfriend's death.",
+    "season": 1
+  },
+  {
+    "id": "john",
+    "name": "John Winchester",
+    "text": "A missing hunter whose quest for revenge drives the story.",
+    "season": 1
+  },
+  {
+    "id": "mary",
+    "name": "Mary Winchester",
+    "text": "Sam and Dean's mom. Once a hunter herself, she was killed by Azazel.",
+    "season": 1
+  },
+  {
+    "id": "azazel",
+    "name": "Azazel",
+    "text": "The Yellow-Eyed Demon who killed Mary and has eyes for Sam.",
+    "season": 1
+  },
+  {
+    "id": "meg",
+    "name": "Meg",
+    "text": "A demon who is originally loyal to Hell, but ends up helping the Winchesters.",
+    "season": 1
+  },
+  {
+    "id": "bobby",
+    "name": "Bobby Singer",
+    "text": "A father figure to Sam and Dean, Bobby is an experienced, no-nonsense hunter who helps guide and support them.",
+    "season": 1
+  },
+  {
+    "id": "missouri",
+    "name": "Missouri Mosely",
+    "text": "A powerful psychic who helps the Winchesters during a hunt.",
+    "season": 1
+  },
+  {
+    "id": "jess",
+    "name": "Jessica (Jess) Moore",
+    "text": "Sam's supportive girlfriend at Stanford.",
+    "season": 1
+  },
+  {
+    "id": "harry",
+    "name": "Harry Spangler",
+    "text": "A supernaturalist who is best friends with Ed. Will eventually launch the Ghostfacers.",
+    "season": 1
+  },
+  {
+    "id": "ed",
+    "name": "Ed Zeddmore",
+    "text": "A supernaturalist who is friends with Harry. Will eventually launch the Ghostfacers.",
+    "season": 1
+  },
+  {
+    "id": "gabriel",
+    "name": "The Trickster",
+    "text": "A mischevious creature that loves to play pranks and eat candy. He's very sarcastic and loves making jokes. It is believed that he can be killed if he is stabbed in the heart with a stake covered in lamb's blood.",
+    "season": 2
+  },
+  {
+    "id": "tessa",
+    "name": "Tessa",
+    "text": "A Reaper that comes to collect Dean when he's dying. We learn that Reapers have the ability to alter the dying person's perception of who they are and what is going on around them.",
+    "season": 2
+  },
+  {
+    "id": "gordon",
+    "name": "Gordon Walker",
+    "text": "A hunter who is obsessed with killing Vampires. He also believes Sam is truly evil and will do whatever it takes to kill him.",
+    "season": 2
+  },
+  {
+    "id": "jo",
+    "name": "Jo Harvelle",
+    "text": "A hunter who works at the Harvelle Roadhouse with her mom, Ellen, and Ash.",
+    "season": 2
+  },
+  {
+    "id": "ellen",
+    "name": "Ellen Harvelle",
+    "text": "A hunter who owns a hunter's bar called Harvelle Roadhouse.",
+    "season": 2
+  },
+  {
+    "id": "ash",
+    "name": "Ash",
+    "text": "A computer genius and hacker that works at Harvelle's Roadhouse.",
+    "season": 2
+  },
+  {
+    "id": "victor",
+    "name": "Victor Hendriksen",
+    "text": "An FBI who is hunting down Sam and Dean after shapeshifters take their identity.",
+    "season": 2
+  },
+  {
+    "id": "lilith",
+    "name": "Lilith",
+    "text": "A powerful white-eyed demon who holds Dean's contract.",
+    "season": 3
+  },
+  {
+    "id": "ruby",
+    "name": "Ruby",
+    "text": "A demon that works closely with Sam, initially to help save Dean...",
+    "season": 3
+  },
+  {
+    "id": "bela",
+    "name": "Bela Talbot",
+    "text": "A supernatural items broker who clashes with the Winchesters and eventually becomes an ally.",
+    "season": 3
+  },
+  {
+    "id": "rufus",
+    "name": "Rufus Turner",
+    "text": "Bobby Singer's best friend and hunting partner. He's very sassy and grumpy.",
+    "season": 3
+  },
+  {
+    "id": "lisa",
+    "name": "Lisa Braedon",
+    "text": "One of Dean's flings, with who he later develops a closer relationship with. She has a son named Ben, who resembles Dean's personality and looks.",
+    "season": 3
+  },
+  {
+    "id": "castiel",
+    "name": "Castiel",
+    "text": "The angel who gripped Dean tight and raised him from perdition.",
+    "season": 4
+  },
+  {
+    "id": "uriel",
+    "name": "Uriel",
+    "text": "An angel specialist who was in the same garrison as Castiel and Anna.",
+    "season": 4
+  },
+  {
+    "id": "anna",
+    "name": "Anna Milton",
+    "text": "An angel who decided to fall and live amongst the human. She heavily believes angels should have free-will and not be subjected to only following orders.",
+    "season": 4
+  },
+  {
+    "id": "raphael",
+    "name": "Raphael",
+    "text": "An archangel who competes with Castiel for leading the angels in Heaven.",
+    "season": 4
+  },
+  {
+    "id": "lucifer",
+    "name": "Lucifer",
+    "text": "The archangel who fell and went to rule Hell.",
+    "season": 4
+  },
+  {
+    "id": "zachariah",
+    "name": "Zachariah",
+    "text": "An angel tasked with getting Dean to say Yes as Michael's vessel.",
+    "season": 4
+  },
+  {
+    "id": "pamela",
+    "name": "Pamela Barnes",
+    "text": "A psychic who tries to help Dean learn more about who pulled him from Hell. She later becomes blind after seeing Castiel's true form.",
+    "season": 4
+  },
+  {
+    "id": "jimmy",
+    "name": "Jimmy Novak",
+    "text": "The human who allows Castiel to use him as a vessel.",
+    "season": 4
+  },
+  {
+    "id": "claire",
+    "name": "Claire Novak",
+    "text": "Jimmy Novak's daughter.",
+    "season": 4
+  },
+  {
+    "id": "crowley",
+    "name": "Crowley",
+    "text": "The King of Hell. A powerful demon in charge of running Hell and is initally a strong adversary to the Winchester boys. Later becomes a close ally.",
+    "season": 5
+  },
+  {
+    "id": "nick",
+    "name": "Nick",
+    "text": "A family man who loses it all when his family is murdered.He's the main vessel for Lucifer.",
+    "season": 5
+  },
+  {
+    "id": "michael",
+    "name": "Michael",
+    "text": "The archangel responsible for casting Lucifer down to Hell.",
+    "season": 5
+  },
+  {
+    "id": "adam",
+    "name": "Adam Milligan",
+    "text": "Half brother to Sam and Dean. Is a potential vessel for Michael.",
+    "season": 5
+  },
+  {
+    "id": "death",
+    "name": "Death",
+    "text": "One of the four horsemen. He has many conversations with Dean about how he maintains the natural order and the importance of his role.",
+    "season": 5
+  },
+  {
+    "id": "jody",
+    "name": "Jody Mills",
+    "text": "A sheriff whose entire family died after her kid turned into a monster. Eventually becomes a close ally to the Winchesters and Bobby.",
+    "season": 5
+  },
+  {
+    "id": "eve",
+    "name": "Eve",
+    "text": "Mother of All supernatural creatures.",
+    "season": 6
+  },
+  {
+    "id": "samuel",
+    "name": "Samuel Campbell",
+    "text": "Sam and Dean's grandfather. He's a hunter that leads the family in hunts. He has many conflicts with Dean based on how he handles situations and his opinions.",
+    "season": 6
+  },
+  {
+    "id": "balthazar",
+    "name": "Balthazar",
+    "text": "An archangel who helps Castiel in his fight against Raphael.",
+    "season": 6
+  },
+  {
+    "id": "kevin",
+    "name": "Kevin Tran",
+    "text": "A prophet of the lord. He's formerly a college student from Princeton.",
+    "season": 7
+  },
+  {
+    "id": "linda",
+    "name": "Linda Tran",
+    "text": "Kevin's mother, who has no limits to what she'd do to ensure her son's safety.",
+    "season": 7
+  },
+  {
+    "id": "dick",
+    "name": "Dick Roman",
+    "text": "CEO of Richard Roman Enterprises and leaders of the Leviathans.",
+    "season": 7
+  },
+  {
+    "id": "garth",
+    "name": "Garth Fitzgerald IV",
+    "text": "A quirky hunter who takes over Bobby's responsibilites and later becomes a huge ally.",
+    "season": 7
+  },
+  {
+    "id": "charlie",
+    "name": "Charlie Bradbury",
+    "text": "A genius hacker who works for Dick Roman. She eventually becomes a close ally to the Winchester brothers.",
+    "season": 7
+  },
+  {
+    "id": "krissy",
+    "name": "Krissy Chambers",
+    "text": "A hunter-in-training who leads a group of teens on a hunt.",
+    "season": 7
+  },
+  {
+    "id": "frank",
+    "name": "Frank Deveraux",
+    "text": "A hacker who is super paranoid and fanatic. He helps the Winchesters because he owes Bobby for saving his life.",
+    "season": 7
+  },
+  {
+    "id": "abaddon",
+    "name": "Abaddon",
+    "text": "A knight of hell who is hell-bent on controlling Hell.",
+    "season": 8
+  },
+  {
+    "id": "naomi",
+    "name": "Naomi",
+    "text": "Leader of the Angels in Heaven. Tries to brainwash Castiel and the other angels to maintain her control.",
+    "season": 8
+  },
+  {
+    "id": "metatron",
+    "name": "Metatron",
+    "text": "The scribe of God. He tries to control the narrative and the angels in Heaven after Naomi's rule.",
+    "season": 8
+  },
+  {
+    "id": "benny",
+    "name": "Benny Lafeyette",
+    "text": "A vampire who works closely with Dean and Castiel in Purgatory.",
+    "season": 8
+  },
+  {
+    "id": "amelia",
+    "name": "Amelia",
+    "text": "Sam Winchester's love interest while Dean is in Purgatory.",
+    "season": 8
+  },
+  {
+    "id": "aaron",
+    "name": "Aaron Bass",
+    "text": "He owns a Golem and is responsible for fighting against the Nazis.",
+    "season": 8
+  },
+  {
+    "id": "samandriel",
+    "name": "Samandriel",
+    "text": "An angel who is tortured to get information about one of the tablets.",
+    "season": 8
+  },
+  {
+    "id": "henry",
+    "name": "Henry Winchester",
+    "text": "Sam and Dean's grandfather who travels to the future to escape Abaddon's massacre. He's a men of letters.",
+    "season": 8
+  },
+  {
+    "id": "gadreel",
+    "name": "Gadreel",
+    "text": "The angel who let the serphent into Heaven (which resulted in him being trapped in Heaven's jail for millenias). He possesses Sam to heal him and to walk amongst the huamns.",
+    "season": 9
+  },
+  {
+    "id": "cain",
+    "name": "Cain",
+    "text": "A Knight of Hell who has the Mark of Cain- a mark that makes him super powerful and blood thirsty (and allows him to use the First Blade).",
+    "season": 9
+  },
+  {
+    "id": "bartholomew",
+    "name": "Bartholomew",
+    "text": "An angel who is trying to lead the angels in Heaven.",
+    "season": 9
+  },
+  {
+    "id": "hannah",
+    "name": "Hannah",
+    "text": "An angel who works closely with Castiel to restore  order in Heaven.",
+    "season": 9
+  },
+  {
+    "id": "donna",
+    "name": "Donna Hanscum",
+    "text": "Cheerful sheriff with no knowledge of the Supernatural. Eventually becomes a skilled hunter and ally/friend to the Winchester brothers and Jody.",
+    "season": 9
+  },
+  {
+    "id": "amara",
+    "name": "Amara",
+    "text": "She is the darkness. She is contained in the Mark of Cain.",
+    "season": 10
+  },
+  {
+    "id": "rowena",
+    "name": "Rowena MacLeod",
+    "text": "A powerful witch who has close relationships to Crowley.",
+    "season": 10
+  },
+  {
+    "id": "cole",
+    "name": "Cole Trenton",
+    "text": "An ex-marine who hunts Dean for killing his father when he was a child.",
+    "season": 10
+  },
+  {
+    "id": "billie",
+    "name": "Billie",
+    "text": "A powerful reaper Dean meets when he tries to bargain for Sam's life (when he thinks he's dead).",
+    "season": 11
+  },
+  {
+    "id": "toni",
+    "name": "Kady Toni Bevell",
+    "text": "British Men of Letters agent sent to America to control American hunters.",
+    "season": 11
+  },
+  {
+    "id": "eileen",
+    "name": "Eileen Leahy",
+    "text": "A deaf hunter who is a close ally to the Winchesters and a love intereest for Sam Winchester.",
+    "season": 11
+  },
+  {
+    "id": "ketch",
+    "name": "Arthur Ketch",
+    "text": "A powerful mercenary for the British Men of Letters",
+    "season": 12
+  },
+  {
+    "id": "mick",
+    "name": "Mick Davies",
+    "text": "A leader in the British Men of Letters. He has excellent knowledge on all things Supernatural.",
+    "season": 12
+  },
+  {
+    "id": "jack",
+    "name": "Jack Kline",
+    "text": "A nephilim, whose angelic father is Lucifer.",
+    "season": 12
+  },
+  {
+    "id": "kelly",
+    "name": "Kelly Kline",
+    "text": "Jack's mother. A human who had relations with Lucifer.",
+    "season": 12
+  },
+  {
+    "id": "alicia",
+    "name": "Alicia Barnes",
+    "text": "Hunter raised by her witch mother.",
+    "season": 12
+  },
+  {
+    "id": "max",
+    "name": "Max Barnes",
+    "text": "Alicia's twin brother who inherited his mother's magical abilities after she dies.",
+    "season": 12
+  },
+  {
+    "id": "lily",
+    "name": "Lily Sunders",
+    "text": "A witch who is seeking revenge for the murder of her husband and daughter.",
+    "season": 12
+  },
+  {
+    "id": "ramiel",
+    "name": "Ramiel",
+    "text": "A Prince of Hell who is reclusive and wanted nothing to do with the activities of Hell.",
+    "season": 12
+  },
+  {
+    "id": "dagon",
+    "name": "Dagon",
+    "text": "A Prince of Hell, responsible for guarding Kelly Kline while she was pregnant.",
+    "season": 12
+  },
+  {
+    "id": "anael",
+    "name": "Anael (Sister Jo)",
+    "text": "An angel who poses as a Healer, with close ties to Lucifer.",
+    "season": 13
+  },
+  {
+    "id": "asmodeus",
+    "name": "Asmodeus",
+    "text": "Prince of Hell who ruled after Crowley's death with an extreme interest in Jack.",
+    "season": 13
+  },
+  {
+    "id": "duma",
+    "name": "Duma",
+    "text": "An angel who deceives Jack to do Heaven's twisted bidding.",
+    "season": 13
+  },
+  {
+    "id": "kaia",
+    "name": "Kaia Nieves",
+    "text": "A dreamwalker who becomes close to Claire Novak.",
+    "season": 13
+  },
+  {
+    "id": "maggie",
+    "name": "Maggie",
+    "text": "A new hunter from the Alternate World who looks up to Sam.",
+    "season": 13
+  },
+  {
+    "id": "abraxas",
+    "name": "Abraxas",
+    "text": "The demon who is responsible for killing Nick's family.",
+    "season": 14
+  },
+  {
+    "id": "sergei",
+    "name": "Sergei",
+    "text": "A shaman who helps others, bartering his skills for valuable items.",
+    "season": 14
+  },
+  {
+    "id": "belphagor",
+    "name": "Belphagor",
+    "text": "A demon who possesses Jack and helps the Winchesters contain the souls of Hell. Well versed in spells and torture.",
+    "season": 15
+  }
+]
