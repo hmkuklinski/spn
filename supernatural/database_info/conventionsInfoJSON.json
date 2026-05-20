@@ -111,12 +111,66 @@
         "startYear": "2026",
         "guests": "Jensen Ackles, Jared Padalecki, Misha Collins, Rob Benedict, Richard Speight Jr., Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"
       },
+       {
+        "id": "whippany",
+        "location": "Whippany, NJ",
+        "eventLocation": "Hanover Marriott Hotel",
+        "startMonth": "AUG",
+        "startDate": "21",
+        "startYear": "2026",
+        "guests": "Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"
+      },
+       {
+        "id": "orlando",
+        "location": "Orlando, FL",
+        "eventLocation": "Doubletree by Hilton Orlando Hotel",
+        "startMonth": "SEPT",
+        "startDate": "11",
+        "startYear": "2026",
+        "guests": "Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"
+      },
       {
         "id": "charlotte",
         "location": "Charlotte, NC",
         "eventLocation": "Embassy Suites Charlotte-Concord Resort",
         "startMonth": "SEPT",
         "startDate": "25",
+        "startYear": "2026",
+        "guests": "Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"
+      },
+      {
+        "id": "vancouver",
+        "location": "Vancouver, BC",
+        "eventLocation": "Westin Bayshore Vancouver Hotel",
+        "startMonth": "OCT",
+        "startDate": "9",
+        "startYear": "2026",
+        "guests": "Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"
+      },
+      {
+        "id": "columbus",
+        "location": "Colombus, OH",
+        "eventLocation": "Greater Columbus Convention Center",
+        "startMonth": "OCT",
+        "startDate": "16",
+        "startYear": "2026",
+        "guests": "Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, Jim Beaver, and David Haydn-Jones"
+      },
+      {
+        "id": "chicago2",
+        "location": "Chicago, IL",
+        "eventLocation": "Westin O'Hare Hotel",
+        "startMonth": "NOV",
+        "startDate": "6",
+        "startYear": "2026",
+        "guests": "Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"
+      },
+      {
+        "id": "austin",
+        "location": "Austin, TX",
+        "eventLocation": "Marriott Austin Downtown Hotel",
+        "startMonth": "NOV",
+        "startDate": "20",
         "startYear": "2026",
         "guests": "Jensen Ackles, Misha Collins, Rob Benedict, Richard Speight Jr., Felicia Day, Kim Rhodes, Briana Buckmaster, and David Haydn-Jones"
       }
