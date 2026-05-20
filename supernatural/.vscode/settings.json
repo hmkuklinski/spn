@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 200,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:supernatural}/database_info/supernatural.db",
+            "name": "SPNdb"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
