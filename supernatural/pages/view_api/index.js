@@ -55,6 +55,9 @@ import ViewMonsterWeaknesses from "./get_monster_weaknesses";
 import ViewMonsterEpisodes from "./get_monster_episodes";
 import ViewKillMonster from "./get_kill_monster";
 import ViewMonsterMythology from "./get_monster_mythology";
+import ViewAllSongs from "./get_all_songs";
+import ViewSongCount from "./get_song_count";
+import ViewSongInfo from "./get_song_info";
 export default function ShowAPIDoc() {
   const [showSeason, setShowSeason] = useState(false);
   const [showEpisode, setShowEpisode] = useState(false);
@@ -298,7 +301,10 @@ export default function ShowAPIDoc() {
     get_monster_weaknesses: <ViewMonsterWeaknesses />,
     get_monster_episodes: <ViewMonsterEpisodes />,
     get_kill_monster: <ViewKillMonster />,
-    get_monster_mythology: <ViewMonsterMythology />
+    get_monster_mythology: <ViewMonsterMythology />,
+    get_all_songs: <ViewAllSongs />,
+    get_song_count: <ViewSongCount />,
+    get_song_info: <ViewSongInfo />
   };
 
   return (

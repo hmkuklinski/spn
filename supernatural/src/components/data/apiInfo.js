@@ -713,6 +713,48 @@ export const apiEndpointsInfo = [
             {"name": "mythology", "desc":"Returns a string with the mythology of the monster.", "valueType":"(string)"}
         ]
     },
+    //SONGS --------------------------------------
+    {
+        "id":48,
+        "endpoint_name": "Song- GET Songs",
+        "base_url": "/api/songsAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songsAPI?type=all_songs",
+        "parameters": [
+            {"name": "all_songs", "type": "string", "notes": "where all_songs is a string specifying the user wants to get all songs used in the series."},
+       
+        ],
+        "outputs": [
+            {"name": "songs", "desc":"Returns all the songs in the series", "valueType":"()"}
+        ]
+    },
+    {
+        "id":49,
+        "endpoint_name": "Song- GET Song Count",
+        "base_url": "/api/songsAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&type=get_count",
+        "parameters": [
+            {"name": "song_title", "type": "string", "notes": "where song_title is a string specifying the title of the song the user wants counted, with spaces separated with %20 or &"},
+            {"name": "type", "type": "string", "notes": "where get_count is a string specifying that the user wants to count the instances of song being used."},
+       
+        ],
+        "outputs": [
+            {"name": "count", "desc":"Returns the number of times the song appears in series.", "valueType":"(string)"}
+        ]
+    },
+    {
+        "id":50,
+        "endpoint_name": "Song- GET Song Information",
+        "base_url": "/api/songsAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&artist=Neoni",
+        "parameters": [
+            {"name": "song_title", "type": "string", "notes": "where song_title is a string specifying the title of the song the user wants counted, with spaces separated with %20 or &"},
+            {"name": "artist", "type": "string", "notes": "where artist is a string specifying the artist of the song, with spaces separated with %20 or &"},
+       
+        ],
+        "outputs": [
+            {"name": "song", "desc":"Returns the song information if arguments match.", "valueType":"(object)"}
+        ]
+    },
 ];
 
 export const apiPreviews = [
@@ -1279,5 +1321,39 @@ export const apiPreviews = [
         "link": "/view_api/get_monster_mythology",
         "description": "Gets the mythology of a monster.",
         "code": "sample request: GET https://supernatural-lore.vercel.app/api/monstersAPI?monster_name=reapers&type=get_mythology"
+    },
+    //SONGS -----------------------
+    {
+        "id":48,
+        "key": "get_all_songs",
+        "title": "Songs- Get All Songs",
+        "sideTitle":"All Songs",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_all_songs",
+        "description": "Gets all the songs that appear in the series.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songsAPI?type=all_songs"
+    },
+    {
+        "id":49,
+        "key": "get_song_count",
+        "title": "Songs- Get Song Count",
+        "sideTitle":"Song Count",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_song_count",
+        "description": "Gets number of times a song premiered in the show.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&type=get_count"
+    },
+    {
+        "id":50,
+        "key": "get_song_info",
+        "title": "Songs- Get Song Information",
+        "sideTitle":"Song Info",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_song_info",
+        "description": "Gets information about a specified song.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&artist=Neoni"
     },
 ];

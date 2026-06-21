@@ -9,7 +9,7 @@ export default function handler(request, response){
         results = characters.find(character => character.id === charId);
     }
     else if (character_name && !charId && type != "get_random"){
-        results = characters.find(character=> character_name.toLowerCase() === character.name.toLowerCase());
+        results = characters.find(character=> charcter_name.toLowerCase() === character.name.toLowerCase());
     }
     else if (character_name && charId){
         return response.status(404).json({error: "You cannot pass both a character id and a character name. Please pick one to continue your search."});
