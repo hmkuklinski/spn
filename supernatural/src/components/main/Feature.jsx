@@ -27,7 +27,7 @@ export default function Feature({contentType, ...props}){
     let subtitle="";
     let imgSrc =`${props.imgsrc}`;
     if (contentType === "character" && props.name){
-        subtitle = props.type? `${props.name} ${props.type}`: `${props.name}`;
+        subtitle = props.type? `${props.name} - ${props.type}`: `${props.name}`;
     }
     else if (contentType === "monster" && props.name){
         subtitle = `${props.name}`;
