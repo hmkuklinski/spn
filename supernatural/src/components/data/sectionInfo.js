@@ -50,4 +50,11 @@ export const sections= [
         buttonLink:"/spn-then-and-now", 
         desc:"Explore the SPN Then and Now podcast, where episodes dive deep into the series through discussions, behind-the-scenes insights, and special guest appearances. This section features links to listen across various platforms, details about the hosts and their connection to the show, and a breakdown of total episodes released. Discover everything you need to follow along with the journey from episode one to now."
     }, 
+    {
+        id:7,
+        title:"The Winchesters Archive- API",
+        imgsrc:"/assets/sections/sam-computer.jpg",
+        buttonLink:"/view_api",
+        desc:"Feature for developers to view and analyze data from Supernatural. With 60+ unique endpoints, you can browse data by Season, Episode, Character, Monster, Song, and much more!"
+    }
 ];
