@@ -8,6 +8,7 @@ export default function Home(){
         <div className="main-container">
             <HomeLanding />
             <MySections />
+            <h2 class="section_title">Features</h2>
             <Features />
         </div>
     </Layout>

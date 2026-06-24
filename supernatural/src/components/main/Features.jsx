@@ -52,7 +52,7 @@ export default function Features(){
 
     //feature, imgsrc, subtitle, description, link, linkText
     return (
-        <div className="features-container">
+        <div className="my-sections" id="featured-items">
             <Feature {...myMon} contentType="monster" />
             <Feature {...myEp} contentType="episode"/>
             <Feature {...myChar} contentType="character" />

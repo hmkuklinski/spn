@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function SectionDesc({title, imgsrc, desc, buttonLink}){
+export default function SectionDesc({title, imgsrc, desc, buttonLink, subtitle=null}){
     return (<Link href={buttonLink} className="section-link">
         <div className="section-info">
             <div className="section-img">
@@ -8,8 +8,16 @@ export default function SectionDesc({title, imgsrc, desc, buttonLink}){
             </div>
             <div className="section-content">
                 <div className="section-title">
-                    <h2>{title}</h2>
+                    <h2>
+                        {title}
+                        {subtitle && (
+                            <div className='section-subtitle'>
+                                <h4>{subtitle}</h4>
+                            </div>
+                        )}
+                    </h2>
                 </div>
+                
                 <div className="section-description">
                     <p>{desc}</p>
                 </div>
