@@ -717,8 +717,8 @@ export const apiEndpointsInfo = [
     {
         "id":48,
         "endpoint_name": "Song- GET Songs",
-        "base_url": "/api/songsAPI?",
-        "example_url":"https://supernatural-lore.vercel.app/api/songsAPI?type=all_songs",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?type=all_songs",
         "parameters": [
             {"name": "all_songs", "type": "string", "notes": "where all_songs is a string specifying the user wants to get all songs used in the series."},
        
@@ -730,8 +730,8 @@ export const apiEndpointsInfo = [
     {
         "id":49,
         "endpoint_name": "Song- GET Song Count",
-        "base_url": "/api/songsAPI?",
-        "example_url":"https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&type=get_count",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?song_title=Carry%20On%20Wayward%20Son&type=get_count",
         "parameters": [
             {"name": "song_title", "type": "string", "notes": "where song_title is a string specifying the title of the song the user wants counted, with spaces separated with %20 or &"},
             {"name": "type", "type": "string", "notes": "where get_count is a string specifying that the user wants to count the instances of song being used."},
@@ -744,8 +744,8 @@ export const apiEndpointsInfo = [
     {
         "id":50,
         "endpoint_name": "Song- GET Song Information",
-        "base_url": "/api/songsAPI?",
-        "example_url":"https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&artist=Neoni",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?song_title=Carry%20On%20Wayward%20Son&artist=Neoni",
         "parameters": [
             {"name": "song_title", "type": "string", "notes": "where song_title is a string specifying the title of the song the user wants counted, with spaces separated with %20 or &"},
             {"name": "artist", "type": "string", "notes": "where artist is a string specifying the artist of the song, with spaces separated with %20 or &"},
@@ -755,6 +755,97 @@ export const apiEndpointsInfo = [
             {"name": "song", "desc":"Returns the song information if arguments match.", "valueType":"(object)"}
         ]
     },
+    {
+        "id":51,
+        "endpoint_name": "Song- GET Song By Song Title",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?song_title=Carry%20On%20Wayward%20Son",
+        "parameters": [
+            {"name": "song_title", "type": "string", "notes": "where song_title is a string specifying the title of the song the user wants, with spaces separated with %20 or &"},
+       
+        ],
+        "outputs": [
+            {"name": "song", "desc":"Returns array of songs with title, if arguments match.", "valueType":"(object)"}
+        ]
+    },
+    {
+        "id":52,
+        "endpoint_name": "Song- GET Songs By Artist",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?artist=AC/DC",
+        "parameters": [
+            {"name": "artist", "type": "string", "notes": "where artist is a string specifying the artist of the song the user wants, with spaces separated with %20 or &"},
+       
+        ],
+        "outputs": [
+            {"name": "song", "desc":"Returns array of songs by artist, if arguments match.", "valueType":"(object)"}
+        ]
+    },
+    {
+        "id":53,
+        "endpoint_name": "Song- GET Songs By Artist Count",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?artist=AC/DC&type=get_count",
+        "parameters": [
+            {"name": "artist", "type": "string", "notes": "where artist is a string specifying the artist of the song the user wants, with spaces separated with %20 or &"},
+            {"name": "type", "type": "string", "notes": "where type is a string specifying the the request to get the count"},
+        ],
+        "outputs": [
+            {"name": "count", "desc":"Returns a string of the count value", "valueType":"(String)"}
+        ]
+    },
+    {
+        "id":54,
+        "endpoint_name": "Song- Get Songs By Season",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?season=1",
+        "parameters": [
+            {"name": "season", "type": "string", "notes": "where season is an integer value 1-15, specifying the season's data you want to look at"},
+            
+        ],
+        "outputs": [
+            {"name": "songs", "desc":"Returns an array of song information if arguments match.", "valueType":"(object)"}
+        ]
+    },
+    {
+        "id":55,
+        "endpoint_name": "Song- Get Songs By Episode",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?season=1&episode=1",
+        "parameters": [
+            {"name": "season", "type": "string", "notes": "where season is an integer value 1-15, specifying the season's data you want to look at"},
+            {"name":"episode", "type": "string", "notes":"where episodes is a valid integer based on number of episodes of specified season"}
+        ],
+        "outputs": [
+            {"name": "songs", "desc":"Returns an array of song information for episode only, if arguments match.", "valueType":"(object)"}
+        ]
+    },
+    {
+        "id":56,
+        "endpoint_name": "Song- Get Random Song",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?type=get_random",
+        "parameters": [
+            {"name":"type", "type": "string", "notes":"where argument passed is get_random"}
+        ],
+        "outputs": [
+            {"name": "songs", "desc":"Returns a randomly selected song from series.", "valueType":"(object)"}
+        ]
+    },
+    {
+        "id":57,
+        "endpoint_name": "Song- Get Songs By Season Range",
+        "base_url": "/api/songAPI?",
+        "example_url":"https://supernatural-lore.vercel.app/api/songAPI?seasonStart=1&seasonEnd=2",
+        "parameters": [
+            {"name":"seasonStart", "type": "string", "notes":"where seasonStart is the starting range for your song selection query, INCLUSIVE."},
+            {"name":"seasonEnd", "type":"string", "notes": "where seasonEnd is the ending range for your song selection query, INCLUSIVE."}
+        ],
+        "outputs": [
+            {"name": "songs", "desc":"Returns an array of song from specified range, if valid arguments.", "valueType":"(object)"}
+        ]
+    },
+
 ];
 
 export const apiPreviews = [
@@ -1332,7 +1423,7 @@ export const apiPreviews = [
         "category":"songs",
         "link": "/view_api/get_all_songs",
         "description": "Gets all the songs that appear in the series.",
-        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songsAPI?type=all_songs"
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?type=all_songs"
     },
     {
         "id":49,
@@ -1343,7 +1434,7 @@ export const apiPreviews = [
         "category":"songs",
         "link": "/view_api/get_song_count",
         "description": "Gets number of times a song premiered in the show.",
-        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&type=get_count"
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?song_title=Carry%20On%20Wayward%20Son&type=get_count"
     },
     {
         "id":50,
@@ -1354,6 +1445,84 @@ export const apiPreviews = [
         "category":"songs",
         "link": "/view_api/get_song_info",
         "description": "Gets information about a specified song.",
-        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songsAPI?song_title=Carry%20On%20Wayward%20Son&artist=Neoni"
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?song_title=Carry%20On%20Wayward%20Son&artist=Neoni"
     },
+    {
+        "id":51,
+        "key": "get_song_by_title",
+        "title": "Songs- Get Song By Title",
+        "sideTitle":"Song By Title",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_song_by_title",
+        "description": "Gets information about a specified song by title- can include songs with same name or covers of target song.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?song_title=Carry%20On%20Wayward%20Son"
+    },
+    {
+        "id":52,
+        "key": "get_songs_by_artist",
+        "title": "Songs- Get Songs By Artist",
+        "sideTitle":"Songs By Artist",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_songs_by_artist",
+        "description": "Returns songs by a specified artist that were used across the series.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?artist=AC/DC"
+    },
+    {
+        "id":53,
+        "key": "get_artist_count",
+        "title": "Songs- Get Songs By Artist Count",
+        "sideTitle":"Songs By Artist Count",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_artist_count",
+        "description": "Returns songs by a specified artist that were used across the series.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?artist=AC/DC&type='get_count"
+    },
+    {
+        "id":54,
+        "key": "get_songs_by_season",
+        "title": "Songs- Get Songs By Season",
+        "sideTitle":"Songs By Season",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_songs_by_season",
+        "description": "Returns songs that were used in the specified season.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?season=1"
+    },
+    {
+        "id":55,
+        "key": "get_songs_by_episode",
+        "title": "Songs- Get Songs By Episode",
+        "sideTitle":"Songs By Episode",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_songs_by_episode",
+        "description": "Returns songs that were used in the specified episode.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?season=1&episode=1"
+    },
+    {
+        "id":56,
+        "key": "get_random_song",
+        "title": "Songs- Get Random Song",
+        "sideTitle":"Random Song",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_random_song",
+        "description": "Returns a random song from any episode in series.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?type=get_random"
+    },
+    {
+        "id":57,
+        "key": "get_song_by_range",
+        "title": "Songs- Get Songs Through Seasons",
+        "sideTitle":"In Seasons",
+        "methodType": "GET",
+        "category":"songs",
+        "link": "/view_api/get_song_by_range",
+        "description": "Returns an array of songs that are in the specified season range.",
+        "code": "sample request: GET https://supernatural-lore.vercel.app/api/songAPI?seasonStart=1&seasonEnd=2"
+    },
+
 ];

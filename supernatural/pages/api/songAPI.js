@@ -1,7 +1,7 @@
 import { songs } from "../../src/components/data/songInfo";
 
 export default function handler(request, response){
-    const {song_title, artist, season, episode, type} = request.query;
+    const {song_title, artist, season, episode, type, seasonStart, seasonEnd} = request.query;
 
     let results= null;
 
@@ -28,14 +28,33 @@ export default function handler(request, response){
         results = songs.filter(song=> song.artist.toLowerCase() === artist.toLowerCase());
         results = [...new Map(results.map(song => [song.title.toLowerCase(), song])).values()];
     }
+    
+    //get by episode
+    else if (season && episode){
+        results = songs.filter(song=> song.season === season && song.episode === episode);
+    }
+    //get songs for season range
+    else if (seasonStart && seasonEnd){
+        let seasonStartInt= parseInt(seasonStart,10);
+        let seasonEndInt = parseInt(seasonEnd,10);
+        if (isNaN(seasonStartInt) || isNaN(seasonEndInt)) {
+            return response.status(400).json({ error: "Season values must be numbers." });
+        }
+        if (seasonStartInt<1){
+            return response.status(400).json({error:"Invalid seasonStart value passed. Must be a value greater than 1"});
+        }
+        if (seasonEndInt>15){
+            return response.status(400).json({catch:"Invalid seasonEnd value passed. Must be less than 15"});
+        }
+        results = songs.filter(song => {
+            const season = parseInt(song.season, 10);
+            return season >= seasonStartInt && season <= seasonEndInt;
+        });
+    }
     //filtered by season 
     else if (season){
         results = songs.filter(song=> song.season === season);
         results = [...new Map(results.map(song => [song.artist.toLowerCase(), song])).values()];
-    }
-    //get by episode
-    else if (season && episode){
-        results = songs.filter(song=> song.season === season && song.episode === episode);
     }
     //get random song
     else if (type == "get_random"){

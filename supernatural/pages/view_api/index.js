@@ -58,10 +58,20 @@ import ViewMonsterMythology from "./get_monster_mythology";
 import ViewAllSongs from "./get_all_songs";
 import ViewSongCount from "./get_song_count";
 import ViewSongInfo from "./get_song_info";
+import ViewSongTitle from './get_song_by_title';
+import ViewSongArtist from './get_songs_by_artist';
+import ViewSongArtistCount from './get_artist_count';
+import ViewSongSeason from './get_songs_by_season';
+import ViewSongEpisode from './get_songs_by_episode';
+import ViewSongRandom from './get_random_song';
+import ViewSongRange from './get_song_by_range';
+
 export default function ShowAPIDoc() {
   const [showSeason, setShowSeason] = useState(false);
   const [showEpisode, setShowEpisode] = useState(false);
   const [showCharacter, setShowCharacter] = useState(false);
+  const [showMonster, setShowMonster] = useState(false);
+  const [showSong, setShowSong] = useState(false);
   const [selectedEndpoint, setSelectedEndpoint] = useState(null);
   const [activeTab, setActiveTab] = useState("home");
 
@@ -222,14 +232,11 @@ export default function ShowAPIDoc() {
         
         <p>Possible Endpoints are listed below. Click on the section to expand it and see a sneak preview of the possible endpoints for that section!</p>
       </div>
-      {/* Season */}
       <SectionPreview passedState={showSeason} isOpen={isOpen} notOpen={notOpen} infoType="Season" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={0} endIndex={11} />
-      {/* Episode */}
       <SectionPreview passedState={showEpisode} isOpen={isOpen} notOpen={notOpen} infoType="Episode" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={11} endIndex={19} />
-
-      {/* Character */}
-      <SectionPreview passedState={showCharacter} isOpen={isOpen} notOpen={notOpen} infoType="Character" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={20} endIndex={36} />
-
+      <SectionPreview passedState={showCharacter} isOpen={isOpen} notOpen={notOpen} infoType="Character" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={20} endIndex={37} />
+      <SectionPreview passedState={showMonster} isOpen={isOpen} notOpen={notOpen} infoType="Monster" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={37} endIndex={47} />
+      <SectionPreview passedState={showSong} isOpen={isOpen} notOpen={notOpen} infoType="Song" setActiveTab={setActiveTab} setSelectedEndpoint={setSelectedEndpoint} startIndex={47} endIndex={57} />
       <div>
         <h2>About the Stack</h2>
         <p>The information for this project was originally gathered for a supernatural themed website. I later developed this API to help myself understand how to implement/design APIs and to allow other developers to use my work in their own creation and analyses.</p>
@@ -304,7 +311,14 @@ export default function ShowAPIDoc() {
     get_monster_mythology: <ViewMonsterMythology />,
     get_all_songs: <ViewAllSongs />,
     get_song_count: <ViewSongCount />,
-    get_song_info: <ViewSongInfo />
+    get_song_info: <ViewSongInfo />,
+    get_song_by_title: <ViewSongTitle />,
+    get_songs_by_artist: <ViewSongArtist />,
+    get_artist_count: <ViewSongArtistCount />,
+    get_songs_by_season: <ViewSongSeason />,
+    get_songs_by_episode: <ViewSongEpisode />,
+    get_random_song: <ViewSongRandom />,
+    get_song_by_range: <ViewSongRange />
   };
 
   return (
